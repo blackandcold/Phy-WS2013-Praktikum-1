@@ -1,0 +1,204 @@
+% -*- TeX:de -*-
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[12pt,a4paper]{article}
+\usepackage[german]{babel} % german text
+\usepackage[DIV12]{typearea} % size of printable area
+\usepackage[T1]{fontenc} % font encoding
+%\usepackage[latin1]{inputenc} % most likely on Windows
+\usepackage[utf8]{inputenc} % probably on Linux
+\usepackage{multicol}
+
+% PLOTTING
+\usepackage{pgfplots} 
+\usepackage{pgfplotstable}
+
+\usepackage{graphicx} % to include images
+\usepackage{subfigure} % for creating subfigures
+\usepackage{amsmath} % a bunch of symbols
+\usepackage{amssymb} % even more symbols
+\usepackage{booktabs} % pretty tables
+
+% a floating environment for circuits
+\usepackage{float}
+\usepackage{caption}
+
+\newfloat{circuit}{tbph}{circuits}
+\floatname{circuit}{Schaltplan}
+
+% a floating environment for diagrams
+\newfloat{diagram}{tbph}{diagrams}
+\floatname{diagram}{Diagramm}
+
+\selectlanguage{german} % use german
+
+\begin{document}
+
+%%%%%%% DECKBLATT %%%%%%%
+\thispagestyle{empty}
+			\begin{center}
+			\Large{Fakultät für Physik}\\
+			\end{center}
+\begin{verbatim}
+
+
+\end{verbatim}
+							%Eintrag des Wintersemesters
+			\begin{center}
+			\textbf{\LARGE WS 2013/14}
+			\end{center}
+\begin{verbatim}
+
+
+\end{verbatim}
+			\begin{center}
+			\textbf{\LARGE{Physikalisches Praktikum\\ für das Bachelorstudium}}
+			\end{center}
+\begin{verbatim}
+
+
+
+
+\end{verbatim}
+
+			\begin{center}
+			\textbf{\LARGE{PROTOKOLL}}
+			\end{center}
+			
+\begin{verbatim}
+
+
+
+
+
+\end{verbatim}
+
+			\begin{flushleft}
+			\textbf{\Large{Experiment (Nr., Titel):}}\\
+							%Experiment Nr. und Titel statt den Punkten eintragen
+			\LARGE{PW1, Messen - Messfehler}	
+			\end{flushleft}
+
+\begin{verbatim}
+
+\end{verbatim}	
+							%Eintragen des Abgabedatums, oder des Erstelldatums des Protokolls
+			\begin{flushleft}
+			\textbf{\Large{Datum:}} \Large{17.10.2013}
+			\end{flushleft}
+			
+\begin{verbatim}
+\end{verbatim}
+							%Namen der Protokollschreiber
+		\begin{flushleft}
+			\textbf{\Large{Namen:}} \Large{Patrick Braun, Johannes Kurz}
+			\end{flushleft}
+
+\begin{verbatim}
+
+
+\end{verbatim}
+							%Kurstag und Gruppennummer, zb. Fr/5
+			\begin{flushleft}
+			\textbf{\Large{Kurstag/Gruppe:}} \Large{DO/2}
+			\end{flushleft}
+
+\begin{verbatim}
+
+
+
+\end{verbatim}
+							%Name des Betreuers, das Praktikum betreute.
+			\begin{flushleft}
+			\LARGE{\textbf{Betreuer:}}	\Large{}	
+			\end{flushleft}
+
+%%%%%%% DECKBLATT ENDE %%%%%%%
+\pagebreak
+\begin{multicols}{2}
+\section{Mechanische Messungen}
+\subsection{Messung der Dicke eines Drahtes mit dem Mikroskop} 
+
+Mikroskop: Karl Zeiss, Axiostar plus 5x, 10x, 40x 
+
+Beobachtungen mit Mikroskop ohne Skala\\
+Scharfstellen, Höhe eingestellt, größte Vergrößerung stellen.
+71 Striche ohne Skala.\\
+71 Striche ohne Skala.\\
+70 Striche ohne Skala.\\
+71 Striche ohne Skala.\\
+72 Striche ohne Skala.\\
+\\
+Beobachtung des Eich-Strichs beginnend am Rand zur Erleichterung. Fixieren des Plättchens. 
+40 am Okular entsprechen 0.1mm\\
+Ungenauigkeit Instrument: 0.0025/Strich
+xy - bei erster Messung\\
+
+\subsection{Messung der Dicke eines Drahtes mit einem Schublehre}
+Schublehre sehr ungenau. \\
+Messungen: \\
+0.2mm\\
+0.25mm\\
+0.2mm\\
+0.25mm\\
+0.2mm\\
+Ungenauigkeit Instrument: 0.5mm
+
+\subsection{Messung der Dicke eines Drahtes mit einer Micrometerschraube}
+Messung Rand unten: 0.18(5)mm Schätzung weil zwischen 0.18 und 0.19 \\
+Messung Rand unten: 0.18(5)mm Schätzung weil zwischen 0.18 und 0.19 \\
+Messung Rand oben: 0.18mm\\
+Messung bei ca. 1/3: 0.17(9)mm\\
+Messung Mitte: 0.17(1)mm\\
+Ungenauigkeit Instrument: 0.01mm
+
+\subsection{Messung der Winkel eines Dreiecks mit dem Winkellehre}
+
+Metallenes Dreieck. Firma Storm.\\
+Messungenauigkeit von 5 Minuten.\\
+$\alpha = $ 23 Grad, 40 Minuten\\
+$\beta =$ 71 Grad, 15 Minuten\\
+$\gamma = $ 84 Grad, 15 Minuten\\
+
+\section{Pendel}
+"Aufgabenstellung in einem Satz" - Wir bestimmen die lokale Erdbeschleunigung über den Zusammenhang zwischen Länge und Periodendauer eines Fadenpendels.\\
+
+Über 6.3 Grad entsteht ein Fehler der über der Messunsicherheit liegt. \\
+Messung bei Nulldurchgang.
+Messunsicherheit 1/100 Sekunden.
+
+\subsection{10 Einzelschwingungen}
+1.59s\\
+1.59s\\
+1.63s\\
+1.57s\\
+1.58s\\
+1.57s\\
+1.56s\\
+1.59s\\
+1.56s\\
+1.57s\\
+Kugeldurchmesser: 1.995cm $\pm 0.05mm$\\
+Seillänge 62.05cm\\
+Bis Schwerpunkt 63cm\\
+Mittelwert: 1.581, Stabw: 0.0207, StdError (u): 0.00657, Var : 0.00043
+\subsection{10 Mehrfachschwingungen}
+15.91s\\
+15.91s\\
+15.89s\\
+15.92s\\
+15.78s\\
+15.94s\\
+15.83s\\
+15.93s\\
+15.90s\\
+15.92s\\
+15.93s\\
+Mittelwert: 1.5808, Stabw: 0.0031, StdError (u): 0.000986, Var : 9.73 $10^{-6}$
+\subsection{Auswertung}
+Bei längeren Laufzeiten ist mein Messfehler weniger relevant.
+
+Nur mit 10-Facher Schwingungsdauer g berechnen.
+g = 9.8379 $ms^{-2}$ $\pm $ 0.00125 $ms^{-2}$
+\section{Strom}
+\end{multicols}
+\end{document}

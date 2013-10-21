@@ -417,15 +417,45 @@ Wechselspannung: Auflösung 10mV, Unsicherheit $\pm (1\% + 3)$\\
 Gleichstrom:     Auflösung 0.01 mA, Unsicherheit $\pm (1\% + 3)$\\
 Wechselstrom:    Auflösung 0.01 mA, Unsicherheit $\pm (1\% + 3)$\\
 \subsection{Aufgaben und Aufbau}
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.8]{./figure/parallel.png}
+	\caption{Parallele Widerstände}
+	\label{fig:401}
+\end{figure}
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.75]{./figure/seriell.png}
+	\caption{Serielle Widerstände}
+	\label{fig:402}
+\end{figure}
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.7]{./figure/richtige.png}
+	\caption{Spannungsrichtige und stromrichtige Messung }
+	\label{fig:403}
+\end{figure}
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=1]{./figure/seriell_mit_c.png}
+	\caption{Serielle Schaltung mit Widerstand und Kondensator}
+	\label{fig:404}
+\end{figure}
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.25]{./figure/komplex.png}
+	\caption{Grafische Abbildung serielle Schaltung mit R und $R_x$ sowie R und $R_C$}
+	\label{fig:405}
+\end{figure}
 Der erste Teil des Versuchs, beschäftigt sich mit der Messung eines unbekannten Widerstandes $R_{x}$ auf verschiedene Arten bei Gleichstrom. Anhand der Ergebnisse lassen sich die verschiedenen Methoden vergleichen.\\
-Zuerst wird der Widerstand sowohl in einer spannungs- als auch stromrichtigen Schaltung bestimmt (Abbildung \ref{fig:401}).\\
-Danach wird er, in Parallelschaltung mit einem bekannten Widerstand R, durch Berechnung aus Gesamtstrom und -spannung ermittelt (Abbildung \ref{fig:402}).\\
-Ebenso in Serienschaltung der beiden Widerstände (Abbildung \ref{fig:403}).\\
+Zuerst wird der Widerstand sowohl in einer spannungs- als auch stromrichtigen Schaltung bestimmt (Abbildung \ref{fig:403}).\\
+Danach wird er, in Parallelschaltung mit einem bekannten Widerstand R, durch Berechnung aus Gesamtstrom und -spannung ermittelt (Abbildung \ref{fig:401}).\\
+Ebenso in Serienschaltung der beiden Widerstände (Abbildung \ref{fig:402}).\\
 Zuletzt sollen, ebenso in Serie, die Spannungen an beiden Widerständen $R_{x}$ und R gemessen werden, und daraus $R_{x}$ berechnet werden (Abbildung \ref{fig:404}).\\
 \\
 Im zweiten Teil werden die Schaltungen mit Wechselstrom versorgt:\\
-Einerseits wird wieder $R_{x}$ bestimmt, in Serienschaltung mit R, sowohl durch Messung von Gesamtstrom und -spannung, als auch durch Messung der Teilspannungen (Abbildung \ref{fig:405}).\\
-Außerdem wird die Kapazität C eines Kondensators, und sein komplexer Wechselstromwiderstand $X_{c}$, bestimmt durch Messung der gleichen Größen (Also nochmalige Durchführung der Messung wie in Schaltung (Abbildung \ref{fig:405}) mit dem Kondensator statt $R_{x}$).\\
+Einerseits wird wieder $R_{x}$ bestimmt, in Serienschaltung mit R, sowohl durch Messung von Gesamtstrom und -spannung, als auch durch Messung der Teilspannungen (Abbildung \ref{fig:404}) mit $R_{x}$ anstelle von C.\\
+Außerdem wird die Kapazität C eines Kondensators, und sein komplexer Wechselstromwiderstand $X_{c}$, bestimmt durch Messung der gleichen Größen (Also nochmalige Durchführung der Messung wie in Schaltung (Abbildung \ref{fig:404}) mit dem Kondensator wie in der Abbildung).\\
 \\
 Dabei ist vor allem auf die richtigen Einstellungen an den Multimetern zu achten, je nach zu messender Größe und verwendetem Strom. Außerdem lässt sich der Versuch durch strategisch günstiges Stecken der einzelnen Schaltungen wesentlich beschleunigen und die Fehleranfälligkeit durch klare aufgeräumte Schaltungen verringern.\\
 \\
@@ -475,6 +505,51 @@ $U_{C} = (22.65 \pm 0.26) V$\\
 $\omega = 2*\pi *50$ \\
 $X_{c} = \frac{U_{C}}{I_{ges} - R} = (3.811 \pm 0.094) k\Omega$ \\
 $C = (\omega * X_{c})^{-1} = 835 \pm 21 nF$ \\
+
+\subsection{Diskussion}
+
+Innenwiderstandskorrektur zu Schaltung 1: Das Fluke 175 Multimeter hat sowohl im Gleich-, wie auch Wechselspannungsbetrieb einen Innenwiderstand $R_{i} >= 1M\Omega$.\\
+$U_{ges}/R_{i}= I_{Fluke} = (0.02 \pm 0.01) mA$\\
+Abgezogen vom gemessenen Strom, wird der Widerstand erneut berechnet:\\
+$U_{ges}/I_{korr}= (2.707 \pm 0.041) k\Omega$\\
+Der ursprünglich berechnete Wert $(2.701 \pm 0.002) k\Omega$ liegt so weit neben dem korrigierten, dass beide Unsicherheiten nur einen kleinen Deckungsbereich haben. Da sich die Unterschiede trotzdem im Promill-Bereich bewegen, und weit geringer sind, als die Unterschiede der Ergebnisse aus den verschiedenen Schaltungen, kann man die Innenwiderstandskorrektur wohl als vernachlässigbar betrachten.\\
+\\
+Vergleich der gemessenen Gesamtspannungen und -ströme mit berechneten:\\
+Der ohmsche Widerstand $R_{x}$ wurde in mehreren Schaltungen durch verschiedene Messungen bestimmt. Den kleinsten Fehler dabei haben die Werte aus der direkten Messung von $R_{x}$. Diese sollen im folgenden herangezogen werden, um die Gesamtwiderstände der Serien- bzw. der Parallelschaltung zu berechnen und mit den gemessenen zu vergleichen.\\
+\\
+Parallelschaltung: Der Gesamtwiderstand ergibt sich durch\\
+$1/R_{ges} = 1/R_{bekannt} + 1/R_{x}$\\
+$R_{x} = 2.701 k\Omega$\\
+$R_{bekannt} = 4.700 k\Omega$\\
+$R_{ges} = 1.715 k\Omega$\\
+Aus den gemessenen Werten ergibt sich für $R_{ges}: (1.709 \pm 0.038) k\Omega$\\
+\\
+Für die Parallelschaltung liegt der berechnete Gesamtwiderstand also gut im Unsicherheitsbereich der Messung.\\
+\\
+Serienschaltung: Der Gesamtwiderstand ergibt sich durch\\
+$R_{ges} = R_{bekannt} + R_{x}$\\
+$R_{ges} = 7.401 k\Omega$\\
+Aus den gemessenen Werten ergibt sich für $R_{ges}: (7.388 \pm 0.161) k\Omega$\\
+\\
+Auch hier liegt der berechnete Wert nahe am gemessenen. Die Unsicherheit ist in der Serienschaltung jedoch vergleichsweise groß.\\
+Es zeigt sich also, dass die verschiedenen Schaltungen Ergebnisse liefern, die sich alle in einem Bereich decken.\\
+Verschieden sind die Genauigkeiten der einzelnen Methoden, aber die Ergebnisse legen nahe, dass sich der wahre Wert in guter Näherung in diesem Bereich befindet (um 2.7k$\Omega$).\\
+\\
+\\
+Trotz vielfältiger potentieller Fehler sind alle Ergebnisse innerhalb ihrer Genauigkeit stimmig. Einige davon wären:\\
+Temperaturschwankungen in den Leitern (es wurde versucht, jeweils nur kurze Zeit Strom fließen zu lassen)\\
+Materialbedingte Fehler in Kabeln und Steckern\\
+Fehler in den Bauteilen\\
+Schwankungen in der Stromversorgung\\
+Abhängigkeit von mehreren Messgrößen u.a.\\
+\\
+\\
+Zuletzt soll noch die Frage beantwortet werden, nach dem Zusammenhang der Gesamtspannung mit den beiden Teilspannungen in der Wechselstrom-Serienschaltung.\\
+Im Fall mit 2 ohmschen Widerständen, addieren sich die Spannungen an beiden genauso wie in einem Gleichstromnetzwerk auf. Zwischen den beiden Spannungen besteht keine Phasenverschiebung (Abbildung \ref{fig:405}).\\
+In einem kapazitiven Widerstand jedoch sind Spannung und Strom um $\frac{\pi}{2}$ verschoben. (Spannung folgt dem Strom nach)\\
+Da aufgrund der Serienschaltung im gesamten System der Strom ohne Phasenverschiebung fließen muss, folgt also hier die Teilspannung am Kondensator um $\frac{\pi}{2}$ der Teilspannung am ohmschen Widerstand nach. Die Gesamtspannung ergibt sich aus der Vektoraddition beider Spannungen in der Gaußschen Zahlenebene (Abbildung \ref{fig:405}).
+
+
 
 \end{multicols}
 \section{Quellen}

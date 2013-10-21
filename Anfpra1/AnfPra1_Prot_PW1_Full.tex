@@ -13,6 +13,7 @@
 \usepackage{pgfplotstable}
 
 \usepackage{graphicx} % to include images
+\usepackage{tikz}
 \usepackage{subfigure} % for creating subfigures
 \usepackage{amsmath} % a bunch of symbols
 \usepackage{amssymb} % even more symbols
@@ -22,12 +23,12 @@
 \usepackage{float}
 \usepackage{caption}
 
-\newfloat{circuit}{tbph}{circuits}
-\floatname{circuit}{Schaltplan}
+%\newfloat{circuit}{tbph}{circuits}
+%\floatname{circuit}{Schaltplan}
 
 % a floating environment for diagrams
-\newfloat{diagram}{tbph}{diagrams}
-\floatname{diagram}{Diagramm}
+%\newfloat{diagram}{tbph}{diagrams}
+%\floatname{diagram}{Diagramm}
 
 \selectlanguage{german} % use german
 
@@ -109,56 +110,130 @@
 \end{verbatim}
 							%Name des Betreuers, das Praktikum betreute.
 			\begin{flushleft}
-			\LARGE{\textbf{Betreuer:}}	\Large{}	
+			\LARGE{\textbf{Betreuer:}}	\Large{Johanna Akbarzadeh}	
 			\end{flushleft}
 
 %%%%%%% DECKBLATT ENDE %%%%%%%
 \pagebreak
+\setlength{\columnsep}{20pt}
 \begin{multicols}{2}
-\section{Mechanische Messungen}
-\subsection{Messung der Dicke eines Drahtes mit dem Mikroskop} 
-
-Mikroskop: Karl Zeiss, Axiostar plus 5x, 10x, 40x 
-
-Beobachtungen mit Mikroskop ohne Skala\\
-Scharfstellen, Höhe eingestellt, größte Vergrößerung stellen.
-71 Striche ohne Skala.\\
-71 Striche ohne Skala.\\
-70 Striche ohne Skala.\\
-71 Striche ohne Skala.\\
-72 Striche ohne Skala.\\
+\section{Einleitung}
+In diesem (ersten) Praktikumsbeispiel geht es um Messen, Messfehler und -unsicherheiten.
+Da Messung ein (wenn nicht "der") Bestandteil eines jeden Experimentes ist, ein Thema, das sich durch alle Bereiche, nicht nur der Physik zieht, steht diese Aufgabenstellung am Anfang des Anfängerpraktikums und ist aufgeteilt auf 3 kleinere Beispiele aus unterschiedlichen Bereichen:\\
+\textbf{Längenmessung:} die Stärke eines Kupferdrahtes wurde mittels unterschieldicher Methoden gemessen\\
+\textbf{Zeitmessung und Unsicherheit:} die Bestimmung der Gravitationsbeschleunigung durch die Schwingungsdauer eines Fadenpendels\\
+\textbf{Spannung/Strom:} Bestimmung von Widerständen durch die Messung von Strom und Spannung in einfachen Netzwerken\\
 \\
-Beobachtung des Eich-Strichs beginnend am Rand zur Erleichterung. Fixieren des Plättchens. 
-40 am Okular entsprechen 0.1mm\\
-Ungenauigkeit Instrument: 0.0025/Strich
-xy - bei erster Messung\\
+Neben dem Titel der Einheit, ist den Beispielen eine Einführung in verschiedene grundlegende Messgeräte gemeinsam, sowie erste Erfahrungen im Aufbau einfacher Experimente, gleichzeitiger erster on-the-fly-Überprüfungen der gemessenen Werte sowie Fehlerminimierung.\\
+\\
+Aufgrund der Struktur der Praktikums-Einheit, ist also auch dieses Protokoll in 3 Teilen gegliedert:\\
+TODO 1\\
+TODO 2\\
+TODO 3\\
 
-\subsection{Messung der Dicke eines Drahtes mit einem Schublehre}
-Schublehre sehr ungenau. \\
-Messungen: \\
-0.2mm\\
-0.25mm\\
-0.2mm\\
-0.25mm\\
-0.2mm\\
-Ungenauigkeit Instrument: 0.5mm
+\section{Einfache mechanische Messungen}
+\subsection{Bestimmung der Dicke eines Kupferdrahtes (und ein Dreieck)}
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.3]{./figure/draht.png}
+	\caption{Drahtprobe auf Objektträger}
+	\label{fig:101}
+\end{figure}
+In diesem Beispiel soll die Stärke eines dünnen Kupferdrahtes, an verschiedenen Stellen, mit 3 unterschiedlichen Geräten bestimmt werden: mittels Schieblehre, Mikrometerschraube und der Okularskala in einem Mikroskop.\\
+Dabei soll zum einen der Umgang mit diesen Messgeräten grundlegend erlernt und geübt, die Messunsicherheiten, Fehlerquellen, Vor- und Nachteile der einzelnen Geräte erkundet, sowie vergleichende Betrachtungen der (zu erwartenden) unterschiedlichen Ergebnissen aller 3 Methoden erarbeitet werden.\\
+Zusätzlich sollen auch die Winkel eines Metall-Dreiecks mit einer Winkellehre gemessen werden, und die Ergebnisse mit deren zu erwartender Summe verglichen werden.\\
+\\
+Es steht also weniger das Messergebnis selbst (also die Dicke des Drahtes) im Fokus dieser Arbeit, sondern die verschiedenen Wege, die zu diesem führen.\\
+Es ist sowohl mit verschiedensten Fehlern und Fehlerquellen zu rechnen, die im Folgenden diskutiert werden, sowie mit Messunsicherheiten, die, abhängig von der jeweiligen Messmethode und deren Auflösung, verschieden groß sind. Außerdem soll in der Diskussion des Experiments auch die Anwendbarkeit und Praktikabilität der Messgeräte im Bezug auf eben unser Beispiel, die Kupferdrahtdicke, besprochen werden.\\
+\\
 
-\subsection{Messung der Dicke eines Drahtes mit einer Micrometerschraube}
-Messung Rand unten: 0.18(5)mm Schätzung weil zwischen 0.18 und 0.19 \\
-Messung Rand unten: 0.18(5)mm Schätzung weil zwischen 0.18 und 0.19 \\
-Messung Rand oben: 0.18mm\\
-Messung bei ca. 1/3: 0.17(9)mm\\
-Messung Mitte: 0.17(1)mm\\
-Ungenauigkeit Instrument: 0.01mm
-
-\subsection{Messung der Winkel eines Dreiecks mit dem Winkellehre}
-
-Metallenes Dreieck. Firma Storm.\\
-Messungenauigkeit von 5 Minuten.\\
+\subsection{Der Aufbau und der Versuch}
+%%%% MESSUNGEN
+%\subsection{Messung der Dicke eines Drahtes mit dem Mikroskop} 
+\textbf{Equipment:}
+\begin{itemize}
+	\item Ein dünner Kupferdraht; ein paar cm lang, locker eingespannt zwischen zwei Befestigungen auf einer Metallplatte (siehe Skizze)
+	\item Eine Schieblehre mit Nonius; angegebene Auflösung: 1/20 mm
+	\item Eine Mikrometerschraube; angegebene Auflösung 1/100 mm
+	\item Ein Mikroskop Karl Zeiss, Axiostar plus; Objektive: 5x, 10x, 40x 
+	\item Ein Dreieck (in der Größenordnung von 10cm)
+	\item Eine Winkellehre; angegebene Auflösung: 5'; Firma Storm
+\end{itemize}
+\textbf{Außerdem:}
+\begin{itemize}
+	\item Ein Vergrößerungsglas zum Ablesen der Winkellehre
+	\item Ein Glasplättchen mit geeichtem Maßstab zum bestimmen der Okularskala des Mikroskops
+\end{itemize}
+Der Aufgabenteil der Winkelmessung gestaltet sich denkbar einfach: Je ein Eck wird in die geöffneten Schenkel der Winkellehre eingepasst, bis diese sauber anliegen. Danach wird (mit Hilfe des Vergrößerungsglases) der Winkel abgelesen.\\
+Das Messinstrument ist mit einem Nonius ausgestattet (auch wenn hier, dank der Einheiten Grad/Minuten keine Unterteilung in 9 Teile vorliegt), der es erlaubt, das Ergebnis auf Minuten genau abzulesen.\\
+Die wesentlichste prozessbedingte Schwierigkeit, und mögliche Fehlerquelle, hierbei ist das Ablesen selbst, an der sehr kleinen Skala. Hier ergab sich möglicherweise eine zusätzliche Unsicherheit, dazu mehr in der Diskussion des Beispiels.\\
+\\
+Die Bestimmung der Dicke des Kupferdrahtes wird pro Messinstrument jeweils an 5 verschiedenen Stellen durchgeführt. (Aufgrund der zur Verfügung stehenden Mittel und der zu erwartenden Homogenität der Kupferdrahtdicke, haben wir darauf verzichtet, diese Stellen zu markieren und nach Augenmaß jeweils 5 Messungen in ungefähr gleichem Abstand gemacht.)\\
+Von den 3 Funktionen der Schieblehre werden die Schenkel zur Messung von Außenmaßen verwendet. Bei der Messung von etwas (im Vergleich zur Auflösung der Schublehre) so Dünnem, stellt sich heraus, dass der Druck, mit dem die Messschenkel zusammengeschoben werden, eine Rolle für das Ergebnis spielt.\\
+Abgelesen wird an der Millimeterskala sowie am Nonius.
+Die Messung mit der Mikrometerschraube gestaltet sich ähnlich, durch die eingebaute Rutschkupplung jedoch ist der Druck, den das Messinstrument auf den Draht ausübt vorgegeben. Abgelesen wird an einer Halbmillimeterskala und einer zusätzlichen Unterteilung in 50 Teile.
+Anders als bei den bisherigen 3 Messungen, in denen verstellbare Schenkel an das zu messende Objekt angepasst werden, erfolgt die Stärkebestimmung mittels Lichtmikroskop, durch das Vergleichen des Drahtes mit einer Skala.\\
+Dazu wird der Draht am Objekttisch fixiert und mit geringer Vergrößerung in die Mitte des Sichtfeldes gebracht und scharf gestellt. Danach wird mit den stärker vergrößernden Objektiven der Draht noch genauer justiert. Es ist dabei darauf zu achten, die Schärfe so einzustellen, dass die Ränder des Drahtes präzise dargestellt werden, da ja die Stärke gemessen werden soll. Bei großer Vergrößerung ist es durch die runde Form nicht mehr möglich, den gesamten betrachteten Teil des Drahtes gleichermaßen scharf abzubilden.
+Außerdem ergibt sich durch die Aufhängung des Drahtes eventuell das Problem, dass bei stärkeren (= längeren) Objektiven, der Draht das Objektiv berührt. Das ist am besten schon vor der groben Einstellung mit dem kleinsten Objektiv zu berücksichtigen.\\
+Ist der Draht also richtig platziert und die Ränder so klar, wie möglich, unter stärkster Vergrößerung zu sehen, wird die Dicke mit der nicht dimensionierten Skala im Okular gemessen. Nach Beendigung aller Messungen wird mit einem Eichnormal (eine dimensionierte Skala auf einem Objektträger) die tatsächliche Länge der Okularskala für die angewandte Vergrößerung bestimmt.
+Aus diesem Verhältnis und der gezählten Anzahl der Striche, lässt sich direkt die Dicke in der entsprechenden Größenordnung in m berechnen.\\
+\subsection{Ergebnisse}
+Mittelwerte der einzelnen Messungen mit Fehler:
+\begin{description}
+	\item[Schublehre]  0.23 $\pm$ 0.05mm
+	\item[Mikroschraube] 0.17 $\pm$ 0.01mm
+	\item[Mikroskop] 0.1775 $\pm$ 0.0025mm
+\end{description}
+Gewogener Mittelwert aller Messungen: siehe Leitfaden
+\begin{description}
+				\item[ungerundet] (0.17718 $\pm$ 0.0092mm) 
+				\item[gerundet] 0.1772 $\pm$ 0.01 mm
+\end{description}
+Dreiecksmessung, Auflösung: 0$^{\circ}$5'\\
+$23^{\circ}40' + 71^{\circ}15' + 84^{\circ}15'=179^{\circ}10'\pm0^{\circ}15'$
+\subsection{Messwerte}
+\textbf{Mikroskop:}\\
+\pgfplotstabletypeset[int detect, fixed,precision=4]{
+Strich mm
+71 0.1775
+71 0.1775
+70 0.1750
+71 0.1775
+72 0.1800
+}\\
+\\
+40 Strich am Okular entsprechen 0.1mm\\
+Ungenauigkeit Instrument: 0.0025mm/Strich\\
+\\
+\textbf{Schublehre:}\\
+\pgfplotstabletypeset[fixed zerofill,precision=2]{
+mm
+0.2
+0.25
+0.2
+0.25
+0.2
+}\\
+Ungenauigkeit Instrument: 0.5mm\\
+\\
+\textbf{Micrometerschraube:}\\
+\pgfplotstabletypeset[fixed zerofill,precision=2]{
+mm
+0.18
+0.18
+0.18
+0.17
+0.17
+}\\
+Ungenauigkeit Instrument: 0.01mm\\
+\\
+\textbf{Winkellehre:}\\
 $\alpha = $ 23 Grad, 40 Minuten\\
 $\beta =$ 71 Grad, 15 Minuten\\
 $\gamma = $ 84 Grad, 15 Minuten\\
+Messungenauigkeit von 5 Minuten.\\
 
+%%%%
 \section{Pendel}
 "Aufgabenstellung in einem Satz" - Wir bestimmen die lokale Erdbeschleunigung über den Zusammenhang zwischen Länge und Periodendauer eines Fadenpendels.\\
 
@@ -196,9 +271,51 @@ Mittelwert: 1.581, Stabw: 0.0207, StdError (u): 0.00657, Var : 0.00043
 Mittelwert: 1.5808, Stabw: 0.0031, StdError (u): 0.000986, Var : 9.73 $10^{-6}$
 \subsection{Auswertung}
 Bei längeren Laufzeiten ist mein Messfehler weniger relevant.
-
 Nur mit 10-Facher Schwingungsdauer g berechnen.
-g = 9.8379 $ms^{-2}$ $\pm $ 0.00125 $ms^{-2}$
+g = 9.8379 $ms^{-2}$ $\pm $ 0.13 $ms^{-2}$
+
+\subsection{Lineare Regression mit Gruppenergebnissen}
+
+$T^2$ $l$\\
+Robert\\
+1.95
+0.48\\
+Wir\\
+2.53
+0.63\\
+Johannes\\
+0.745
+2.99\\
+Irgendwer\\
+0.276
+1.12\\
 \section{Strom}
+
+\subsection{Gleichstrom}
+Spannungsrichtig:\\
+I = 8.90mA $\pm 0.01mA$ wegen Fluktuation am Messgerät.
+U = 24.00V
+Stromrichtig:\\
+I = 8.89mA
+U=24.02V
+\\
+Parallelschaltung von Widerständen\\
+23.98V 14.04mA Gesamt
+Serienschaltung\\
+3.25mA 24.01V\\
+Spannungsabfall Serienschaltung\\
+$U_{Rx}$ = 15.22V\\
+$U_{R}$ = 8.80V
+\subsection{Wechselstrom}
+Seriell, ohne C: 3.69mA 27.14V\\
+Einzel:\\
+$U_{Rx}$ = 9.94V\\
+$U_{R}$ = 17-22V\\
+Mit C reinhängen statt Rx\\
+$U_{C}$ = 22.65V\\
+$U_{R}$ = 14.83V\\
+Gesamtstrom, Gesamtspannung\\
+$U_{ges}$ = 27.15V\\
+$I_{ges}$ = 3.19mA\\
 \end{multicols}
 \end{document}

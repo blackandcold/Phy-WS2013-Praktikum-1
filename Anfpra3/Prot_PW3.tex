@@ -119,32 +119,82 @@
 \begin{multicols}{2}
 \section{Einleitung}
 
+\subsection{Theorie Elastizitätsmodul}
+
+\subsection{Theorie Schermodul}
+
+\subsection{Theorie Trägheitsmoment}
+
 \section{Elastizität}
 
+Speed: 0.05mm/s. A; 50mm/min. B\\
+Calibration 24kg ~ 40.0mV\\
+Das Voltmeter am Verstärker pendelt um $(9.98 \pm 0.01)mV$ ohne Gewicht und mit 2kg Last bei $(40 \pm 0.1)mV$. Die Unsicherheit ergibt sich aus den Schwankungen die von den alten Röhren hervorgerufen werden welche im Verstärker verbaut sind.
+
 \subsection{Messdaten und Ergebnisse}
-Messung Alu Draht.\\
+Messung Durchmesser Aluminiumdraht:\\
 1.99
 1.99
 1.98
 1.99
 1.99
 
-Voltmeter am Verstärker pendelt zwischen 9.98mV ohne Gewicht. Mit 2kg Last bei (40 \pm 0.1)mV. 
+Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich aus der Ungenauigkeit des Messinstruments.\\
+
+
 
 
 \section{Torsionspendel}
 
-\subsection{Messdaten und Ergebnisse}
 
-%\begin{figure}[H]
-%	\centering
-%  	\includegraphics[scale=0.3]{./figure/draht.png}
-%	\caption{Drahtprobe auf Objektträger}
-%	\label{fig:201}
-%\end{figure}
+\subsection{Messdaten und Ergebnisse}
+$L_{Draht} = (64.6 \pm 0.1)cm$\\
+Gesamtmasse: 494.2g für $l_1 und l_2$\\
+$l_1 = 23.9cm$\\
+$l_2 = 27.9cm$\\
+Gesamtmasse: 729.7g für $l_3 und l_4$\\
+$l_3 = 34.9cm$\\
+$l_4 = 47.9cm$\\
+\\
+Genauigkeit bei der Messung von Gewicht ist mit ($\pm 0.1g$) von der Waage und mit ($\pm 1mm$) bei dem Maßband vorgegeben.\\
+\\
+Messwerte $T_x$ für Messungen x $\in\{1,2,3,4\}$:\\
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={T1,T2,T3,T4},
+			col sep=tab,
+			columns/T1/.style={column name=$T_1$},
+			columns/T2/.style={column name=$T_2$},
+			columns/T3/.style={column name=$T_3$},
+			columns/T4/.style={column name=$T_4$},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								column type/.add={}{|}
+								}
+			]{./data/torsionspendel.dat}
+	\caption{Messwerte Torsionspendel, 0...keine Messung}
+	\label{fig:torsion_mw}
+\end{figure}
 
 \section{Pendel}
 
 Messen der Trägheit
 
+
+\subsection{Messdaten und Ergebnisse}
+
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.45]{./figure/speichenrad.png}
+	\caption{Speichenrad mit Zylindermasse}
+	\label{fig:rad}
+\end{figure}
+
+\end{multicols}
 \end{document}

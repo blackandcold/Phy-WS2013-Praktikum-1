@@ -1981,7 +1981,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph2	1	1	28.10.13 19:34
-geometry	758	102	509	461	hidden
+geometry	758	102	509	461	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -2046,7 +2046,7 @@ EnabledTickLabels	1	1	1	1
 <bottom>50.8695652173913</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
-<visible>0</visible>
+<visible>1</visible>
 <Text>
 \l(1)%(1)
 </Text>

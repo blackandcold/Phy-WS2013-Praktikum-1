@@ -1,0 +1,75 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	1
+<table>
+Table1	30	2	28.10.13 21:24
+geometry	0	0	769	459	active
+header	Schwingungsdauer T [s][Y]	Auslenkwinkel Phi [Grad][X]
+ColWidth	199	206	
+<com>
+</com>
+ColType	0;0/13	0;0/13
+ReadOnlyColumn	0	0
+HiddenColumn	0	0
+Comments			
+WindowLabel		2
+<data>
+0	1.8556	100
+1	1.7782	90
+2	1.7231	80
+3	1.6565	70
+4	1.6178	60
+5	1.5737	50
+6	1.5448	40
+7	1.5167	30
+8	1.4997	20
+9	1.4901	10
+</data>
+</table>
+<open>1</open>
+<log>
+[28.10.13 20:40	Plot: ''Graph2'']
+Linear Regression of dataset: Fahrradpendel_Braun_Kurz_Schwingungsdauer T [s], using function: A*x+B
+Weighting Method: No weighting
+From x = 1,0000000000000e+02 to x = 1,0000000000000e+01
+B (y-intercept) = 1,4040038166667e+00 +/- 2,1583706743270e-02
+A (slope) = 4,0303792424242e-03 +/- 3,4785293085032e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,9826370738457e-04
+R^2 = 0,9437592974708
+Adjusted R^2 = 0,9276905253197
+RMSE (Root Mean Squared Error) = 0,03159531147788
+RSS (Residual Sum of Squares) = 0,007986109659077
+---------------------------------------------------------------------------------------
+
+[28.10.13 20:58	Plot: ''Graph2'']
+Linear Regression of dataset: Fahrradpendel_Braun_Kurz_Schwingungsdauer T [s], using function: A*x
+Weighting Method: No weighting
+From x = 1,0000000000000e+02 to x = 1,0000000000000e+01
+A (slope) = 2,4087576623377e-02 +/- 3,4948089150988e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,7022704009257e-01
+R^2 = -28,8033838637
+Adjusted R^2 = -32,52880684667
+RMSE (Root Mean Squared Error) = 0,6857310260536
+RSS (Residual Sum of Squares) = 4,232043360833
+---------------------------------------------------------------------------------------
+
+
+[28.10.13 21:29	Plot: ''Graph1'']
+Polynomial Fit of dataset: Table1_1, using function: a0+a1*x+a2*x^2+a3*x^3+a4*x^4
+Weighting Method: No weighting
+From x = 1,00000e+02 to x = 1,00000e+01
+a0 = 1,48919e+00 +/- 1,40313e-02
+a1 = -4,04505e-04 +/- 1,58148e-03
+a2 = 5,05721e-05 +/- 5,47731e-05
+a3 = -2,20484e-07 +/- 7,31916e-07
+a4 = 1,21066e-09 +/- 3,30871e-09
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,80346e-05
+R^2 = 0,99936
+Adjusted R^2 = 0,99857
+RMSE (Root Mean Squared Error) = 0,0042467
+RSS (Residual Sum of Squares) = 9,0173e-05
+---------------------------------------------------------------------------------------
+</log>

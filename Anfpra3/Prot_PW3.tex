@@ -126,7 +126,40 @@ Den tatsächlichen Versuchsaufbauten entsprechend, ist dieses Protokoll in 3 Tei
 - Trägheitsmoment eines Pendels mit Zusatzmasse
 
 \section{Elastizität}
-
+%[28.10.13 23:02	Plot: ''Graph2'']
+%Non-linear Fit of dataset: ZugversuchBraun_Kurz2_MPa, using function: A*x+B
+%Weighting Method: No weighting
+%Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+%From x = 3,00909e-03 to x = 3,99240e-03
+%A = 1,37145e+04 +/- 2,20642e+02
+%B = -3,11220e+01 +/- 7,75029e-01
+%--------------------------------------------------------------------------------------
+%Chi^2/doF = 2,43344e-01
+%R^2 = 0,98521
+%Adjusted R^2 = 0,98469
+%RMSE (Root Mean Squared Error) = 0,4933
+%RSS (Residual Sum of Squares) = 14,114
+%---------------------------------------------------------------------------------------
+%Iterations = 2
+%Status = success
+%---------------------------------------------------------------------------------------
+%[28.10.13 23:05	Plot: ''Graph2'']
+%Non-linear Fit of dataset: ZugversuchBraun_Kurz2_MPa, using function: A*x+B
+%Weighting Method: No weighting
+%Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001
+%From x = 1,44091e-02 to x = 1,49924e-02
+%A = 5,53887e+04 +/- 4,72901e+02
+%B = -7,92930e+02 +/- 6,95247e+00
+%--------------------------------------------------------------------------------------
+%Chi^2/doF = 2,41274e-01
+%R^2 = 0,99753
+%Adjusted R^2 = 0,99738
+%RMSE (Root Mean Squared Error) = 0,4912
+%RSS (Residual Sum of Squares) = 8,2033
+%---------------------------------------------------------------------------------------
+%Iterations = 5
+%Status = success
+%---------------------------------------------------------------------------------------
 
 %Speed: 0.05mm/s. A; 50mm/min. B\\
 %Calibration 24kg ~ 40.0mV\\
@@ -205,7 +238,20 @@ die Standardabw. des Mittelwerts ist trotz Student-t-Korrektur kleiner als die A
 
 Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich aus der Ungenauigkeit des Messinstruments.\\
 
+Erste Steigung (A*x+B):\\
+A = 1,37145e+04 +/- 2,20642e+02\\
+B = -3,11220e+01 +/- 7,75029e-01\\
+Zweite Steigung:\\
+A = 5,53887e+04 +/- 4,72901e+02\\
+B = -7,92930e+02 +/- 6,95247e+00\\
+Da der erste Wert deutlich niedriger ist, scheint die Probe verbogen gewesen zu sein und wir verwenden nur die zweite Steigung. $$55388 N/mm^2$$ ist noch weit entfernt vom Literaturwert $70000 N/mm^2$. Die Differenz könnte sich aus dem Abrutschenden des Drahtes aus der Halterung ergeben. Diese war bereits ausgebrochen und spröde.\\
 
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.4]{./figure/druck_dehnung_linreg.png}
+	\caption{Druck-Dehnungs Diagramm mit Fitting}
+	\label{fig:draht_druck_dehnung_linreg.png}
+\end{figure}
 
 \section{Torsionspendel}
 In diesem Teil von PW3 soll nun der Torsionsmodul G von Aluminium bestimmt werden. Aus diesem und dem in Kapitel 2 ermittelten Elastizitätsmodul E kann schließlich die Poissonzahl $\nu $ berechnet werden.\\

@@ -133,6 +133,16 @@ Den tatsächlichen Versuchsaufbauten entsprechend, ist dieses Protokoll in 3 Tei
 
 \section{Elastizität}
 
+Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001\\
+From x = 3,0108722000000e+01 to x = 4,9908854000000e+01\\
+A = 9,6818262123320e-03 +/- 1,2866119481322e-04\\
+B = -2,7619963927231e-01 +/- 5,2008879239489e-03\\
+\\
+$Chi^2/doF$ = 5,5172355389895e-05\\
+$R^2$ = 0,9829880187942\\
+Adjusted $R^2$ = 0,9826372562951\\
+RMSE (Root Mean Squared Error) = 0,007427809595695\\
+RSS (Residual Sum of Squares) = 0,00540689082821\\
 
 %Speed: 0.05mm/s. A; 50mm/min. B\\
 %Calibration 24kg ~ 40.0mV\\
@@ -154,12 +164,12 @@ Equipment:\\
 	\item Eichgewichte
 	\item Zwei Messinglehren; (100 $\pm$ 0.1) mm
 \end{itemize}
-Der Aluminiumdraht wird in den Lastrahmen der Zugmaschine eingespannt (Abbildung \ref{fig:elastizität}). Der Abstand zwischen den beiden Klemmen beträgt (100 $\pm$ 0.1) mm. Er wird mit Hilfe der beiden Messinglehren erreicht.\\
-\begin{figure}[h]
+Der Aluminiumdraht wird in den Lastrahmen der Zugmaschine eingespannt (Abbildung \ref{fig:elastizitaet}). Der Abstand zwischen den beiden Klemmen beträgt (100 $\pm$ 0.1) mm. Er wird mit Hilfe der beiden Messinglehren erreicht.\\
+\begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.45]{./figure/speichenrad.png}
+	\includegraphics[scale=0.4]{./figure/placeholder.png}
 	\caption{Skizze Versuchsaufbau}
-	\label{fig:elastizität}
+	\label{fig:elastizitaet}
 \end{figure}
 Die untere Klemme sitzt auf einem beweglichen Rahmen, der nach Beginn des Versuches mit 0.5 mm/min nach unten fährt. Dabei sendet die Kraftmesszelle im oberen Teil der Zugmaschine eine Spannung, proportional zur Kraft, die auf den Draht wirkt, an die Verstärkereinheit und über einen A/D-Wandler in den PC zur Aufzeichnung.\\
 Das Signal wird in $[V]$ aufgezeichnet.\\
@@ -214,6 +224,14 @@ Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich
 
 \section{Torsionspendel}
 In diesem Teil von PW3 soll nun der Torsionsmodul G von Aluminium bestimmt werden. Aus diesem und dem in Kapitel 2 ermittelten Elastizitätsmodul E kann schließlich die Poissonzahl $\nu $ berechnet werden.\\
+
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.4]{./figure/placeholder.png}
+	\caption{Torsionspendel mit Massen}
+	\label{fig:torsion}
+\end{figure}
+
 \subsection{Versuchsaufbau und \\-durchführung}
 Equipment:\\
 Ein Torsionspendel, bestehend aus einer Querstange, montiert an einem Aluminiumdraht\\

@@ -146,16 +146,21 @@ Bei höheren Spannungen bleibt eine gewisse Verformung zurück, auch wenn keine 
 
 \subsection{Versuchsaufbau und \\-durchführung}
 Equipment:\\
-Eine Zugmaschine mit Verstärker (Fa. INSTRON)\\
-Ein Voltmeter FLUKE 175\\
-Ein Aluminiumdraht\\
-Eine Mikrometerschraube\\
-Eichgewichte\\
-Zwei Messinglehren; (100 $\pm$ 0.1) mm\\
-\\
-\\
-Der Aluminiumdraht wird in den Lastrahmen der Zugmaschine eingespannt (Abb. 2.1). Der Abstand zwischen den beiden Klemmen beträgt (100 $\pm$ 0.1) mm. Er wird mit Hilfe der beiden Messinglehren erreicht.\\
-% !!! fig 2.1 Skizze des Versuchs einfügen %%%%%%%%%%%%%
+\begin{itemize}
+	\item Eine Zugmaschine mit Verstärker (Fa. INSTRON)
+	\item Ein Voltmeter FLUKE 175
+	\item Ein Aluminiumdraht
+	\item Eine Mikrometerschraube
+	\item Eichgewichte
+	\item Zwei Messinglehren; (100 $\pm$ 0.1) mm
+\end{itemize}
+Der Aluminiumdraht wird in den Lastrahmen der Zugmaschine eingespannt (Abbildung \ref{fig:elastizität}). Der Abstand zwischen den beiden Klemmen beträgt (100 $\pm$ 0.1) mm. Er wird mit Hilfe der beiden Messinglehren erreicht.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{./figure/speichenrad.png}
+	\caption{Skizze Versuchsaufbau}
+	\label{fig:elastizität}
+\end{figure}
 Die untere Klemme sitzt auf einem beweglichen Rahmen, der nach Beginn des Versuches mit 0.5 mm/min nach unten fährt. Dabei sendet die Kraftmesszelle im oberen Teil der Zugmaschine eine Spannung, proportional zur Kraft, die auf den Draht wirkt, an die Verstärkereinheit und über einen A/D-Wandler in den PC zur Aufzeichnung.\\
 Das Signal wird in $[V]$ aufgezeichnet.\\
 Daher muss die Datenausgabe vor Versuchsbeginn kalibriert werden:\\
@@ -172,20 +177,26 @@ in die Dehnung $\epsilon$ konvertiert, wobei die Geschwindigkeit des Zugrahmens\
 Die so gewonnenen Daten werden in einem Diagramm Spannung gegen Dehnung aufgetragen.\\
 Es wird ein linearer Anstieg im Elastizitätsbereich erwartet, dessen Steigung im linearen Fit direkt den E-Modul ergibt.\\
 
+\begin{figure}[H]
+\begin{tikzpicture}
+    \pgfplotsset{width=7.4cm,
+	}
+    \begin{axis}[
+    	xlabel={t(s)},
+    	ylabel={mV}]
+	\addplot [no marks,red]file{./data/ZugversuchBraun_Kurz2_edited.lvm};
+    \end{axis}
+
+    \end{tikzpicture}
+    	\caption{Plot wie von der Messung}
+	\label{fig:orig_Vs_plot}
+\end{figure}
 
 
 \subsection{Messdaten und Ergebnisse}
 Messung Durchmesser Aluminiumdraht:\\
-1.99
-1.99
-1.98
-1.99
-1.99
-
+(1.99, 1.99, 1.98, 1.99, 1.99)\\
 Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich aus der Ungenauigkeit des Messinstruments.\\
-
-
-
 
 \section{Torsionspendel}
 

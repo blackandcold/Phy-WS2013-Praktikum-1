@@ -1,0 +1,144 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+Fahrradpendel_Braun_Kurz	10	4	28.10.13 20:34
+geometry	11	-1	752	588	
+header	Schwingungsdauer T [s][Y]	Auslenkwinkel Phi [Grad][X]	xError[xEr]	yError[yEr]
+ColWidth	200	207	100	100	
+<com>
+<col nr="3">
+col("Schwingungsdauer T [s]")
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel	/Users/blackandcold/Code/UNI/Phy_ws2013_praktikum/Anfpra3/data/Fahrradpendel_Braun_Kurz.txt	2
+<data>
+0	1.8556665	100	5	1.8556665
+1	1.778218	90	5	1.778218
+2	1.723165	80	5	1.723165
+3	1.656548	70	5	1.656548
+4	1.6178835	60	5	1.6178835
+5	1.57376475	50	5	1.57376475
+6	1.5448545	40	5	1.5448545
+7	1.5167355	30	5	1.5167355
+8	1.49972675	20	5	1.49972675
+9	1.49018425	10	5	1.49018425
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	28.10.13 21:07
+geometry	763	0	513	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	501	403
+PlotTitle	Title	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	%(?X)	%(?Y)			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Lucida Grande	15	75	0	0	0
+ScaleFont0	Lucida Grande	13	75	0	0	0
+ScaleFont1	Lucida Grande	13	75	0	0	0
+ScaleFont2	Lucida Grande	13	75	0	0	0
+ScaleFont3	Lucida Grande	13	75	0	0	0
+AxisFont0	Lucida Grande	13	50	0	0	0
+AxisFont1	Lucida Grande	13	50	0	0	0
+AxisFont2	Lucida Grande	13	50	0	0	0
+AxisFont3	Lucida Grande	13	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Fahrradpendel_Braun_Kurz_Auslenkwinkel Phi [Grad]	Fahrradpendel_Braun_Kurz_Schwingungsdauer T [s]	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	9	1
+scale	0	1.45	1.9	0	8	5	0	0
+scale	1	1.45	1.9	0	8	5	0	0
+scale	2	0	120	0	8	5	0	0
+scale	3	0	120	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>3.0075187969925</x>
+<y>1.8849498327759</y>
+<right>32.781954887218</right>
+<bottom>1.84130434782609</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+</Text>
+<Font>Lucida Grande	13	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[28.10.13 20:40	Plot: ''Graph2'']
+Linear Regression of dataset: Fahrradpendel_Braun_Kurz_Schwingungsdauer T [s], using function: A*x+B
+Weighting Method: No weighting
+From x = 1,0000000000000e+02 to x = 1,0000000000000e+01
+B (y-intercept) = 1,4040038166667e+00 +/- 2,1583706743270e-02
+A (slope) = 4,0303792424242e-03 +/- 3,4785293085032e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,9826370738457e-04
+R^2 = 0,9437592974708
+Adjusted R^2 = 0,9276905253197
+RMSE (Root Mean Squared Error) = 0,03159531147788
+RSS (Residual Sum of Squares) = 0,007986109659077
+---------------------------------------------------------------------------------------
+
+[28.10.13 20:58	Plot: ''Graph2'']
+Linear Regression of dataset: Fahrradpendel_Braun_Kurz_Schwingungsdauer T [s], using function: A*x
+Weighting Method: No weighting
+From x = 1,0000000000000e+02 to x = 1,0000000000000e+01
+A (slope) = 2,4087576623377e-02 +/- 3,4948089150988e-03
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,7022704009257e-01
+R^2 = -28,8033838637
+Adjusted R^2 = -32,52880684667
+RMSE (Root Mean Squared Error) = 0,6857310260536
+RSS (Residual Sum of Squares) = 4,232043360833
+---------------------------------------------------------------------------------------
+
+</log>

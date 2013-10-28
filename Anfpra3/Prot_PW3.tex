@@ -133,16 +133,6 @@ Den tatsächlichen Versuchsaufbauten entsprechend, ist dieses Protokoll in 3 Tei
 
 \section{Elastizität}
 
-Scaled Levenberg-Marquardt algorithm with tolerance = 0,0001\\
-From x = 3,0108722000000e+01 to x = 4,9908854000000e+01\\
-A = 9,6818262123320e-03 +/- 1,2866119481322e-04\\
-B = -2,7619963927231e-01 +/- 5,2008879239489e-03\\
-\\
-$Chi^2/doF$ = 5,5172355389895e-05\\
-$R^2$ = 0,9829880187942\\
-Adjusted $R^2$ = 0,9826372562951\\
-RMSE (Root Mean Squared Error) = 0,007427809595695\\
-RSS (Residual Sum of Squares) = 0,00540689082821\\
 
 %Speed: 0.05mm/s. A; 50mm/min. B\\
 %Calibration 24kg ~ 40.0mV\\
@@ -184,7 +174,7 @@ $ \epsilon = \frac{v*t}{L_{0}} $\\
 in die Dehnung $\epsilon$ konvertiert, wobei die Geschwindigkeit des Zugrahmens\\
  $v = 0.5 mm/min$ und die Ausgangslänge $ L_{0} = (100 \pm 0.1) mm $.\\
 \\
-Die so gewonnenen Daten werden in einem Diagramm Spannung gegen Dehnung aufgetragen.\\
+Die so gewonnenen Daten werden in einem Diagramm Spannung gegen Dehnung aufgetragen \ref{fig:orig_Vs_plot}.\\
 Es wird ein linearer Anstieg im Elastizitätsbereich erwartet, dessen Steigung im linearen Fit direkt den E-Modul ergibt.\\
 
 \begin{figure}[H]
@@ -198,11 +188,12 @@ Es wird ein linearer Anstieg im Elastizitätsbereich erwartet, dessen Steigung i
     \end{axis}
 
     \end{tikzpicture}
-    	\caption{Plot wie von der Messung}
+    	\caption{Plot der Rohdaten aus der Messung}
 	\label{fig:orig_Vs_plot}
 \end{figure}
 
 %"Für eine genauere Anleitung zur Versuchdurchführung siehe www....anfpra/pw3 %%%% ????
+%\ref{fig:orig_Vs_plot}
 
 \subsection{Messdaten und Ergebnisse}
 Dicke des Aluminium-Drahtes [mm]:\\
@@ -299,7 +290,7 @@ Messwerte $T_x$ für Messungen x $\in\{1,2,3,4\}$:\\
 In diesem Versuch soll das gesamte , sowie die einzelnen Teilträgheitsmomente eines physikalischen Pendels, bestehend aus einem Rad und einem daran montierten Zylinder, ermittelt werden.\\
 Dazu wird der Steiner'sche Satz benutzt, der die Trägheitsmomente mehrerer Objekte mit parallelen 
 
-Messen der Trägheit
+\subsection{Versuchsaufbau und \\-durchführung}
 
 
 \subsection{Messdaten und Ergebnisse}

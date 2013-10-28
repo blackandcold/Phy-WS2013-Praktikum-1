@@ -286,14 +286,25 @@ Messwerte $T_x$ für Messungen x $\in\{1,2,3,4\}$:\\
 	\label{fig:torsion_mw}
 \end{figure}
 
+
+
+%%%% FAHRRADPENDEL %%%%%
+
+
 \section{Pendel}
 In diesem Versuch soll das gesamte , sowie die einzelnen Teilträgheitsmomente eines physikalischen Pendels, bestehend aus einem Rad und einem daran montierten Zylinder, ermittelt werden.\\
-Dazu wird der Steiner'sche Satz benutzt, der die Trägheitsmomente mehrerer Objekte mit parallelen 
+Dazu wird der Steiner'sche Satz benutzt, der das Trägheitsmoment eines Körpers für seine Drehung um den Schwerpunkt mit dem Trägheitsmoment J um eine parallele Achse verbindet (Abstand d zwischen den Achsen).\\
+$$ J = J_{S} + m_{ges}d^2 $$
 
 \subsection{Versuchsaufbau und \\-durchführung}
 
-
-\subsection{Messdaten und Ergebnisse}
+\begin{itemize}
+	\item Ein Rad mit Aufhängung
+	\item Ein Metallzylinder
+	\item Ein Maßband (Auflösung $1 mm$)
+	\item Eine Schiebelehre (Aufl. $0.05mm$)
+	\item CASSY - Sensorsystem
+\end{itemize}
 
 \begin{figure}[H]
 	\centering
@@ -301,6 +312,29 @@ Dazu wird der Steiner'sche Satz benutzt, der die Trägheitsmomente mehrerer Obje
 	\caption{Speichenrad mit Zylindermasse}
 	\label{fig:rad}
 \end{figure}
+
+Das hier untersuchte Pendel besteht aus einem Speichenrad, durch dessen Mittelpunkt die Drehachse geht, und einem an der Außenseite befestigten Metallzylinder \ref{fig:rad}.\\
+Das gesamte Trägheitsmoment des Systems ist die Summe der einzelnen, von Rad und Zylinder. Da das Trägheitsmoment des Rades aufgrund seiner inhomogenen Masseverteilung und Form jedoch mathematisch nicht zu erhalten ist, errechnet man aus der Periodendauer der Schwingung im Grenzfall des Auslenkwinkels $\varphi_{0} \rightarrow 0$ das gesamte Trägheitmoment und erhält so gemeinsam mit dem des Zylinders schließlich auch das des Rades:\\
+
+$$ J = J_{Z} + J_{Rad} = D*(\frac{T_{0}}{2\pi})^2$$
+
+Die Winkelrichtgröße D:\\
+
+$$D=m_{z}*g*l_{AS}$$\\
+
+Das Trägheitsmoment des Zylinders:\\
+
+$$J_{Z}=m_{Z}(\frac{1}{4}r_{Z}^2 + \frac{1}{12}h_{Z}^2+l_{AS}^2)$$
+
+, wobei $l_{AS}$ der Abstand zwischen Drehachse und Schwerpunkt ist.\\
+Die Periodendauer $T_{0}$ erhält man, indem die Periodendauern verschiedener Auslenkwinkel $\varphi$ gemessen werden und aus den Einzelwerten mittels Polynom-Fit auf die Schwingungsdauer $T(\varphi_{0})$ extrapoliert werden kann.\\
+Dazu wird in Abständen von $10^{\circ}$, beginnend mit $100^{\circ}$, die Schwingungsdauer computergestützt mit einem Sensor-CASSY gemessen.
+
+
+
+
+\subsection{Messdaten und Ergebnisse}
+
 
 \end{multicols}
 \end{document}

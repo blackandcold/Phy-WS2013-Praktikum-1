@@ -126,8 +126,6 @@ Den tatsächlichen Versuchsaufbauten entsprechend, ist dieses Protokoll in 3 Tei
 - Trägheitsmoment eines Pendels mit Zusatzmasse
 
 \section{Elastizität}
-
-
 %Speed: 0.05mm/s. A; 50mm/min. B\\
 %Calibration 24kg ~ 40.0mV\\
 %Das Voltmeter am Verstärker pendelt um $(9.98 \pm 0.01)mV$ ohne Gewicht und mit 2kg Last bei $(40 \pm 0.1)mV$. Die Unsicherheit ergibt sich aus den Schwankungen die von den alten Röhren hervorgerufen werden welche im Verstärker verbaut sind.
@@ -151,7 +149,7 @@ Equipment:\\
 Der Aluminiumdraht wird in den Lastrahmen der Zugmaschine eingespannt (Abbildung \ref{fig:elastizitaet}). Der Abstand zwischen den beiden Klemmen beträgt (100 $\pm$ 0.1) mm. Er wird mit Hilfe der beiden Messinglehren erreicht.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{./figure/placeholder.png}
+	\includegraphics[scale=0.23]{./figure/zugversuch_aufbau.png}
 	\caption{Skizze Versuchsaufbau}
 	\label{fig:elastizitaet}
 \end{figure}
@@ -203,31 +201,51 @@ die Standardabw. des Mittelwerts ist trotz Student-t-Korrektur kleiner als die A
 
 %Voltmeter am Verstärker pendelt zwischen 9.98mV ohne Gewicht. Mit 2kg Last bei $(40 \pm 0.1)$mV. 
 
-Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich aus der Ungenauigkeit des Messinstruments.\\
+\section{Diskussion}
+Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich aus der Ungenauigkeit des Messinstruments.
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.25]{./figure/zugversuch_fail.jpg}
+	\caption{Korrekte einspannung der Probe und Fehlversuch}
+	\label{fig:draht_fehlversuch}
+\end{figure}
+Die folgenden Werte wurden direkt von QTi-Plot errechnet durch die linearen Regressionen welche als rote Linien in Abbildung \ref{fig:draht_druck_dehnung_linreg} zu sehen sind.\\
+Erste Steigung:\\
+A = 1,37145e+04 +/- 2,20642e+02\\
+B = -3,11220e+01 +/- 7,75029e-01\\
+Zweite Steigung:\\
+A = 5,53887e+04 +/- 4,72901e+02\\
+B = -7,92930e+02 +/- 6,95247e+00\\
+Da der erste Wert mit ($13715 \pm 221$)N/$mm^2$ deutlich niedriger ist, scheint die Probe verbogen gewesen zu sein und wir verwenden nur die zweite Steigung. $$(55388 \pm 473)N/mm^2$$ ist noch weit entfernt vom Literaturwert $70000 N/mm^2$. Die Differenz könnte sich aus dem Abrutschenden des Drahtes aus der Halterung ergeben. Diese war bereits ausgebrochen und spröde. Der Versuch musste wiederholt werden, da beim ersten Versuch bereits die Probe durch Fehlbedienung verformt wurde (Ergebnisse nicht berücksichtigt siehe Probe Abbildung \ref{fig:draht_fehlversuch}).\\
 
-
+\begin{figure}[H]
+	\centering
+  	\includegraphics[scale=0.4]{./figure/druck_dehnung_linreg.png}
+	\caption{Druck-Dehnungs Diagramm mit Fitting}
+	\label{fig:draht_druck_dehnung_linreg}
+\end{figure}
 
 \section{Torsionspendel}
 In diesem Teil von PW3 soll nun der Torsionsmodul G von Aluminium bestimmt werden. Aus diesem und dem in Kapitel 2 ermittelten Elastizitätsmodul E kann schließlich die Poissonzahl $\nu $ berechnet werden.\\
 
 \begin{figure}[H]
 	\centering
-  	\includegraphics[scale=0.4]{./figure/placeholder.png}
+  	\includegraphics[scale=0.25]{./figure/torsionspendel_aufbau.png}
 	\caption{Torsionspendel mit Massen}
 	\label{fig:torsion}
 \end{figure}
 
 \subsection{Versuchsaufbau und \\-durchführung}
-Equipment:\\
-Ein Torsionspendel, bestehend aus einer Querstange, montiert an einem Aluminiumdraht\\
-Ein Satz Gewichte (je 2 gleiche)\\
-Eine Mikrometerschraube\\
-Ein Maßband\\
-Eine Stoppuhr\\
-Eine Waage\\
+Equipment:
+\begin{itemize}
+	\item Ein Torsionspendel, bestehend aus einer Querstange, montiert an einem Aluminiumdraht
+	\item Ein Satz Gewichte (je 2 gleiche)
+	\item Eine Mikrometerschraube
+	\item Ein Maßband
+	\item Eine Stoppuhr
+	\item Eine Waage
+\end{itemize}
 % !!!! bitte markennahmen, evtl auflösung/genauigkeit einfügen
-\\
-\\
 Das Pendel wird aufgebaut, wie in Abb. 3.1.\\
 % !!!!!! skizze 3.1 einfügen... zeichnung - torsionspendel
 2 gleiche Massen werden in gleichem Abstand l von der Mitte befestigt. Anschließend wird das Pendel derartig in Bewegung versetzt, dass die Querstange in der Ebene um ihre Ruhelage, also normal zum Aluminiumdraht, oszilliert. Der Draht erfährt also eine Scherung.\\

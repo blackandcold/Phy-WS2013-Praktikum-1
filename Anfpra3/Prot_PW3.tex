@@ -199,6 +199,14 @@ $(1,98\pm 0.01)$mm\\
 1.99
 1.98\\
 die Standardabw. des Mittelwerts ist trotz Student-t-Korrektur kleiner als die Auflösung des Messgerätes)\\
+\\
+Die folgenden Werte wurden direkt von QTi-Plot errechnet, und sinnvoll gerundet, durch die linearen Regressionen welche als rote Linien in Abbildung \ref{fig:draht_druck_dehnung_linreg} zu sehen sind.\\
+Erste Steigung:\\
+A = (13710 $\pm$ 230)N/$mm^2$\\
+B = (-31.13 $\pm$ 0.78)N/$mm^2$\\
+Zweite Steigung:\\
+A = (55390 $\pm$ 480)N/$mm^2$\\
+B = (-792.9$\pm$ 7.0) N/$mm^2$\\
 
 %Voltmeter am Verstärker pendelt zwischen 9.98mV ohne Gewicht. Mit 2kg Last bei $(40 \pm 0.1)$mV. 
 
@@ -207,18 +215,16 @@ Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich
 \begin{figure}[H]
 	\centering
   	\includegraphics[scale=0.25]{./figure/zugversuch_fail.jpg}
-	\caption{Korrekte einspannung der Probe und Fehlversuch}
+	\caption{Korrekte Einspannung der Probe und Fehlversuch}
 	\label{fig:draht_fehlversuch}
 \end{figure}
 \noindent
-Die folgenden Werte wurden direkt von QTi-Plot errechnet durch die linearen Regressionen welche als rote Linien in Abbildung \ref{fig:draht_druck_dehnung_linreg} zu sehen sind.\\
-Erste Steigung:\\
-A = 1,37145e+04 +/- 2,20642e+02\\
-B = -3,11220e+01 +/- 7,75029e-01\\
-Zweite Steigung:\\
-A = 5,53887e+04 +/- 4,72901e+02\\
-B = -7,92930e+02 +/- 6,95247e+00\\
-Da der erste Wert mit ($13715 \pm 221$)N/$mm^2$ deutlich niedriger ist, scheint die Probe verbogen gewesen zu sein und wir verwenden nur die zweite Steigung. $$(55388 \pm 473)N/mm^2$$ ist noch weit entfernt vom Literaturwert $70000 N/mm^2$. Die Differenz könnte sich aus dem Abrutschenden des Drahtes aus der Halterung ergeben. Diese war bereits ausgebrochen und spröde. Der Versuch musste wiederholt werden, da beim ersten Versuch bereits die Probe durch Fehlbedienung verformt wurde (Ergebnisse nicht berücksichtigt siehe Probe Abbildung \ref{fig:draht_fehlversuch}).\\
+Da der erste Wert für $E_{Al}$ mit ($13710 \pm 230$)N/$mm^2$ deutlich niedriger ist, als der zweite, scheint die Probe verbogen gewesen zu sein und wir verwenden nur die zweite Steigung: 
+$$E_{Al}=(55390 \pm 480)N/mm^2$$ 
+ist noch weit entfernt vom Literaturwert $70000 N/mm^2$. Die Differenz könnte sich aus dem Abrutschenden des Drahtes aus der Halterung ergeben. Diese war möglicherweise bereits ausgebrochen und spröde. \\
+Die Art der Einspannung, in der der zu untersuchende Draht sehr fest eingeklemmt werden muss, um nicht zu verrutschen, erzeugt auch eine Verformung, die das Messergebnis beeinflusst. Da relativ große Kräfte auf das Aluminium wirken, die jedoch im Idealfall nur auf eine Achse wirken sollten, ist die Genauigkeit dieser Methode, zumindest bei einem so dünnen Draht, nicht besonders hoch.\\
+Das Experiment musste wiederholt werden, da beim ersten Versuch bereits die Probe durch Fehlbedienung, aufgrund der eben großen Kräfte sofort, verformt wurde (Ergebnisse wurden nicht berücksichtigt, siehe Probe Abbildung \ref{fig:draht_fehlversuch}).\\
+Der erwartete Verlauf der Spannungs-Dehnungskurve ist dennoch, trotz der Ungenauigkeit, in \ref{fig:draht_druck_dehnung_linreg} gut zu erkennen.
 
 \begin{figure}[H]
 	\centering
@@ -248,7 +254,7 @@ Equipment:
 	\item Eine Waage
 \end{itemize}
 % !!!! bitte markennahmen, evtl auflösung/genauigkeit einfügen
-Das Pendel wird aufgebaut, wie in Abb. 3.1.\\
+Das Pendel wird aufgebaut, wie in \ref{fig:torsion}.\\
 % !!!!!! skizze 3.1 einfügen... zeichnung - torsionspendel
 2 gleiche Massen werden in gleichem Abstand l von der Mitte befestigt. Anschließend wird das Pendel derartig in Bewegung versetzt, dass die Querstange in der Ebene um ihre Ruhelage, also normal zum Aluminiumdraht, oszilliert. Der Draht erfährt also eine Scherung.\\
 Es ist darauf zu achten, dass die Bewegung möglichst gleichmäßig und rund läuft. Eine nahezu saubere Torsion des Drahtes, ohne Verzerrungen, ist in dieser Art der Durchführung (von Hand) kaum möglich, einige Übungsläufe vor der ersten Messung können jedoch eindeutige Verbesserungen der Schwingung erwirken.\\
@@ -327,9 +333,13 @@ Die 2. Messreihe unterscheidet sich auch durch die Wahl der Massen und der ihrer
 Diese wurden alle deutlich größer gewählt, als ihre Pendants in der ersten Messreihe. Das führt zu deutlich langsameren Periodendauern, die sowohl einfacher zu messen sind, als auch das System ruhiger schwingen lassen.\\
 Der Aufbau und die verwendeten Verhältnisse haben in diesem Experiment eine ebenmäßige Schwingung des Pendels fast unmöglich gemacht (Anregung per Hand). Auch das war in der 2. Messreihe näher am Ideal.\\
 \\
+\textbf{Poissonzahl $\nu_{Al}$}\\
 Zuletzt soll noch aus dem Elastizitätsmodul $E_{Al}$ für Aluminium aus \ref{Elastizität} und dem ermittelten Schubmodul $G_{Al}$ die Poissonzahl errechnet werden:\\
+\\
+$\nu_{Al} = (0.090 \pm 0.049)$\\
+\\
+Die doch sehr große Abweichung vom Literaturwert ($\nu_{Al}=0.34$) erklärt sich einfach durch das eher ungenau Ergebnis für $E_{Al}$. Ersetzt man dieses durch seinen Literaturwert, stimmt auch die Poissonzahl (in den Grenzen der Unsicherheit) überein.
 
-$$\nu = $$
 
 %%%% FAHRRADPENDEL %%%%%
 
@@ -385,8 +395,28 @@ Dazu wird in Abständen von $10^{\circ}$, beginnend mit $100^{\circ}$, die Schwi
 
 \subsection{Messdaten und Ergebnisse}
 \begin{itemize}
-	\item Zylinder
+	\item Zylinder:\\
+	$m_{Z}= (938,5 \pm 0.1)g$\\
+	$h_{Z} = (107.60 \pm 0.02)mm$\\
+	$r_{Z}=(35.28 \pm 0.02)mm$\\
+	
+	\item Achsenabstand\\
+	$l_{AS}=(388\pm 1)mm$\\
+	
+	\item Periodendauer ($\varphi_{0}$)\\
+	$T_{0}= (1.490 \pm 0.001)s$\\
+	
 \end{itemize}
+
+
+$$J_{Z}= (0.142 \pm 0.001)kg*m^2$$
+$$J_{Ges}= (0.201\pm 0.053)kg*m^2$$
+$$J_{Rad}= (0.0585 \pm 0.052)kg*m^2$$
+
+
+\subsection{Diskussion}
+
+
 
 \section{Quellen}
 Formeln und Abbildung Fahrradpendel:\\

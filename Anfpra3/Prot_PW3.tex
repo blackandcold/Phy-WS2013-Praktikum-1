@@ -212,7 +212,7 @@ B = (-792.9$\pm$ 7.0) N/$mm^2$\\
 %Voltmeter am Verstärker pendelt zwischen 9.98mV ohne Gewicht. Mit 2kg Last bei $(40 \pm 0.1)$mV. 
 
 \section{Diskussion}
-Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich aus der Ungenauigkeit des Messinstruments.
+%Ergibt eine Dicke von \textbf{$(1.99 \pm 0.01)mm$}. Die Unsicherheit ergibt sich aus der Ungenauigkeit des Messinstruments.
 \begin{figure}[H]
 	\centering
   	\includegraphics[scale=0.25]{./figure/zugversuch_fail.jpg}
@@ -408,21 +408,28 @@ Dazu wird in Abständen von $10^{\circ}$, beginnend mit $100^{\circ}$, die Schwi
 	
 \end{itemize}
 
-
+\noindent
+Richtmoment: $$D = (3.5722 \pm 0.0093)Nm$$
+Trägheitsmomente:
 $$J_{Z}= (0.142 \pm 0.001)kg*m^2$$
 $$J_{Ges}= (0.201\pm 0.053)kg*m^2$$
-$$J_{Rad}= (0.0585 \pm 0.052)kg*m^2$$
+$$J_{Rad}= (0.059 \pm 0.052)kg*m^2$$
 
 
 \subsection{Diskussion}
 
+Die Höhe des Zylinders wurde aufgrund seiner unsymmetrischen Enden abgeschätzt: Die Annahme war, dass die Enden (die eben ungleich sind), ab Änderung des Radius, ungefähr gleich viel Masse haben, und sich daher im Trägheitsmoment gegenseitig aufheben.\\
+In der Gauss-Fehlerfortpflanzung zur Berechnung der Unsicherheiten der Trägheitmomente machen sich besonders der Achsenabstand $l_{AS}$ bemerkbar.\\
+Überraschenderweise ergibt der Polynom-Fit, aus dem $T_{0}$ hervorgeht eine Unsicherheit, die deutlich kleiner ist, als die Auflösung des CASSY-Sensors. Im Diagramm \ref{fig:rad_fit} ist gut zu sehen, dass trotz der großen Unsicherheit bezüglich des Auslenkwinkels, die gemessenen Werte gut an der Kurve liegen. Das liegt vermutlich daran, dass der Zusammenhang zwischen Schwingungsdauer und Auslenkwinkel in guter Näherung einem Polynom 4.Ordnung entspricht und Dämpfung und andere Einflüsse vernachlässigbar sind. Die Winkel, für die gemessen wird, dürften daher nur wenig Einfluss auf die Kurve insgesamt haben.\\
+Die Berechnung des Trägheitsmoments $J_{Z}$ des Zylinders ergibt sich aus Größen, die sehr genau (mit der Schublehre) messbar sind ($l_{AS}$ und $m_{Z}$ gehen ja auch in die anderen Berechnungen ein). Seine Unsicherheit aus der Fehlerfortpflanzung ist daher wesentlich kleiner, als die des Gesamtträgheitmomentes des Systems. Da diese beiden voneinander subtrahiert werden um $J_{Rad}$ zu erhalten, ist es sinnvoll auch $J_{Z}$ auf 3 Nachkommastellen zu runden, wodurch die Unsicherheit auf 1 Auflösungseinheit gerundet wird.
 
 
 \section{Quellen}
 Formeln und Abbildung Fahrradpendel:\\
 \url{http://www.univie.ac.at/anfpra/neu1/pw/pw3/PW3.pdf}\\
 \url{http://de.wikipedia.org/wiki/Schubmodul}\\
-\\
+\url{http://de.wikipedia.org/wiki/Poissonzahl}\\
+\url{http://en.wikipedia.org/wiki/Moment_of_inertia}\\
 
 \end{multicols}
 \end{document}

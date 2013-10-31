@@ -1,0 +1,265 @@
+% -*- TeX:de -*-
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[12pt,a4paper]{article}
+\usepackage[german]{babel} % german text
+\usepackage[DIV12]{typearea} % size of printable area
+\usepackage[T1]{fontenc} % font encoding
+%\usepackage[latin1]{inputenc} % most likely on Windows
+\usepackage[utf8]{inputenc} % probably on Linux
+\usepackage{multicol}
+
+% PLOTTING
+\usepackage{pgfplots} 
+\usepackage{pgfplotstable}
+\usepackage{url}
+\usepackage{graphicx} % to include images
+\usepackage{tikz}
+\usepackage{subfigure} % for creating subfigures
+\usepackage{amsmath} % a bunch of symbols
+\usepackage{amssymb} % even more symbols
+\usepackage{booktabs} % pretty tables
+
+% a floating environment for circuits
+\usepackage{float}
+\usepackage{caption}
+
+%\newfloat{circuit}{tbph}{circuits}
+%\floatname{circuit}{Schaltplan}
+
+% a floating environment for diagrams
+%\newfloat{diagram}{tbph}{diagrams}
+%\floatname{diagram}{Diagramm}
+
+\selectlanguage{german} % use german
+
+\begin{document}
+
+%%%%%%% DECKBLATT %%%%%%%
+\thispagestyle{empty}
+			\begin{center}
+			\Large{Fakultät für Physik}\\
+			\end{center}
+\begin{verbatim}
+
+
+\end{verbatim}
+							%Eintrag des Wintersemesters
+			\begin{center}
+			\textbf{\LARGE WS 2013/14}
+			\end{center}
+\begin{verbatim}
+
+
+\end{verbatim}
+			\begin{center}
+			\textbf{\LARGE{Physikalisches Praktikum\\ für das Bachelorstudium}}
+			\end{center}
+\begin{verbatim}
+
+
+
+
+\end{verbatim}
+
+			\begin{center}
+			\textbf{\LARGE{PROTOKOLL}}
+			\end{center}
+			
+\begin{verbatim}
+
+
+
+
+
+\end{verbatim}
+
+			\begin{flushleft}
+			\textbf{\Large{Experiment (Nr., Titel):}}\\
+							%Experiment Nr. und Titel statt den Punkten eintragen
+			\LARGE{PW4 Oberflächenspannung, Viskosität, Hygrometrie, Schmelzwärme}	
+			\end{flushleft}
+
+\begin{verbatim}
+
+\end{verbatim}	
+							%Eintragen des Abgabedatums, oder des Erstelldatums des Protokolls
+			\begin{flushleft}
+			\textbf{\Large{Datum:}} \Large{31.10.2013}
+			\end{flushleft}
+			
+\begin{verbatim}
+\end{verbatim}
+							%Namen der Protokollschreiber
+		\begin{flushleft}
+			\textbf{\Large{Namen:}} \Large{Patrick Braun, Johannes Kurz}
+			\end{flushleft}
+
+\begin{verbatim}
+
+
+\end{verbatim}
+							%Kurstag und Gruppennummer, zb. Fr/5
+			\begin{flushleft}
+			\textbf{\Large{Kurstag/Gruppe:}} \Large{DO/2}
+			\end{flushleft}
+
+\begin{verbatim}
+
+
+
+\end{verbatim}
+							%Name des Betreuers, das Praktikum betreute.
+			\begin{flushleft}
+			\LARGE{\textbf{Betreuer:}}	\Large{ Franz Sachslehner }	
+			\end{flushleft}
+
+%%%%%%% DECKBLATT ENDE %%%%%%%
+\pagebreak
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+\section{Einleitung}
+
+\section{Oberflächenspannung}
+
+\subsection{Versuchsaufbau und \\-durchführung}
+Bevor Messungen durchgeführt werden können muss die verwendete Waage geeicht werden. Dazu werden auf die Schale 0.1g schwere Metallstücke gelegt und die dazugehörigen Striche abgelesen. Dadurch kann die Kraft pro Strich errechnet werden. \\
+\\
+Destilliertes Wasser.\\
+Eichgewichter, Pinzette, Waage, Schale mit Wasser, Metallring\\
+\subsection{Messwerte und Ergebnisse}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.23]{./figure/zugversuch_aufbau.png}
+%	\caption{Skizze Versuchsaufbau}
+%	\label{fig:elastizitaet}
+%\end{figure}
+%\noindent
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={g,strich},
+			col sep=tab,
+			columns/T1/.style={column name=$T_1[s]$},
+			columns/T2/.style={column name=$T_2[s]$},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								column type/.add={}{|}
+								}
+			]{./data/oberflaechenspannung_eichung.dat}
+	\caption{Eichungsmessung der Waage}
+	\label{fig:oberflaeche_eichung}
+\end{figure}
+\noindent
+
+strich
+39
+38
+39
+39
+39
+39
+40
+%#Neues Wasser destiliert
+47
+46
+46
+46
+46
+
+%#35
+
+
+24.00mm +- 0.05mm\\
+23.15mm +- 0.05mm\\
+\\
+Erste:\\
+$23.5^{\circ}C$\\
+Zweite:\\
+$22.3^{\circ}C$\\
+\subsection{Diskussion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Viskosität}
+Rühre, Pinzette, Kugeln
+Thermometer Sumit DT150\\
+\subsection{Messwerte und Ergebnisse}
+Temp: $24^{\circ}C \pm 1^{\circ}C$\\
+Länge Innen-Innen: 13.42cm\\
+Dichte Flüssigkeit: $1225 \pm 5 kg/m^2$\\
+\\
+Messungen 1:\\
+$0.794 \pm 0.002mm$\\
+$16.1 \pm 0.1 mg$\\
+
+Fallzeiten:\\
+2.4s\\
+2.37s\\
+2.4s\\
+2.38\\
+2.41\\
+2.41\\
+2.31\\
+2.44\\
+2.47\\
+2.44\\
+2.47\\
+\\
+Messung 2:\\
+$6.6 \pm 0.1mg$\\
+$0.595 \pm 0.01mm$\\
+\\
+Fallzeiten:\\
+3.94\\
+3.97\\
+3.97\\
+4.13\\
+3.97\\
+3.97\\
+3.97\\
+3.79\\
+3.97\\
+3.88\\
+4.04\\
+\\
+\textbf{Höppler-Viskosimeter}\\
+HAAKE, Thermometer, Heizgerät\\
+Temperatur: $25.0^{\circ}C \pm 0.1^{\circ}C$\\
+Messung 1: 2m51s90ms\\
+Messung 2: 2m51s32ms\\
+Messung 3: 2m51s32ms\\
+\\
+Temperatur: $50.6^{\circ}C \pm 0.1^{\circ}C$\\
+Messung 1: 0m42s25ms\\
+Messung 2: 0m41s63ms\\
+Messung 3: 0m41s78ms\\
+\\
+\subsection{Diskussion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Luftfeuchtigkeit}
+\subsection{Messwerte und Ergebnisse}
+$T_{Start} = 24^{\circ}C \pm 1^{\circ}C$\\
+
+
+\subsection{Diskussion}
+
+\section{Schmelztemperatur von Wasser}
+
+\subsection{Messwerte und Ergebnisse}
+
+\subsection{Diskussion}
+
+\section{Quellen}
+Formeln und Abbildung Fahrradpendel:\\
+\url{http://www.univie.ac.at/anfpra/neu1/pw/pw3/PW3.pdf}\\
+
+
+\end{multicols}
+\end{document}

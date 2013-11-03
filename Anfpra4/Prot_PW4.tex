@@ -153,18 +153,22 @@ Die Eichung der Waage ergab einen linearen Anstieg (Abbildung \ref{fig:oberflaec
 	\label{fig:oberflaeche_eichung_fit}
 \end{figure}
 \noindent
-% Regress in N gegen Strich
-%%%   B (y-intercept) = 6,373626373626351e-02 +/- 2,122709832588890e-02
-%%%   A (slope) = 4,651006485868871e+02 +/- 2,541280599100647e+00
-Durch die lineare Regression (Abbildung \ref{fig:oberflaeche_eichung_linreg}) der Messwerte (Tabelle \ref{fig:oberflaeche_eichung}) erhält man die Steigung der Kraft pro strich. Diese Steigung entspricht pro Strich \textbf{$K = \frac{1}{465} = (0.0022\pm )N$}. Für den Metallring wurde mit einer Schiebelehre wie folgt gemessen:\\
+Durch die lineare Regression (Abbildung \ref{fig:oberflaeche_eichung_linreg}) der Messwerte (Tabelle \ref{fig:oberflaeche_eichung}) erhält man die Steigung der Kraft pro strich. Diese Steigung entspricht pro Strich \textbf{$K = \frac{1}{465} = (0.0022\pm 0.000012)N$}. Für den Metallring wurde mit einer Schiebelehre wie folgt gemessen:\\
 Außendurchmesser: $(24.00 \pm 0.05)mm$\\
 Innendurchmesser: $(23.15 \pm 0.05)mm$\\
 Errechnet man sich die Oberflächenspannung zusammen mit den Werten aus Tabelle \ref{fig:oberflaeche_messung} für $Wasser_{destilliert}$ ergibt sich:
 $$\sigma = \frac{4.62 * 0.0022N}{\pi * (0.02400 + 0.02315)m} =$$ 
-$$= (0.069 \pm 0.00) \frac{N}{m}$$ %TODO Fehler
+$$= (68.62 \pm 0.36) \frac{mN}{m}$$ %TODO Fehler
 Für Wasser mit Verunreinigungen: 
 $$ \sigma = \frac{3.9 * 0.0022N}{\pi * (0.02400 + 0.02315)m} =$$
-$$ = (0.058 \pm 0.000) \frac{N}{m}$$
+$$ = (57.92 \pm 0.33) \frac{mN}{m}$$
+
+
+
+% Regress in Strich gegen N
+%%%B (y-intercept) = -1,343535761669278e-04 +/- 4,628591085282343e-05
+%%%A (slope) = 2,149302255457725e-03 +/- 1,174365191704868e-05
+
 
 \begin{figure}[H]
 	\centering
@@ -222,7 +226,7 @@ $22.3^{\circ}C$\\
 Die Durchführung der Eichung und Messung gestaltete sich unproblematisch. Die Eichung erfordert etwas Fingerspitzengefühl und Geduld da die Waage einen (fast) umgedämpften Oszillator gleicht. Bei den ersten Zwischenrechnungen ergab sich ein zu niedriger Wert im Vergleich zum Literaturwert. \\
 Literaturwert: \\
 Wasser bei $20^{\circ}$ $\sigma = 72.75 \frac{mN}{m}$.\\
-Daraufhin wurde das Wasser in der Schale nach der Reinigung derselben durch destilliertes Wasser ersetzt um die Verunreinigungen so niedrig wie möglich zu halten. Zusätzlich war das Wasser um ca. $1^{\circ}C$ kühler was ebenfalls zu einer Näherung an den Literaturwert geführt hat. Mit einem Wert von $(69 \pm 0.00) \frac{mN}{m}$ liegt die Messung bei $22.3^{\circ}C$ bei einem zu erwartenden Wert. Die Differenz ist hauptsächlich durch den Temperaturunterschied zu erklären und an den Messungenauigkeiten der verwendeten Geräte. %TODO Fehler
+Daraufhin wurde das Wasser in der Schale nach der Reinigung derselben durch destilliertes Wasser ersetzt um die Verunreinigungen so niedrig wie möglich zu halten. Zusätzlich war das Wasser um ca. $1^{\circ}C$ kühler was ebenfalls zu einer Näherung an den Literaturwert geführt hat. Mit einem Wert von $(69 \pm 0.2) \frac{mN}{m}$ liegt die Messung bei $22.3^{\circ}C$ bei einem zu erwartenden Wert. Die Differenz ist hauptsächlich durch den Temperaturunterschied zu erklären und an den Messungenauigkeiten der verwendeten Geräte. %TODO Fehler
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Viskosität}
@@ -236,37 +240,42 @@ Dichte Flüssigkeit: $1225 \pm 5 kg/m^2$\\
 Messungen 1:\\
 $0.794 \pm 0.002mm$\\
 $16.1 \pm 0.1 mg$\\
-
-Fallzeiten:\\
-2.4s\\
-2.37s\\
-2.4s\\
-2.38\\
-2.41\\
-2.41\\
-2.31\\
-2.44\\
-2.47\\
-2.44\\
-2.47\\
-\\
 Messung 2:\\
 $6.6 \pm 0.1mg$\\
 $0.595 \pm 0.01mm$\\
-\\
 Fallzeiten:\\
-3.94\\
-3.97\\
-3.97\\
-4.13\\
-3.97\\
-3.97\\
-3.97\\
-3.79\\
-3.97\\
-3.88\\
-4.04\\
-\\
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			col sep=space,
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								precision=2,
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								precision=2,
+								column type/.add={}{|}
+								}
+			]{
+			$Messung_1 Messung_2$
+			2.40 3.94
+			2.37 3.97
+			2.40 3.97
+			2.38 4.13
+			2.41 3.97
+			2.41 3.97
+			2.31 3.97
+			2.44 3.79
+			2.47 3.97
+			2.44 3.88
+			2.47 4.04
+	}
+	\caption{Messung von Fallzeiten}
+	\label{fig:visko_fallzeit}
+\end{figure}
+\noindent
 \textbf{Höppler-Viskosimeter}\\
 HAAKE, Thermometer, Heizgerät\\
 Temperatur: $25.0^{\circ}C \pm 0.1^{\circ}C$\\
@@ -289,9 +298,70 @@ $T_{Start} = 24^{\circ}C \pm 1^{\circ}C$\\
 
 \subsection{Diskussion}
 
-\section{Schmelztemperatur von Wasser}
+
+%%%%%% EIS - SCHMELZWAERME %%%%%%%%
+
+\section{Schmelzwärme vonEis}
+Bei der Wärmezufuhr in einen Stoff kommt es bei Phasenübergängen zu Zeiten konstanter Temperatur, währendderer die zugeführte Energie zur Gänze in die Zustandsänderung, nicht jedoch in die Temperaturänderung geht.\\
+\\
+In diesem Versuch soll die spezifische Schmelzwärme von Eis (Wasser aus der Haushaltsleitung, Wien) bestimmt werden. Es wird dazu die Mischungsmethode verwendet:\\
+In einem (idealerweise völlig) wärmeisolierten Gefäß werden 2 Stoffe unterschiedlicher Temperatur gemischt. Die abgegebene Wärmemenge des wärmeren Stoffes muss wegen der Energieerhaltung gleich der aufgenommenen Wärmemenge des kälteren und des Gefäßes sein.\\
+Aus den Anfangstemperaturen und der Mischtemperatur lässt sich beispielsweise auf die latente Wärme schließen, die beim Schmelzvorgang von Eis frei wird.
+$$\Delta Q_1=(C_k+m_wc_w)(T_1-T_m)=$$
+$$=\Delta Q_2 = m_eS+m_ec_w(T_m-T_S)$$
+$S$ ist die gesuchte spezifische Schmelzwärme des Eises, die Massen $m_e$, $m_w$ des verwendeten Wasser und Eises sowie die Wärmekapazitäten $c_w$, $C_k$ von Wasser und dem verwendeten Gefäß gehen in die Rechnung ein.\\
+
+\noindent Equipment:
+\begin {itemize}
+	\item Ein Kalorimetergefäß mit Rührer
+	\item Wasser und Eis
+	\item Ein ULab-Datalogger mit Temperatursonde
+\end {itemize}
+
+Das Kalorimeter wird, zu etwas mehr als der Hälfte, mit erhitztem Wasser (ca. $80^{\circ}$ C) gefüllt und der Temperaturverlauf des Systems wird mehrere Minuten gemessen.\\
+Nach ein paar Minuten wird Eis eingebracht (weniger als Wasser). Es ist darauf zu achten, das Eis schnell einzuwerfen und sofort und durchgehend zu rühren um den Schmelzvorgang zu beschleunigen.\\
+Schließlich soll ein instantaner Temperaturausgleich approximiert werden.\\
+Während des gesamten Versuchs wird der Temperaturverlauf gemessen, der grob in 3 Abschnitte geteilt werden kann, die durch Anlegen von Geraden idealisiert werden (vgl. Abb. \ref{fig:Tempverlauf-Eis}):\\
+- Vor der Zugabe von Eis\\
+- während des Schmelzvorganges\\
+- nach der Vermischung
+
+
+\end{multicols}
+
+%%%% Diagramm Eis
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{./figure/PW4_graph.PNG}
+	\caption{Temperatur in [$^\circ$C] gegen die Zeit in [s] im Kalorimeter\ }
+	{\centering Screenshot aus Coach6}
+	\label{fig:Tempverlauf-Eis}
+\end{figure}
+\noindent
+
+\begin{multicols}{2}
+
 
 \subsection{Messwerte und Ergebnisse}
+
+\begin{itemize}
+	\item Wärmekapazitäten:\\
+	Kalorimeter: $C_k = (100 \pm 10) J/K$\\
+	Wasser (20$^{\circ}$C): $c_w=(4,182) J/gK$
+	
+	\item Massen:\\
+	Kalorimeter: $(236.6 \pm 0.1)g$\\
+	Wasser: $m_w = (154.0 \pm 0.2)g$\\
+	Eis: $m_e = (26.0 \pm 0.2)g$
+	
+	\item Temperaturen:\\
+	Anfang: $T_1=(80 \pm 0.5) ^\circ C$\\
+	Ende: $T_m=(58 \pm 0.5) ^\circ C$\\
+	Schmelztemp. Eis: $T_S = 0 ^\circ C$
+\end{itemize}
+
+\noindent spezifische Schmelzwärme von Wasser:\\
+$$S =(387 \pm   ) kJ/kg$$
 
 \subsection{Diskussion}
 
@@ -299,6 +369,8 @@ $T_{Start} = 24^{\circ}C \pm 1^{\circ}C$\\
 Formeln und Abbildung Fahrradpendel:\\
 \url{http://www.univie.ac.at/anfpra/neu1/pw/pw3/PW3.pdf}\\
 
+\noindent spezifische Wärmekapazität von Wasser:\\
+\url{http://de.wikipedia.org/wiki/Spezifische_W%C3%A4rmekapazit%C3%A4t}
 
 \end{multicols}
 \end{document}

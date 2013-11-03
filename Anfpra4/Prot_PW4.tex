@@ -121,9 +121,9 @@
 
 \section{Oberflächenspannung}
 
-% Regress in N gegen Strich
-%%%   B (y-intercept) = 6,373626373626351e-02 +/- 2,122709832588890e-02
-%%%   A (slope) = 4,651006485868871e+02 +/- 2,541280599100647e+00
+% Regress in Strich gegen N
+%%%B (y-intercept) = -1,343535761669278e-04 +/- 4,628591085282343e-05
+%%%A (slope) = 2,149302255457725e-03 +/- 1,174365191704868e-05
 
 
 
@@ -256,9 +256,70 @@ $T_{Start} = 24^{\circ}C \pm 1^{\circ}C$\\
 
 \subsection{Diskussion}
 
-\section{Schmelztemperatur von Wasser}
+
+%%%%%% EIS - SCHMELZWAERME %%%%%%%%
+
+\section{Schmelzwärme vonEis}
+Bei der Wärmezufuhr in einen Stoff kommt es bei Phasenübergängen zu Zeiten konstanter Temperatur, währendderer die zugeführte Energie zur Gänze in die Zustandsänderung, nicht jedoch in die Temperaturänderung geht.\\
+\\
+In diesem Versuch soll die spezifische Schmelzwärme von Eis (Wasser aus der Haushaltsleitung, Wien) bestimmt werden. Es wird dazu die Mischungsmethode verwendet:\\
+In einem (idealerweise völlig) wärmeisolierten Gefäß werden 2 Stoffe unterschiedlicher Temperatur gemischt. Die abgegebene Wärmemenge des wärmeren Stoffes muss wegen der Energieerhaltung gleich der aufgenommenen Wärmemenge des kälteren und des Gefäßes sein.\\
+Aus den Anfangstemperaturen und der Mischtemperatur lässt sich beispielsweise auf die latente Wärme schließen, die beim Schmelzvorgang von Eis frei wird.
+$$\Delta Q_1=(C_k+m_wc_w)(T_1-T_m)=$$
+$$=\Delta Q_2 = m_eS+m_ec_w(T_m-T_S)$$
+$S$ ist die gesuchte spezifische Schmelzwärme des Eises, die Massen $m_e$, $m_w$ des verwendeten Wasser und Eises sowie die Wärmekapazitäten $c_w$, $C_k$ von Wasser und dem verwendeten Gefäß gehen in die Rechnung ein.\\
+
+\noindent Equipment:
+\begin {itemize}
+	\item Ein Kalorimetergefäß mit Rührer
+	\item Wasser und Eis
+	\item Ein ULab-Datalogger mit Temperatursonde
+\end {itemize}
+
+Das Kalorimeter wird, zu etwas mehr als der Hälfte, mit erhitztem Wasser (ca. $80^{\circ}$ C) gefüllt und der Temperaturverlauf des Systems wird mehrere Minuten gemessen.\\
+Nach ein paar Minuten wird Eis eingebracht (weniger als Wasser). Es ist darauf zu achten, das Eis schnell einzuwerfen und sofort und durchgehend zu rühren um den Schmelzvorgang zu beschleunigen.\\
+Schließlich soll ein instantaner Temperaturausgleich approximiert werden.\\
+Während des gesamten Versuchs wird der Temperaturverlauf gemessen, der grob in 3 Abschnitte geteilt werden kann, die durch Anlegen von Geraden idealisiert werden (vgl. Abb. \ref{fig:Tempverlauf-Eis}):\\
+- Vor der Zugabe von Eis\\
+- während des Schmelzvorganges\\
+- nach der Vermischung
+
+
+\end{multicols}
+
+%%%% Diagramm Eis
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{./figure/PW4_graph.PNG}
+	\caption{Temperatur in [$^\circ$C] gegen die Zeit in [s] im Kalorimeter\ }
+	{\centering Screenshot aus Coach6}
+	\label{fig:Tempverlauf-Eis}
+\end{figure}
+\noindent
+
+\begin{multicols}{2}
+
 
 \subsection{Messwerte und Ergebnisse}
+
+\begin{itemize}
+	\item Wärmekapazitäten:\\
+	Kalorimeter: $C_k = (100 \pm 10) J/K$\\
+	Wasser (20$^{\circ}$C): $c_w=(4,182) J/gK$
+	
+	\item Massen:\\
+	Kalorimeter: $(236.6 \pm 0.1)g$\\
+	Wasser: $m_w = (154.0 \pm 0.2)g$\\
+	Eis: $m_e = (26.0 \pm 0.2)g$
+	
+	\item Temperaturen:\\
+	Anfang: $T_1=(80 \pm 0.5) ^\circ C$\\
+	Ende: $T_m=(58 \pm 0.5) ^\circ C$\\
+	Schmelztemp. Eis: $T_S = 0 ^\circ C$
+\end{itemize}
+
+\noindent spezifische Schmelzwärme von Wasser:\\
+$$S =(387 \pm   ) kJ/kg$$
 
 \subsection{Diskussion}
 
@@ -266,6 +327,8 @@ $T_{Start} = 24^{\circ}C \pm 1^{\circ}C$\\
 Formeln und Abbildung Fahrradpendel:\\
 \url{http://www.univie.ac.at/anfpra/neu1/pw/pw3/PW3.pdf}\\
 
+\noindent spezifische Wärmekapazität von Wasser:\\
+\url{http://de.wikipedia.org/wiki/Spezifische_W%C3%A4rmekapazit%C3%A4t}
 
 \end{multicols}
 \end{document}

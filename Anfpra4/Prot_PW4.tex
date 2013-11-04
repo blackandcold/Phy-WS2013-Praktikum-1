@@ -282,25 +282,30 @@ Außerdem war das destillierte Wasser ca. $1^{\circ}C$ kühler, also auch die Ne
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Viskosität}
-In diesem Experiment ist das Ziel die Viskosität einer Flüssigkeit zu bestimmen. Mit einem einfachen Versuchsaufbau wie in Skizze \ref{fig:visko_aufbau} ersichtlich wird eine Röhre mit der zu vermessenden Flüssigkeit gefüllt und Markierungen an der Außenseite angebracht. Danach wird die Distanz zwischen den Markierungen gemessen. Probemassen in Kugelform dienen dazu die Fallgeschwindigkeit für die Probe zu bestimmen. In der Röhre entsteht ein Gleichgewicht zwischen Auftrieb, Erdanziehung und Reibung. Berücksichtigt man dieses Gleichgewicht ergibt sich die folgende Gleichung:
-$$\eta = \frac{(m-\rho * V)*g}{6*\pi *v*r*\kappa}$$
+In diesem Experiment ist es das Ziel, die Viskosität einer Flüssigkeit zu bestimmen. In einem einfachen Versuchsaufbau, wie aus Skizze \ref{fig:visko_aufbau} ersichtlich, wird eine Röhre mit der zu vermessenden Flüssigkeit gefüllt und Markierungen an der Außenseite angebracht. Danach wird die Distanz zwischen den Markierungen gemessen. \\
+Probemassen in Kugelform dienen dazu, die Fallgeschwindigkeit in dem Fluid zu bestimmen. In der Röhre entsteht ein Gleichgewicht zwischen Auftrieb, Erdanziehung und Reibung. Berücksichtigt man dieses Gleichgewicht ergibt sich die folgende Gleichung:
+
+$$\eta = \frac{(m-\rho \cdot V) \cdot g}{6 \cdot \pi \cdot v \cdot r \cdot \kappa}$$
 m...Masse der Probe\\
 $\rho$...Dichte der Flüssigkeit\\
 V...Volumen der Kugel\\
-g...Erdbeschleunigung (Literatur $9.81m/s^2$)\\
+g...Erdbeschleunigung (Lit.: $9.81m/s^2$)\\
 v...Fallgeschwindigkeit (errechnet mit v = s/t)\\
 r...Kugelradius\\
 $\kappa$...Korrekturfaktor (siehe unten)\\
 $$\kappa =  (1+2.1 * \frac{r}{R})$$
 R...Röhrenradius\\
-Wichtig ist bei diesem Versuch alle Parameter zu bestimmen und dort wo möglich Literaturwerte zu verwenden. 
-Der Korrekturfaktor ist nötig da bei der Gleichung von einer unendlichen Entfernung der Probe zum Rand ausgegangen wird. Daher berücksichtigt der Korrekturfaktor das Verhältnis zwischen Kugelradius und Röhrenradius. Zu letzt bleibt nur noch die Fallzeit der Probe zwischen den Markierungen zu messen um die Geschwindigkeit v zu berechnen.
-Zur Durchführung der Messung wird mit der Pinzette eine Kugel genommen und in die Röhre geworfen. Es wird mit einer Stoppuhr die Fallzeit zwischen den zwei Markierungen mit der Stoppuhr gemessen.
+Flüssigkeit: 86\% iges Glyzerin\\
+\\
+Wichtig ist, bei diesem Versuch, alle Parameter zu bestimmen und dort, wo es möglich ist, Literaturwerte zu verwenden. \\
+Der Korrekturfaktor ist nötig, da in der Gleichung von einer unendlichen Entfernung der Probe zum Rand des Flüssigkeitsvolumen ausgegangen wird. \\
+Daher berücksichtigt der Korrekturfaktor das Verhältnis zwischen Kugelradius und Röhrenradius. Zuletzt bleibt nur noch, die Fallzeit der Probe zwischen den Markierungen zu messen, um die Geschwindigkeit v berechnen zu können.\\
+Zur Durchführung der Messung wird mit der Pinzette eine Kugel genommen und in die Röhre geworfen. Es wird die Fallzeit zwischen den zwei Markierungen mit der Stoppuhr gemessen.
 %%% TO DO Handskizze Stokesversuch
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{./figure/placeholder.png}
-	\caption{Skizze Versuchsaufbau Stokes}
+	\caption{Skizze Kugelfallmethode nach Stokes}
 	\label{fig:visko_aufbau}
 \end{figure}
 
@@ -313,6 +318,9 @@ Zur Durchführung der Messung wird mit der Pinzette eine Kugel genommen und in d
 	\item Ein Thermometer Sumit DT150
 	\item HAAKE - Höppler-Viskosimeter mit Heizgerät
 \end{itemize}
+Außerdem soll die Viskosität des Glyzerins zum Vergleich mit dem Höppler-Viskosimeter gemessen werden, mit dem schließlich auch eine Messung bei höherer Temperatur durchgeführt werden soll.
+
+
 
 \subsection{Messwerte und Ergebnisse}
 Raumtemperatur: $(24 \pm 1)^{\circ}C$\\
@@ -374,8 +382,6 @@ $m_1 = (16.1 \pm 0.1) mg$\\
 $v_1 = (55.68 \pm 0.53)mm/s$\\
 $\kappa_1 =  %(1+2.1 * \frac{0.794mm}{15mm}) = 
 (1.1112\pm 0.0028)$\\
-
-
 $$\eta_1 = %80.03\frac{mg}{mm*s} = 
 (143 \pm 24) mPa \cdot s$$
 \\
@@ -405,16 +411,36 @@ Messung 1: 171.19s\\
 Messung 2: 171.32s\\
 Messung 3: 171.32s\\
 $t_{Raumtemp}= (171.28 \pm 0.05)s$\\
-$$\eta_{Raumtemp}= (108.918\pm 0.86)mPa\cdot s$$
+$$\eta_{Raumtemp}= (108.918\pm 0.90)mPa\cdot s$$
 \\
 (Heiz-)Temperatur: $(50.6\pm 0.1)^{\circ}C$\\
 Messung 1: 42.25s\\
 Messung 2: 41.63s\\
 Messung 3: 41.78s\\
 $t_{Heiztemp}= (41.89 \pm 0.19)s$\\
-$$\eta_{Heiztemp}=(26.64\pm 0.13)mPa\cdot s$$
+$$\eta_{Heiztemp}=(26.64\pm 0.17)mPa\cdot s$$
 
 \subsection{Diskussion}
+In die Messung der Viskosität einer Flüssigkeit gehen, je nach verwendeter Methode, viele Faktoren ein. Dabei haben vor allem die Abweichungen in Zusammensetzung und Temperatur der untersuchten Flüssigkeit große Auswirkungen auf das Ergebnis.\\
+Das wird auch aus den durchaus unterschiedlichen Ergebnissen ersichtlich:\\
+Vor allem der Vergleich zwischen $\eta_{Hoeppler}$ bei Raumtemperatur und den beiden Stokes-Kugelfallversuchen bietet wertvolle Ansätze: Die beiden Stokesmessungen haben, im Vergleich, relativ hohe Unsicherheitsbereiche, liegen jedoch innerhalb dieser gut beieinander. Die ermittelte Viskosität aus dem Höppler-Versuch liegt mit $(108.918\pm 0.86)mPa\cdot s$ gerade noch im Unsicherheitsbereich der 2. Stokesmessung und schon außerhalb der ersten.\\
+Dabei sind, Ungenauigkeiten der Methodik beiseite gestellt, 2 Hauptquellen dieses Unterschiedes erkennbar:\\
+- Es wurde nicht die gleiche Flüssigkeit verwendet\\
+- die Temperatur war (um etwa $1^\circ$C) höher im Höppler-Versuch.\\
+\\
+Aus praktischen Gründen ließ sich das untersuchte 86\% ige Glycerin weder aus der einen Apparatur in die andere umfüllen, noch in irgendeiner Weise im Rahmen des Praktikums analysieren. Nimmt man dem Literaturwert für 100\% iges Glyzerin $(1480 mP \cdot s)$ zum Vergleich, lässt sich erkennen, dass dieser um eine ganze Größenordnung höher ist. Die Vermutung liegt also nahe, dass die Zusammensetzung der Flüssigkeit eine sehr große Rolle spielt.\\
+Eine praktikable Möglichkeit, dem auf den Grund zu gehen wäre, die Daten aus allen Praktikumsgruppen zu vergleichen (insofern sie alle mit dem gleichen Glyzerin in Zylinder und Höppler-Viskosimeter arbeiten).\\
+Die 2. Höpplermessung, bei ungefähr der doppelten Temperatur, liefert ein Ergebnis, eine Größenordnung niedriger, als bei Raumtemperatur. Auch hier zeigt sich also ein deutlicher Einfluss.\\
+Hier hätte, mit dem Wissen aus der Auswertung, bereits beim Versuch auf bessere Temperaturkontrolle geachtet werden sollen, um die Messung zu optimieren.\\
+\\
+Vor allem aber auch im Stokes-Versuch ergeben sich noch eine Reihe andere Fehlerquellen:\\
+Die Fallzeit wird von Hand gemessen, sowie der Beginn des Fallweges mit den Augen abgeschätzt. Das wäre sicherlich durch weitere Übung noch zu optimieren. Tatsächlich geht die Unsicherheit aus der Geschwindigkeit eher durchschnittlich in die Fehlerfortpflanzung ein.\\
+Besonders groß (2 Größenordnungen höher als der Durchschnitt) ist der Effekt der Unsicherheiten der Flüssigkeitsdichte $\rho$ sowie der Kugelradien $r_1$ und $r_2$ (Beide wurden aus der Angabe übernommen).\\
+Daher lässt sich vermuten, dass die Methodik des Stokes-Versuches (im Rahmen einer größeren Unsicherheit) durchaus gute Ergebnisse liefert und vor allem die Unterschiede in den Versuchsbedingungen (Flüssigkeit und Temperatur) zu den, nicht ganz, deckungsgleichen Ergebnissen geführt haben.\\
+Die erwähnten Optimierungen, gemeinsam mit der Auswertung mehrerer Testreihen, würden zu weiteren Erkenntnissen über die Abhängigkeiten in diesem Experiment führen.
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -454,7 +480,7 @@ $$\phi_{digi}=(47 \pm 1)\%$$
 \subsection{Diskussion}
 
 Die gemessenen Werte aus beiden Methoden stimmen miteinander überein, sogar insofern, dass der kleinere Unsicherheitsbereich aus der Digital-Messung komplett innerhalb des etwas größeren aus der Psychrometermessung liegt.\\
-Die Temperaturen am Psychrometer bleiben während der Messung im sichtbaren Bereich stabil, es wäre also vorstellbar, mit genauerer Skalierung auch mit dieser Methode noch etwas genauere Ergebnisse zu erzielen.\\
+Die Temperaturen am Psychrometer bleiben während der Messung im sichtbaren Bereich stabil, es wäre also vorstellbar, mit genauerer Skalierung, auch mit dieser Methode noch etwas genauere Ergebnisse zu erzielen.\\
 
 
 %%%%%% EIS - SCHMELZWAERME %%%%%%%%
@@ -536,9 +562,11 @@ Um also den Einfluss einzelner der erwähnten Fehlerquellen zu bestimmen und die
 
 \section{Quellen}
 \noindent Oberflächenspannung von Wasser:\\
-\url{http://de.wikipedia.org/wiki/Oberfl$\%$C3$\%$A4chenspannung}\\
+\url{http://de.wikipedia.org/wiki/Oberfl%C3%A4chenspannung}\\
 \noindent spezifische Wärmekapazität von Wasser:\\
 \url{http://de.wikipedia.org/wiki/Spezifische_W%C3%A4rmekapazit%C3%A4t}
+\noindent Viskosität von Glyzerin und ihr temperaturabhängiger Verlauf:\\
+\url{http://de.wikipedia.org/wiki/Viskosit%C3%A4t}
 
 \end{multicols}
 \end{document}

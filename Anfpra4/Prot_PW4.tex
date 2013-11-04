@@ -176,6 +176,7 @@ Folgende Materialien wurden verwendet:
 	\item Schale mit Wasser
 	\item Metallring mit Aufhängung
 	\item Ein beweglicher Objekttisch
+	\item Ein Thermometer Sumit DT150
 \end{itemize}
 
 \noindent Bei der Durchführung wurde zuerst Leitungswasser, und danach destilliertes Wasser verwendet, um einen Vergleich zu ermöglichen.
@@ -200,7 +201,6 @@ $$K = \frac{1}{465} = (2.200\pm 0.012)mN$$
 Für den Metallring wurde mit einer Schiebelehre gemessen:\\
 Außendurchmesser: $(24.00 \pm 0.05)mm$\\
 Innendurchmesser: $(23.15 \pm 0.05)mm$\\
-
 Oberflächenspannung $\sigma$ aus den Werten in Tabelle \ref{fig:oberflaeche_messung}:
 $$\sigma = \frac{[Skalenstrich] * 0.0022N}{\pi * (0.02400 + 0.02315)m} $$ 
 $$\sigma_{dest}= (68.62 \pm 0.36) \frac{mN}{m}$$ %TODO Fehler
@@ -278,7 +278,7 @@ In ersten Zwischenrechnungen ergab sich ein niedrigeres Ergebnis, als durch den 
 $\sigma_{Wasser} = 72.75 \frac{mN}{m}$ bei $20^{\circ}C$\\
 \\
 Es wurde eine zweite Messreihe durchgeführt, mit destilliertem Wasser, um die Verunreinigungen so gering wie möglich zu halten (dabei ist auf eine sorgfältige Reinigung der Schale zu achten). \\
-Außerdem war das destillierte Wasser ca. $1^{\circ}C$ kühler, also auch die Nebenbedingung Temperatur näher am verwendeten Literaturwert. Mit einem Ergebnis von $(69 \pm 0.2) \frac{mN}{m}$,  liegt diese Messung, bei $22.3^{\circ}C$, also auf einem, in guter Näherung, zu erwartenden Wert. Die Differenz ist hauptsächlich durch den Temperaturunterschied, und die Messungenauigkeiten der verwendeten Geräte, zu erklären. %TODO Fehler
+Außerdem war das destillierte Wasser ca. $1^{\circ}C$ kühler, also auch die Nebenbedingung Temperatur näher am verwendeten Literaturwert. Mit einem Ergebnis von $(68.62 \pm 0.36) \frac{mN}{m}$,  liegt diese Messung, bei $22.3^{\circ}C$, also auf einem, in guter Näherung, zu erwartenden Wert. Die Differenz ist hauptsächlich durch den Temperaturunterschied, und die Messungenauigkeiten der verwendeten Geräte, zu erklären. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Viskosität}
@@ -286,20 +286,25 @@ Außerdem war das destillierte Wasser ca. $1^{\circ}C$ kühler, also auch die Ne
 
 %%% TO DO Handskizze Stokesversuch
 
+\begin{itemize}
+	\item Eine Röhre mit Flüssigkeit
+	\item Eine Pinzette
+	\item Zwei verschiedene Kugelarten
+	\item Eine Stoppuhr
+	\item Ein Thermometer Sumit DT150
+\end{itemize}
 
-Rühre, Pinzette, Kugeln
-Thermometer Sumit DT150\\
 \subsection{Messwerte und Ergebnisse}
 Temp: $24^{\circ}C \pm 1^{\circ}C$\\
 Länge Innen-Innen: 13.42cm\\
-Dichte Flüssigkeit: $1225 \pm 5 kg/m^2$\\
-\\
-Messungen 1:\\
-$0.794 \pm 0.002mm$\\
-$16.1 \pm 0.1 mg$\\
-Messung 2:\\
-$6.6 \pm 0.1mg$\\
-$0.595 \pm 0.01mm$\\
+%%%%%%%%%%%%%%% WERTE AUS TABELLE verwendet!!11einseinself
+%Dichte Flüssigkeit: $1225 \pm 5 kg/m^2$\\
+%Messungen 1:\\
+%$0.794 \pm 0.002mm$\\
+%$16.1 \pm 0.1 mg$\\
+%Messung 2:\\
+%$6.6 \pm 0.1mg$\\
+%$0.595 \pm 0.01mm$\\
 Fallzeiten:\\
 \begin{figure}[H]
 	\centering
@@ -331,6 +336,27 @@ Fallzeiten:\\
 	\label{fig:visko_fallzeit}
 \end{figure}
 \noindent
+
+$$\kappa = (1+2.1 * \frac{r}{R})$$
+$$\eta = \frac{(m-\rho * V)*g}{6*\pi *v*r*\kappa}$$
+
+\noindent
+\textbf{Messung 1:}\\
+%Messung 1 Mean: 2,40909 \sigma 0,04657 Median: 2,41
+$$v = \frac{l}{t} = \frac{0.13420m}{2.41s} =  (0.05568 \pm xy)\frac{m}{s}$$
+$$\kappa =  (1+2.1 * \frac{0.595mm}{15mm}) = (1.0833 \pm xy)$$
+%$$\eta = \frac{(6.6mg-(1225kg/m^3 * (4/3 * \pi *(0.595mm)^3)))*9.81m/s^2}{6*\pi *0.05568m/s*0.595mm*1.0833}$$
+$$\eta = 80.03\frac{mg}{mm*s} = (0.08003 \pm xy) Pa s$$
+\\
+\noindent
+\textbf{Messung 2:}\\
+%Messung 2 Mean: 	3,98 \sigma 0,06197 Median: 4,13
+$$v = \frac{l}{t} = \frac{0.13420m}{3.98s} =  (0.03372 \pm xy)\frac{m}{s}$$
+$$\kappa = (1+2.1 * \frac{0.794mm}{15mm}) = 1.11116$$
+%$$\eta = \frac{(16.1mg-(1225\frac{kg}{m^3} * (4/3 * \pi *(0.794mm)^3)))*9.81m/s^2}{6*\pi *0.03372m/s*0.794mm*1.11116}$$
+$$\eta = (0.2367 \pm xy)\frac{kg}{m s} = (0.2367\pm xy) Pas$$
+\\
+\noindent
 \textbf{Höppler-Viskosimeter}\\
 HAAKE, Thermometer, Heizgerät\\
 Temperatur: $25.0^{\circ}C \pm 0.1^{\circ}C$\\
@@ -348,14 +374,12 @@ Messung 3: 0m41s78ms\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Luftfeuchtigkeit}
-
+\textbf{Equipment}
 \begin{itemize}
-	\item Equipment\\
-	- Psychrometer mit Gazestrumpf\\
-	- Ein Ventilator
-	- ULab Datalogger
-	- Relative Humidity sensor
-	
+	\item Psychrometer mit Gazestrumpf
+	\item Ein Ventilator
+	\item ULab Datalogger
+	\item Relative Humidity sensor
 \end{itemize}
 
 \noindent In diesem Versuch soll die Luftfeuchtigkeit einerseits mittels eines Aspirationspsychrometers, und andererseits durch ein digitales Messgerät gemessen werden.\\

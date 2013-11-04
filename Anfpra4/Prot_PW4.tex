@@ -186,7 +186,7 @@ Die Eichung der Waage ergab einen linearen Anstieg (Abbildung \ref{fig:oberflaec
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.45]{./figure/Waageneichung-Fit 02.png}
+	\includegraphics[scale=0.45]{./figure/Waageneichung-Fit_02.png}
 	\caption{Skizze Versuchsaufbau}
 	\label{fig:oberflaeche_eichung_fit}
 \end{figure}
@@ -282,10 +282,29 @@ Außerdem war das destillierte Wasser ca. $1^{\circ}C$ kühler, also auch die Ne
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Viskosität}
-
-
+In diesem Experiment ist das Ziel die Viskosität einer Flüssigkeit zu bestimmen. Mit einem einfachen Versuchsaufbau wie in Skizze \ref{fig:visko_aufbau} ersichtlich wird eine Röhre mit der zu vermessenden Flüssigkeit gefüllt und Markierungen an der Außenseite angebracht. Danach wird die Distanz zwischen den Markierungen gemessen. Probemassen in Kugelform dienen dazu die Fallgeschwindigkeit für die Probe zu bestimmen. In der Röhre entsteht ein Gleichgewicht zwischen Auftrieb, Erdanziehung und Reibung. Berücksichtigt man dieses Gleichgewicht ergibt sich die folgende Gleichung:
+$$\eta = \frac{(m-\rho * V)*g}{6*\pi *v*r*\kappa}$$
+m...Masse der Probe\\
+$\rho$...Dichte der Flüssigkeit\\
+V...Volumen der Kugel\\
+g...Erdbeschleunigung (Literatur $9.81m/s^2$)\\
+v...Fallgeschwindigkeit (errechnet mit v = s/t)\\
+r...Kugelradius\\
+$\kappa$...Korrekturfaktor (siehe unten)\\
+$$\kappa =  (1+2.1 * \frac{r}{R})$$
+R...Röhrenradius\\
+Wichtig ist bei diesem Versuch alle Parameter zu bestimmen und dort wo möglich Literaturwerte zu verwenden. 
+Der Korrekturfaktor ist nötig da bei der Gleichung von einer unendlichen Entfernung der Probe zum Rand ausgegangen wird. Daher berücksichtigt der Korrekturfaktor das Verhältnis zwischen Kugelradius und Röhrenradius. Zu letzt bleibt nur noch die Fallzeit der Probe zwischen den Markierungen zu messen um die Geschwindigkeit v zu berechnen.
+Zur Durchführung der Messung wird mit der Pinzette eine Kugel genommen und in die Röhre geworfen. Es wird mit einer Stoppuhr die Fallzeit zwischen den zwei Markierungen mit der Stoppuhr gemessen.
 %%% TO DO Handskizze Stokesversuch
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{./figure/placeholder.png}
+	\caption{Skizze Versuchsaufbau Stokes}
+	\label{fig:visko_aufbau}
+\end{figure}
 
+\textbf{Equipment:}\\
 \begin{itemize}
 	\item Eine Röhre mit Flüssigkeit
 	\item Eine Pinzette
@@ -336,9 +355,6 @@ Fallzeiten:\\
 	\label{fig:visko_fallzeit}
 \end{figure}
 \noindent
-
-$$\kappa = (1+2.1 * \frac{r}{R})$$
-$$\eta = \frac{(m-\rho * V)*g}{6*\pi *v*r*\kappa}$$
 
 \noindent
 \textbf{Messung 1:}\\

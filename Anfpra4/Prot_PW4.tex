@@ -311,20 +311,27 @@ Zur Durchführung der Messung wird mit der Pinzette eine Kugel genommen und in d
 	\item Zwei verschiedene Kugelarten
 	\item Eine Stoppuhr
 	\item Ein Thermometer Sumit DT150
+	\item HAAKE - Höppler-Viskosimeter mit Heizgerät
 \end{itemize}
 
 \subsection{Messwerte und Ergebnisse}
-Temp: $24^{\circ}C \pm 1^{\circ}C$\\
-Länge Innen-Innen: 13.42cm\\
+Raumtemperatur: $(24 \pm 1)^{\circ}C$\\
+\\
+Fallstrecke: \\
+\indent l = $(13.4 \pm 0.1)$ cm\\
 %%%%%%%%%%%%%%% WERTE AUS TABELLE verwendet!!11einseinself
-%Dichte Flüssigkeit: $1225 \pm 5 kg/m^2$\\
-%Messungen 1:\\
+\noindent Dichte der Flüssigkeit: \\
+\indent $\rho_{Glyz} = (1225 \pm 5) kg/m^2$\\
+Radius des Zylinders:\\
+\indent$R=15$ mm\\
+\\
+%Messung 2:\\
 %$0.794 \pm 0.002mm$\\
 %$16.1 \pm 0.1 mg$\\
-%Messung 2:\\
+%Messung 1:\\
 %$6.6 \pm 0.1mg$\\
 %$0.595 \pm 0.01mm$\\
-Fallzeiten:\\
+Fallzeiten in $[s]$:
 \begin{figure}[H]
 	\centering
 	\pgfplotstabletypeset[
@@ -351,40 +358,62 @@ Fallzeiten:\\
 			2.44 3.88
 			2.47 4.04
 	}
-	\caption{Messung von Fallzeiten}
+	\caption{Messung der Fallzeiten}
 	\label{fig:visko_fallzeit}
 \end{figure}
 \noindent
 
 \noindent
+
+
+
 \textbf{Messung 1:}\\
 %Messung 1 Mean: 2,40909 \sigma 0,04657 Median: 2,41
-$$v = \frac{l}{t} = \frac{0.13420m}{2.41s} =  (0.05568 \pm xy)\frac{m}{s}$$
-$$\kappa =  (1+2.1 * \frac{0.595mm}{15mm}) = (1.0833 \pm xy)$$
-%$$\eta = \frac{(6.6mg-(1225kg/m^3 * (4/3 * \pi *(0.595mm)^3)))*9.81m/s^2}{6*\pi *0.05568m/s*0.595mm*1.0833}$$
-$$\eta = 80.03\frac{mg}{mm*s} = (0.08003 \pm xy) Pa s$$
+$r_1 = (0.794 \pm 0.02) mm$\\
+$m_1 = (16.1 \pm 0.1) mg$\\
+$v_1 = (55.68 \pm 0.53)mm/s$\\
+$\kappa_1 =  %(1+2.1 * \frac{0.794mm}{15mm}) = 
+(1.1112\pm 0.0028)$\\
+
+
+$$\eta_1 = %80.03\frac{mg}{mm*s} = 
+(143 \pm 24) mPa \cdot s$$
 \\
 \noindent
+
+
+
 \textbf{Messung 2:}\\
 %Messung 2 Mean: 	3,98 \sigma 0,06197 Median: 4,13
-$$v = \frac{l}{t} = \frac{0.13420m}{3.98s} =  (0.03372 \pm xy)\frac{m}{s}$$
-$$\kappa = (1+2.1 * \frac{0.794mm}{15mm}) = 1.11116$$
-%$$\eta = \frac{(16.1mg-(1225\frac{kg}{m^3} * (4/3 * \pi *(0.794mm)^3)))*9.81m/s^2}{6*\pi *0.03372m/s*0.794mm*1.11116}$$
-$$\eta = (0.2367 \pm xy)\frac{kg}{m s} = (0.2367\pm xy) Pas$$
-\\
+$r_2=(0.595 \pm 0.01)mm$\\
+$m_2=(6.6 \pm 0.1)mg$\\
+$v_2 = (33.72 \pm 0.34) mm/s$\\
+$\kappa_2 = %(1+2.1 * \frac{0.595mm}{15mm}) = 
+(1.0833 \pm 0.0014)$\\
+
+$$\eta_2 = %(0.2367 \pm xy)\frac{kg}{m s} = 
+(131\pm 23) mPa\cdot s$$\\
+
+
+
+
 \noindent
 \textbf{Höppler-Viskosimeter}\\
-HAAKE, Thermometer, Heizgerät\\
-Temperatur: $25.0^{\circ}C \pm 0.1^{\circ}C$\\
-Messung 1: 2m51s90ms\\
-Messung 2: 2m51s32ms\\
-Messung 3: 2m51s32ms\\
+%HAAKE, Thermometer, Heizgerät\\
+(Raum-)Temperatur: $(25.0 \pm 0.1)^{\circ}C$\\
+Messung 1: 171.19s\\
+Messung 2: 171.32s\\
+Messung 3: 171.32s\\
+$t_{Raumtemp}= (171.28 \pm 0.05)s$\\
+$$\eta_{Raumtemp}= (108.918\pm 0.86)mPa\cdot s$$
 \\
-Temperatur: $50.6^{\circ}C \pm 0.1^{\circ}C$\\
-Messung 1: 0m42s25ms\\
-Messung 2: 0m41s63ms\\
-Messung 3: 0m41s78ms\\
-\\
+(Heiz-)Temperatur: $(50.6\pm 0.1)^{\circ}C$\\
+Messung 1: 42.25s\\
+Messung 2: 41.63s\\
+Messung 3: 41.78s\\
+$t_{Heiztemp}= (41.89 \pm 0.19)s$\\
+$$\eta_{Heiztemp}=(26.64\pm 0.13)mPa\cdot s$$
+
 \subsection{Diskussion}
 
 

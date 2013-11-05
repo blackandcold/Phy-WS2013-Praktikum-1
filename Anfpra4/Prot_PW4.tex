@@ -191,10 +191,6 @@ Die Eichung der Waage ergab einen linearen Anstieg (Abbildung \ref{fig:oberflaec
 	\label{fig:oberflaeche_eichung_fit}
 \end{figure}
 
-
-%%% TO DO ... komischer "02.png" Ausdruck in der Darstellung des pics... preview fehler?
-
-
 \noindent
 Durch den linearen Fit der Messwerte (Tabelle \ref{fig:oberflaeche_eichung}) erhält man aus der Steigung die Kraft pro Skalenstrich. 
 $$K = \frac{1}{465} = (2.200\pm 0.012)mN$$ 
@@ -318,6 +314,7 @@ Zur Durchführung der Messung wird mit der Pinzette eine Kugel genommen und in d
 	\item Ein Thermometer Sumit DT150
 	\item HAAKE - Höppler-Viskosimeter mit Heizgerät
 \end{itemize}
+\noindent
 Außerdem soll die Viskosität des Glyzerins zum Vergleich mit dem Höppler-Viskosimeter gemessen werden, mit dem schließlich auch eine Messung bei höherer Temperatur durchgeführt werden soll.
 
 
@@ -453,7 +450,8 @@ Die erwähnten Optimierungen, gemeinsam mit der Auswertung mehrerer Testreihen, 
 	\item Relative Humidity sensor
 \end{itemize}
 
-\noindent In diesem Versuch soll die Luftfeuchtigkeit einerseits mittels eines Aspirationspsychrometers, und andererseits durch ein digitales Messgerät gemessen werden.\\
+\noindent 
+In diesem Versuch soll die Luftfeuchtigkeit einerseits mittels eines Aspirationspsychrometers, und andererseits durch ein digitales Messgerät gemessen werden.\\
 Das Psychrometer bestimmt die Luftfeuchtigkeit indem die Verdunstungskälte gemessen wird: 2 baugleiche Quecksilberthermometer befinden sich in unmittelbarer Nähe. Über das eine ist befeuchteter Stoff gewickelt. Das Wasser verdunstet bis die umgebende Luft mit Feuchtigkeit gesättigt ist und die Temperatur im Gleichgewicht ist. Es wird ein Luftstrom erzeugt, der die gesättigte Luft abführt um die Temperatur konstant zu halten. Aus der Differenz der Temperaturen am trockenen ($T_t$) und am feuchten Thermometer ($T_f$), kann die absolute Luftfeuchtigkeit, $\rho_w$, sowie die relative, $\phi$, berechnet werden:\\
 $$\rho_w=\frac{p_w(T_t)\cdot M_w}{R \cdot T_t}$$
 $$\phi= \frac{p_w(T_t)}{p_{w,max}(T_t)}100\%$$
@@ -463,12 +461,13 @@ und $p_{w,max}(T_t)$ einer Tabelle entnommen wird.\\
 In den Faktor $67Pa/K$ gehen die molaren Massen von Luft und Wasser ein, der Luftdruck auf Meereshöhe, die Wärmekapazität von Luft sowie die Verdampfungswärme von Wasser.
 
 \subsection{Messwerte und Ergebnisse}
+\textbf{Temperaturen}\\
+%For the sake of using itemize, do items in the list as \item :D
 \begin {itemize}
-	\item Temperaturen\\
-	$T_{t} = (24 \pm 1)^{\circ}C$\\
-	$T_{f} = (17 \pm 1)^{\circ}C$\\
-	T vor dem Versuch:\\
-	$(24 \pm 1)^{\circ}C$\\
+	\item[-] $T_{t} = (24 \pm 1)^{\circ}C$
+	\item[-] $T_{f} = (17 \pm 1)^{\circ}C$
+	\item[-] T vor dem Versuch:
+	\item[-] $(24 \pm 1)^{\circ}C$
 \end{itemize}
 
 $$\rho_w= (132 \pm 14)g/m^3$$
@@ -485,8 +484,8 @@ Die Temperaturen am Psychrometer bleiben während der Messung im sichtbaren Bere
 
 %%%%%% EIS - SCHMELZWAERME %%%%%%%%
 
-\section{Schmelzwärme vonEis}
-Bei der Wärmezufuhr in einen Stoff kommt es bei Phasenübergängen zu Zeiten konstanter Temperatur, währendderer die zugeführte Energie zur Gänze in die Zustandsänderung, nicht jedoch in die Temperaturänderung geht.\\
+\section{Schmelzwärme von Eis}
+Bei der Wärmezufuhr in einen Stoff kommt es bei Phasenübergängen zu Zeiten konstanter Temperatur, während derer die zugeführte Energie zur Gänze in die Zustandsänderung, nicht jedoch in die Temperaturänderung geht.\\
 \\
 In diesem Versuch soll die spezifische Schmelzwärme von Eis (Wasser aus der Haushaltsleitung, Wien) bestimmt werden. Es wird dazu die Mischungsmethode verwendet:\\
 In einem (idealerweise völlig) wärmeisolierten Gefäß werden 2 Stoffe unterschiedlicher Temperatur gemischt. Die abgegebene Wärmemenge des wärmeren Stoffes muss wegen der Energieerhaltung gleich der aufgenommenen Wärmemenge des kälteren und des Gefäßes sein.\\
@@ -497,13 +496,20 @@ $S$ ist die gesuchte spezifische Schmelzwärme des Eises, die Massen $m_e$, $m_w
 
 %%%% TO DO Handskizze Kalorimeter
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{./figure/placeholder.png}
+	\caption{Skizze Kalorimeter}
+	\label{fig:visko_kalorimeter}
+\end{figure}
+
 \noindent Equipment:
 \begin {itemize}
 	\item Ein Kalorimetergefäß mit Rührer
 	\item Wasser und Eis
 	\item Ein ULab-Datalogger mit Temperatursonde
 \end {itemize}
-
+\noindent
 Das Kalorimeter wird, zu etwas mehr als der Hälfte, mit erhitztem Wasser (ca. $80^{\circ}$ C) gefüllt und der Temperaturverlauf des Systems wird mehrere Minuten gemessen.\\
 Nach ein paar Minuten wird Eis eingebracht (weniger als Wasser). Es ist darauf zu achten, das Eis schnell einzuwerfen und sofort und durchgehend zu rühren um den Schmelzvorgang zu beschleunigen.\\
 Schließlich soll ein instantaner Temperaturausgleich approximiert werden.\\
@@ -561,12 +567,10 @@ Um also den Einfluss einzelner der erwähnten Fehlerquellen zu bestimmen und die
 
 
 \section{Quellen}
-\noindent Oberflächenspannung von Wasser:\\
-\url{http://de.wikipedia.org/wiki/Oberfl%C3%A4chenspannung}\\
-\noindent spezifische Wärmekapazität von Wasser:\\
-\url{http://de.wikipedia.org/wiki/Spezifische_W%C3%A4rmekapazit%C3%A4t}
-\noindent Viskosität von Glyzerin und ihr temperaturabhängiger Verlauf:\\
-\url{http://de.wikipedia.org/wiki/Viskosit%C3%A4t}
+Oberflächenspannung von Wasser bei $20^{\circ}C$,
+spezifische Wärmekapazität von Wasser,
+Viskosität von Glyzerin und ihr temperaturabhängiger Verlauf
+\url{http://de.wikipedia.org/}
 
 \end{multicols}
 \end{document}

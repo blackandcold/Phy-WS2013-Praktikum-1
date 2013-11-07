@@ -139,6 +139,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Gasthermometer}
 
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.22]{./figure/gas_therm_aufbau.png}
@@ -154,7 +155,53 @@
 %\end{itemize}
 
 \subsection{Messwerte und Ergebnisse}
-Außendruck: 993mBar\\
+Luftdruck im Labor: $(993\pm 1)$mBar\\
+Raumtemperatur: $(22 \pm 1)^\circ $C
+
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={Druck, Laenge, Produkt, Fehler},
+			%columns/Druck/.style={column name=$Druck\\[mmHg]$},
+			col sep=&,
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								column type/.add={}{|} 
+								}
+			]{
+			Druck & Laenge & Produkt & Fehler
+			%[mmHg] \pm1; [mm] \pm1; [mmHg*mm]; [mmHg*mm]
+			917 &213 &195280 &950 
+			794 &229 &181780 &830 
+			745 &245 &182480 &790 
+			713 &256 &182480 &760
+			681 &266 &181090 &740 
+	}
+	\caption{Messung der Fallzeiten}
+	\label{fig:visko_fallzeit}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{./figure/Spannungskoeffizient-lin_Fit.png}
+	\caption{Temperatur gegen mmHg-Differenz, linearer Fit}
+	\label{fig:gas_therm_Spannungskoeffizient}
+\end{figure}
+%B (y-intercept) = 8,350436459016395e-01 +/- 3,812549620209208e-03
+%A (slope) = 3,164236065573769e-03 +/- 9,031174786969129e-05
+
+$$\frac{\Delta p}{\Delta \vartheta} = (3.164 \pm 0.091) mbar/ ^\circ C$$
+$$ p_0 = (835.0 \pm 3.9) mbar$$\\
+\\
+$$\beta = (0.00379 \pm 0.00012) K^-1$$
+$$T_0 =(263.9 \pm 8.0)K$$
+
 
 
 \subsection{Diskussion}

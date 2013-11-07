@@ -1,0 +1,203 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+Tabelle1	30	6	07.11.13 14:01
+geometry	35	144	658	410	
+header	Temp [°C][X]	Qucksilberdiff [Torr]	Temp [° Kelvin]	p [torr]	Druck p [bar][Y]	Druck Fehler[yEr]
+ColWidth	100	100	100	100	100	100	
+<com>
+<col nr="5">
+2*0.001333
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel		2
+<data>
+0	25	-60	298.15	684.8	0.9128384	0.002666
+1	30	-45	303.15	699.8	0.9328334	0.002666
+2	35	-39	308.15	705.8	0.9408314	0.002666
+3	40	-24	313.15	720.8	0.9608264	0.002666
+4	45	-7	318.15	737.8	0.9834874	0.002666
+5	50	1	323.15	745.8	0.9941514	0.002666
+6	60	22	333.15	766.8	1.0221444	0.002666
+</data>
+</table>
+<multiLayer>
+Grafik1	1	1	07.11.13 18:05
+geometry	676	53	513	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	501	403
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Temperatur t [°C]	Druck p [bar]			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
+TitleFont	Lucida Grande	15	75	0	0	0
+ScaleFont0	Lucida Grande	13	75	0	0	0
+ScaleFont1	Lucida Grande	13	75	0	0	0
+ScaleFont2	Lucida Grande	13	75	0	0	0
+ScaleFont3	Lucida Grande	13	75	0	0	0
+AxisFont0	Lucida Grande	13	50	0	0	0
+AxisFont1	Lucida Grande	13	50	0	0	0
+AxisFont2	Lucida Grande	13	50	0	0	0
+AxisFont3	Lucida Grande	13	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabelle1_Temp [°C]	Tabelle1_Druck p [bar]	1	0	#000000	0	1	3	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+ErrorBars	1	Tabelle1_Temp [°C]	Tabelle1_Druck p [bar]	Tabelle1_Druck Fehler	1	8	#000000	1	1	1	0
+<Function>
+<Type>0</Type>
+<Title>LinearFit1</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>25	60</Range>
+<Points>2</Points>
+<Constant>A	0.00316423606557377</Constant>
+<Constant>B	0.835043645901639</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	0.9	1.04	0	8	5	0	0
+scale	1	0.9	1.04	0	8	5	0	0
+scale	2	20	65	0	8	5	0	0
+scale	3	20	65	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>21.127819548872</x>
+<y>1.0353177257525</y>
+<right>37.1428571428571</right>
+<bottom>1.02220735785953</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(3)%(3)
+</Text>
+<Font>Lucida Grande	13	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[07.11.13 14:06	Diagramm: ''Grafik1'']
+Lineare Regression von Datensatz: Tabelle1_p [torr], unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 2,981500000000000e+02 bis x = 3,331500000000000e+02
+B (y-intercept) = -2,195606557377050e+01 +/- 3,195762804631596e+01
+A (slope) = 2,373770491803279e+00 +/- 1,017556183148633e-01
+--------------------------------------------------------------------------------------
+Chi^2/doF = 9,022950819672129e+00
+R^2 = 0,990895892565483
+Angepasstes R^2 = 0,986343838848225
+RMSE (Standardabweichung) = 3,00382270110472
+RSS (Summe der quadrierten Restwerte) = 45,1147540983604
+---------------------------------------------------------------------------------------
+
+[07.11.13 16:07	Diagramm: ''Grafik2'']
+Lineare Regression von Datensatz: Tabelle1_1, unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 2,981500000000000e+02 bis x = 3,331500000000000e+02
+B (y-intercept) = -2,926743540983534e-02 +/- 4,259951818573936e-02
+A (slope) = 3,164236065573769e-03 +/- 1,356402392137134e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,603278205901652e-05
+R^2 = 0,990895892565483
+Angepasstes R^2 = 0,986343838848224
+RMSE (Standardabweichung) = 0,00400409566057265
+RSS (Summe der quadrierten Restwerte) = 8,01639102950837e-05
+---------------------------------------------------------------------------------------
+[07.11.13 16:15	Diagramm: ''Grafik1'']
+Lineare Regression von Datensatz: Tabelle1_1, unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 2,500000000000000e+01 bis x = 6,000000000000000e+01
+B (y-intercept) = 8,350436459016395e-01 +/- 5,726111549136349e-03
+A (slope) = 3,164236065573769e-03 +/- 1,356402392137134e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,603278205901654e-05
+R^2 = 0,990895892565483
+Angepasstes R^2 = 0,986343838848224
+RMSE (Standardabweichung) = 0,00400409566057262
+RSS (Summe der quadrierten Restwerte) = 8,01639102950824e-05
+---------------------------------------------------------------------------------------
+[07.11.13 18:01	Diagramm: ''Grafik2'']
+Lineare Regression von Datensatz: Tabelle1_Druck p [bar], unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Instrumentell: unter Benutzung der Fehlerbalken (w_i = 1/er_i**2), unter Benutzung der Fehlerbalkendaten: Tabelle1_Druck Fehler
+Von x = 2,500000000000000e+01 bis x = 6,000000000000000e+01
+B (y-intercept) = 8,350436459016395e-01 +/- 3,812549620209208e-03
+A (slope) = 3,164236065573769e-03 +/- 9,031174786969129e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,255737704918052e+00
+R^2 = 0,990895892565483
+Angepasstes R^2 = 0,986343838848224
+RMSE (Standardabweichung) = 1,50191135055237
+RSS (Summe der quadrierten Restwerte) = 11,2786885245902
+---------------------------------------------------------------------------------------
+[07.11.13 18:06	Diagramm: ''Grafik1'']
+Lineare Regression von Datensatz: Tabelle1_Druck p [bar], unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Instrumentell: unter Benutzung der Fehlerbalken (w_i = 1/er_i**2), unter Benutzung der Fehlerbalkendaten: Tabelle1_Druck Fehler
+Von x = 2,500000000000000e+01 bis x = 6,000000000000000e+01
+B (y-intercept) = 8,350436459016395e-01 +/- 3,812549620209208e-03
+A (slope) = 3,164236065573769e-03 +/- 9,031174786969129e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,255737704918052e+00
+R^2 = 0,990895892565483
+Angepasstes R^2 = 0,986343838848224
+RMSE (Standardabweichung) = 1,50191135055237
+RSS (Summe der quadrierten Restwerte) = 11,2786885245902
+---------------------------------------------------------------------------------------
+</log>

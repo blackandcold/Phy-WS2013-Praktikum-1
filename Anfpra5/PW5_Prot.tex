@@ -18,6 +18,7 @@
 \usepackage{amsmath} % a bunch of symbols
 \usepackage{amssymb} % even more symbols
 \usepackage{booktabs} % pretty tables
+\usepackage{makecell} % multi row table heading
 
 % a floating environment for circuits
 \usepackage{float}
@@ -163,8 +164,35 @@ Außendruck: 993mBar\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Adiabatenkoeffizienten der Luft}
-
+\section{Adiabatenkoeffizient der Luft}
+In diesem Experiment bestimmen wir den Adiabatenkoeffizienten der Luft. Wird ein Gas komprimiert ohne das Wärme entweichen kann, steigt der Druck stärker an als wenn die Wärme entweichen kann. Im Normalfall (isotherm) entspricht der Druck
+$$p = \frac{C}{V}$$
+wobei C eine Konstante ist.
+Im adiabatischen Fall, den wir Näherungsweise durch Luft erhalten welche ihren Druck in kurzen Intervallen ändert, entspricht der Druck:
+$$p = \frac{C}{V^\kappa}$$
+Es gibt in der Theorie einen Zusammenhang zwischen dem Koeffizienten $\kappa$ und den Freiheitsgraden der Moleküle im Gas. Bei Luft haben wir 6 Freiheitsgrade (3 Raumdimensionen, 3 Rotationsachsen) wobei die Eigendrehung entlang der Achse quer durch das Molekül kaum bis keinen Beitrag zu unserem Problem leistet und daher vernachlässigt wird. Mit 5 Freiheitsgraden ergibt sich ein erwarteter Wert von
+$$\kappa = \frac{f+2}{f} = \frac{7}{5} = 1.4$$
+Um diesen Wert Experimentell zu bestimmen verwenden wir ein 10L Gefäß und einen Gummi Blasebalg um eine Metallkugel in Schwingung zu versetzen. Der Aufbau ist in \ref{fig:adiabatenkoeffizienten_aufbau} ersichtlich.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{./figure/koeffizient.png}
+	\caption{Versuchsaufbau zur Ermittlung des Adiabatenkoeffizienten der Luft}
+	\label{fig:adiabatenkoeffizienten_aufbau}
+\end{figure}
+\noindent
+Nach der Herleitung (aus 3.1.3 [1]) erhalten wir folgende Formal für $\kappa$:
+$$\kappa = \left(\frac{2\pi}{T}\right)^2  \frac{m V_0}{q^2  p}$$
+T... Gemittelte Periodendauer der gemessenen Schwingungen\\
+m... Masse der Kugel\\
+$V_0$... Volumen des Behälters\\
+q... Querschnittsfläche der Röhre in der sich die Kugel bewegt\\
+p... Druck\\
+\\
+Den Druck lässt sich errechnen durch:
+$$p = p_0 + \frac{m g}{q}$$
+$p_0$... Außendruck (Luftdruck)\\
+g... Erdbeschleunigung\\
+Mit den angegebenen Werten aus [1] 3.3.1, den gemessenen Zeiten für T und der gemessenen Masse der Kugel errechnen wir im folgenden Abschnitt $\kappa$.
 %Equipment:
 %\begin{itemize}
 %	\item[-] Stoppuhr
@@ -172,11 +200,49 @@ Außendruck: 993mBar\\
 %\end{itemize}
 %
 \subsection{Messwerte und Ergebnisse}
-Masse Kugel: $(16.828 \pm 0.005)g$ \\
-Zwei Messungen, Kugel mit Papier, nur Papier => zwei mal Messfehler.\\
+
+Masse Kugel (Zwei Messungen, mit Papier und Papier allein):\\
+Kugel mit Papier: $(18,638 \pm 0.005)g$\\
+Papier allein: $(1,810 \pm 0.005)g$\\
+$(16.828 \pm 0.008)g$ \\
+%Zwei Messungen, Kugel mit Papier, nur Papier => zwei mal Messfehler.\\
+Werte von 3 mal 6 Messungen:
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={T1,T2,T3},
+			col sep=&,
+			columns/T1/.style={column name=$T_1[s]$, precision=2, zerofill}, %\makecell{Line 1\\Line 2}
+			columns/T2/.style={column name=$T_2[s]$, precision=2, zerofill},
+			columns/T3/.style={column name=$T_3[s]$, precision=2, zerofill},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								column type/.add={}{|}
+								}
+			]{
+			T1 & T2 & T3
+			5.35 & 5.35 & 5.40
+			5.49 & 5.36 & 5.37
+			5.40 & 5.39 & 5.35
+			5.37 & 5.49 & 5.41
+			5.43 & 5.33 & 5.46
+			5.31 & 5.46 & 5.44
+			}
+	\caption{Periodendauer nach 5 Schwingungen}
+	\label{fig:adiabaten_periode_messung}
+\end{figure}
+\noindent
+Mean: 5,39778 s\\
+STABW: 0,05418s\\
+Standard Error of mean: 0,01277s\\
 
 \subsection{Diskussion}
-
+Da der Fehler von 0.005g zweimal in die Messung eingeht steigert der Fehler sich aufgerundet auf 0.008.
+\ref{fig:adiabaten_periode_messung}
 
 
 %%%%%% Dampfdichtebestimmung %%%%%%%%
@@ -194,7 +260,7 @@ Zwei Messungen, Kugel mit Papier, nur Papier => zwei mal Messfehler.\\
 
 
 \section{Quellen}
-
+[1] Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw5/PW5_PL1.pdf}\\
 
 \end{multicols}
 \end{document}

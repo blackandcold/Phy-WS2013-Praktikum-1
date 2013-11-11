@@ -210,14 +210,20 @@ Raumtemperatur: $(22 \pm 1)^\circ $C
 \end{figure}
 
 
+\end{multicols}
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.50]{./figure/Spannungskoeffizient-lin_Fit.png}
+	\includegraphics[scale=0.65]{./figure/Spannungskoeffizient-lin_Fit.png}
 	\caption{Temperatur gegen mmHg-Differenz, linearer Fit}
 	\label{fig:gas_therm_Spannungskoeffizient}
 \end{figure}
 %B (y-intercept) = 8,350436459016395e-01 +/- 3,812549620209208e-03
 %A (slope) = 3,164236065573769e-03 +/- 9,031174786969129e-05
+
+\begin{multicols}{2}
+
+
 
 $$\frac{\Delta p}{\Delta \vartheta} = (3.164 \pm 0.091) mbar/ ^\circ C$$
 $$ p_0 = (835.0 \pm 3.9) mbar$$\\
@@ -242,17 +248,20 @@ Jedenfalls sind Fehler durch Material und Umgebung nicht auszuschließen, da inn
 Schließlich sind auch etwaige Ablesefehler und -ungenauigkeiten, wie oben argumentiert, nicht auszuschließen.\\
 Interessant wäre schließlich, wie gut das Ergebnis bei genauer linearen Messergebnissen wäre; Also wenn der Einfluss der Messung auf das Ergebnis sehr viel kleiner wäre und damit die Näherung, Luft (deren genaue Zusammensetzung uns hier auch unbekannt ist) als ideales Gas zu deuten, klarer erkennbar wäre.
 
+\pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Adiabatenkoeffizient der Luft}
-In diesem Experiment bestimmen wir den Adiabatenkoeffizienten der Luft. Wird ein Gas komprimiert ohne das Wärme entweichen kann, steigt der Druck stärker an als wenn die Wärme entweichen kann. Im Normalfall (isotherm) entspricht der Druck
+In diesem Experiment bestimmen wir den Adiabatenkoeffizienten der Luft. \\
+Wird ein Gas komprimiert, ohne das Wärme entweichen kann, steigt der Druck stärker an als wenn die Wärme entweichen kann. Im Normalfall (isotherm) entspricht der Druck
 $$p = \frac{C}{V}$$
 wobei C eine Konstante ist.
-Im adiabatischen Fall, den wir Näherungsweise durch Luft erhalten welche ihren Druck in kurzen Intervallen ändert, entspricht der Druck:
+Im adiabatischen Fall, den wir näherungsweise für Luft erhalten, welche ihren Druck in kurzen Intervallen ändert, entspricht dieser:
 $$p = \frac{C}{V^\kappa}$$
-Es gibt in der Theorie einen Zusammenhang zwischen dem Koeffizienten $\kappa$ und den Freiheitsgraden der Moleküle im Gas. Bei Luft haben wir 6 Freiheitsgrade (3 Raumdimensionen, 3 Rotationsachsen) wobei die Eigendrehung entlang der Achse quer durch das Molekül kaum bis keinen Beitrag zu unserem Problem leistet und daher vernachlässigt wird. Mit 5 Freiheitsgraden ergibt sich ein erwarteter Wert von
+Es gibt in der Theorie einen Zusammenhang zwischen dem Koeffizienten $\kappa$ und den Freiheitsgraden der Moleküle im Gas: Moleküle in Luft verfügen über 6 Freiheitsgrade (3 Raumdimensionen, 3 Rotationsachsen), wobei die Eigendrehung entlang der Achse quer durch das Molekül kaum einen bis keinen Beitrag leistet und daher vernachlässigt wird. Mit 5 Freiheitsgraden ergibt sich ein erwarteter Wert von
 $$\kappa = \frac{f+2}{f} = \frac{7}{5} = 1.4$$
-Um diesen Wert Experimentell zu bestimmen verwenden wir ein 10L Gefäß und einen Gummi Blasebalg um eine Metallkugel in Schwingung zu versetzen. Der Aufbau ist in \ref{fig:adiabatenkoeffizienten_aufbau} ersichtlich.
+Um diesen Wert experimentell zu bestimmen verwenden wir ein 10L Gefäß und einen Gummi-Blasebalg, um eine Metallkugel in Schwingung zu versetzen. Die Periodendauer wird bestimmt, indem jeweils 5 ganze Schwingungen gemessen werden und so der Fehler für eine Periode klein gehalten wird.\\
+Der Aufbau ist in \ref{fig:adiabatenkoeffizienten_aufbau} ersichtlich.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.25]{./figure/koeffizient.png}
@@ -262,17 +271,18 @@ Um diesen Wert Experimentell zu bestimmen verwenden wir ein 10L Gefäß und eine
 \noindent
 Nach der Herleitung (aus 3.1.3 [1]) erhalten wir folgende Formal für $\kappa$:
 $$\kappa = \left(\frac{2\pi}{T}\right)^2  \frac{m V_0}{q^2  p}$$
-T... Gemittelte Periodendauer der gemessenen Schwingungen\\
+T... Periodendauer der Schwingungen\\
 m... Masse der Kugel\\
 $V_0$... Volumen des Behälters\\
-q... Querschnittsfläche der Röhre in der sich die Kugel bewegt\\
+q... Querschnittsfläche der Röhre, in der sich die Kugel bewegt\\
 p... Druck\\
 \\
-Den Druck lässt sich errechnen durch:
+Der Druck lässt sich errechnen durch:
 $$p = p_0 + \frac{m g}{q}$$
 $p_0$... Außendruck (Luftdruck)\\
 g... Erdbeschleunigung\\
-Mit den angegebenen Werten aus [1] 3.3.1, den gemessenen Zeiten für T und der gemessenen Masse der Kugel errechnen wir im folgenden Abschnitt $\kappa$.
+\\
+Aus den angegebenen Werten aus [1] 3.3.1, den gemessenen Zeiten für T, und der gemessenen Masse der Kugel errechnen wir im folgenden Abschnitt $\kappa$.
 %Equipment:
 %\begin{itemize}
 %	\item[-] Stoppuhr
@@ -281,10 +291,15 @@ Mit den angegebenen Werten aus [1] 3.3.1, den gemessenen Zeiten für T und der g
 %
 \subsection{Messwerte und Ergebnisse}
 
-Masse Kugel (Zwei Messungen, mit Papier und Papier allein):\\
+Radius des Rohres: 8mm\\
+Volumen des Gefäßes: 10l\\
+Luftdruck p$_0$: 993 mbar\\
+\\
+Masse m der Kugel: $(16.828 \pm 0.008)g$ \\
+\indent (Zwei Messungen:\\
 Kugel mit Papier: $(18,638 \pm 0.005)g$\\
-Papier allein: $(1,810 \pm 0.005)g$\\
-$(16.828 \pm 0.008)g$ \\
+Schutzpapier allein: $(1,810 \pm 0.005)g$)\\
+
 %Zwei Messungen, Kugel mit Papier, nur Papier => zwei mal Messfehler.\\
 Werte von 3 mal 6 Messungen:
 \begin{figure}[H]
@@ -316,9 +331,13 @@ Werte von 3 mal 6 Messungen:
 	\label{fig:adiabaten_periode_messung}
 \end{figure}
 \noindent
-Mean: 5,39778s $\approx$ 5.398s\\
-STABW: 0,05418s\\
-Standard Error of mean: 0.01277s $\approx$ 0.013s\\
+%Mean: 5,39778s $\approx$ 5.398s\\
+%STABW: 0,05418s\\
+%Standard Error of mean: 0.01277s $\approx$ 0.013s\\
+($T_5 = (5.40 \pm 0.02)s$, siehe Abb. \ref{fig:adiabaten_periode_messung})
+$$T=(1.08 \pm 0.01)s$$\\
+\\
+$$\kappa = ($$
 
 \subsection{Diskussion}
 Die Messungen gestalteten sich eher schwierig, da gut messbare Schwingungen nur mit etwas Aufwand zu bewerkstelligen sind. Dennoch ergab sich eine gute Messreihe wie in Tabelle \ref{fig:adiabaten_periode_messung} ersichtlich.
@@ -357,7 +376,7 @@ $$molare Masse = (85.2 \pm 4.1) g/mol$$
 
 
 \subsection{Diskussion}
-Die erwartete molare Masse von Aceton ist etwa $58.1$g/mol.\\
+Die erwartete molare Masse von Aceton ist etwa $58.1$g/mol [2].\\
 Das Ergebnis dieser Messung liegt zwar in der richtigen Größenordnung, ansonsten jedoch deutlich außerhalb der Unsicherheit.\\
 Ein Nachfragen beim Betreuer und Mitstudierenden, die das Experiment bereits durchgeführt haben ergab, dass größere Abweichungen bei diesem Versuchsaufbau durchaus bekannt sind. Die Fehler der einzelnen Messgrößen wurden, auch deshalb, eher vorsichtig abgeschätzt. Dennoch ist der Unsicherheitsbereich klein gegenüber der Abweichung vom Literaturwert.\\
 Diese Diskussion soll sich möglichen Ursachen, aber auch Grenzen der Machbarkeit, im Rahmen des Praktikums, widmen:\\
@@ -378,6 +397,7 @@ Natürlich gibt es noch einige andere mögliche Ursachen des Ergebnisses (wie di
 
 \section{Quellen}
 [1] Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw5/PW5_PL1.pdf}\\
+[2] Lit-Wert Aceton, \url{http://de.wikipedia.org/wiki/Aceton}
 
 \end{multicols}
 \end{document}

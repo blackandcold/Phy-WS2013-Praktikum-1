@@ -172,15 +172,7 @@ lässt sich der Spannungskoeffizient durch einen linearen Fit der Druck/Temperat
 Luftdruck im Labor: $(993\pm 1)$mBar\\
 Raumtemperatur: $(22 \pm 1)^\circ $C
 
-
-
-
-
-
-
-%%%% TO DO SHORTY:
-%%% bitte einheiten in die tabelle einfügen (2. zeile) und die spalte "Produkte" als Integerdarstellung statt der unpraktischen 10erpotenzen ausführen
-
+% pretty as can be!
 
 \begin{figure}[H]
 	\centering
@@ -188,6 +180,10 @@ Raumtemperatur: $(22 \pm 1)^\circ $C
 			columns={Druck, Laenge, Produkt, Fehler},
 			%columns/Druck/.style={column name=$Druck\\[mmHg]$},
 			col sep=&,
+			columns/Druck/.style={column name=\makecell{$Druck$\\$[mmHg]$}, precision=0}, 
+			columns/Laenge/.style={column name=\makecell{$Laenge$\\$[mm]$}, precision=0}, 
+			columns/Produkt/.style={column name=\makecell{$Produkt$\\$[mmHg$\\$*mm]$}, fixed,precision=0, 1000 sep={}}, 
+			columns/Fehler/.style={column name=\makecell{$Fehler$\\$[mmHg]$}, precision=0}, 
 			every head row/.style={before row=\hline,after row=\hline\hline},
 			every last row/.style={after row=\hline},
 			every first column/.style={
@@ -292,9 +288,9 @@ Werte von 3 mal 6 Messungen:
 	\pgfplotstabletypeset[
 			columns={T1,T2,T3},
 			col sep=&,
-			columns/T1/.style={column name=$T_1[s]$, precision=2, zerofill}, %\makecell{Line 1\\Line 2}
-			columns/T2/.style={column name=$T_2[s]$, precision=2, zerofill},
-			columns/T3/.style={column name=$T_3[s]$, precision=2, zerofill},
+			columns/T1/.style={column name=\makecell{$T_1$\\$[s]$}, precision=2, zerofill}, %
+			columns/T2/.style={column name=\makecell{$T_2$\\$[s]$}, precision=2, zerofill},
+			columns/T3/.style={column name=\makecell{$T_3$\\$[s]$}, precision=2, zerofill},
 			every head row/.style={before row=\hline,after row=\hline\hline},
 			every last row/.style={after row=\hline},
 			every first column/.style={
@@ -319,10 +315,10 @@ Werte von 3 mal 6 Messungen:
 Mean: 5,39778s $\approx$ 5.398s\\
 STABW: 0,05418s\\
 Standard Error of mean: 0.01277s $\approx$ 0.013s\\
-
+$$\kappa = 1.357 \pm $$
 \subsection{Diskussion}
 Die Messungen gestalteten sich eher schwierig, da gut messbare Schwingungen nur mit etwas Aufwand zu bewerkstelligen sind. Dennoch ergab sich eine gute Messreihe wie in Tabelle \ref{fig:adiabaten_periode_messung} ersichtlich.
-Da der Fehler bei der Messung der Kugelmasse von 0.005g zweimal in die Messung eingeht steigert der Fehler sich aufgerundet auf 0.008g. Unklar war das angegebene Volumen des in Abb. \ref{fig:adiabatenkoeffizienten_aufbau} zu sehenden Behälters. Mit 10L erschien das etwas überdimensioniert. Da unser Ergebnis mit $$\kappa = 1.32$$ sehr nahe am Wert liegt den man über die Freiheitsgrade erhält, scheint das Volumen doch zu zutreffen.
+Da der Fehler bei der Messung der Kugelmasse von 0.005g zweimal in die Messung eingeht steigert der Fehler sich aufgerundet auf 0.008g. Unklar war das angegebene Volumen des in Abb. \ref{fig:adiabatenkoeffizienten_aufbau} zu sehenden Behälters. Mit 10L erschien das etwas überdimensioniert. Da unser Ergebnis mit $$\kappa = 1.357$$ sehr nahe am Wert liegt den man über die Freiheitsgrade erhält, scheint das Volumen doch zu zutreffen.
 
 %%%%%% Dampfdichtebestimmung %%%%%%%%
 

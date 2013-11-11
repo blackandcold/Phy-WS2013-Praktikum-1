@@ -169,6 +169,23 @@ lässt sich der Spannungskoeffizient durch einen linearen Fit der Druck/Temperat
 %\end{itemize}
 
 \subsection{Messwerte und Ergebnisse}
+
+\end{multicols}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.60]{./figure/Spannungskoeffizient-lin_Fit.png}
+	\caption{Temperatur gegen mmHg-Differenz, linearer Fit}
+	\label{fig:gas_therm_Spannungskoeffizient}
+\end{figure}
+%B (y-intercept) = 8,350436459016395e-01 +/- 3,812549620209208e-03
+%A (slope) = 3,164236065573769e-03 +/- 9,031174786969129e-05
+
+\begin{multicols}{2}
+
+
+
+
 Luftdruck im Labor: $(993\pm 1)$mBar\\
 Raumtemperatur: $(22 \pm 1)^\circ $C
 
@@ -206,18 +223,6 @@ Raumtemperatur: $(22 \pm 1)^\circ $C
 \end{figure}
 
 
-\end{multicols}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.65]{./figure/Spannungskoeffizient-lin_Fit.png}
-	\caption{Temperatur gegen mmHg-Differenz, linearer Fit}
-	\label{fig:gas_therm_Spannungskoeffizient}
-\end{figure}
-%B (y-intercept) = 8,350436459016395e-01 +/- 3,812549620209208e-03
-%A (slope) = 3,164236065573769e-03 +/- 9,031174786969129e-05
-
-\begin{multicols}{2}
 
 
 
@@ -333,19 +338,32 @@ Werte von 3 mal 6 Messungen:
 ($T_5 = (5.40 \pm 0.02)s$, siehe Abb. \ref{fig:adiabaten_periode_messung})
 $$T=(1.08 \pm 0.01)s$$\\
 \\
-$$\kappa = ($$
+$$\kappa = (1.407 \pm 0.027)$$
 
 \subsection{Diskussion}
-Die Messungen gestalteten sich eher schwierig, da gut messbare Schwingungen nur mit etwas Aufwand zu bewerkstelligen sind. Dennoch ergab sich eine gute Messreihe wie in Tabelle \ref{fig:adiabaten_periode_messung} ersichtlich.
-Da der Fehler bei der Messung der Kugelmasse von 0.005g zweimal in die Messung eingeht steigert der Fehler sich aufgerundet auf 0.008g. Unklar war das angegebene Volumen des in Abb. \ref{fig:adiabatenkoeffizienten_aufbau} zu sehenden Behälters. Mit 10L erschien das etwas überdimensioniert. Da unser Ergebnis mit $$\kappa = 1.357$$ sehr nahe am Wert liegt den man über die Freiheitsgrade erhält, scheint das Volumen doch zu zutreffen.
+Die Schwingungen der Kugel in der Röhre sind deutlich gedämpft und wirken teilweise unsauber in ihrem Verlauf. Dennoch ist in Tabelle \ref{fig:adiabaten_periode_messung} gut zu sehen, dass die Streuung ausreichend klein ist, für eine Messung per Hand und Stoppuhr.\\
+Der Fehler von 0.005g beim Wägen der Kugelmasse geht zweimal in die Messung ein, da die Kugel nicht direkt berührt werden soll. Die Fehlerfortpflanzung steigert diesen, aufgerundet, auf 0.008g. Unklar war das angegebene Volumen, des in Abb. \ref{fig:adiabatenkoeffizienten_aufbau} erkennbaren Behälters. Mit 10L erschien das etwas überdimensioniert.\\
+All diese Bedenken dürften jedoch kaum einen Einfluss auf das Ergebnis haben.
+Dieses ist mit $\kappa = (1.407 \pm 0.027)$ \\
+sehr nahe am erwarteten Wert aus der Näherung über die Freiheitsgrade ($\kappa = 1.4$).\\
+In diesem Versuch ist vor allem die Genauigkeit des Ergebnisses überraschend:\\
+Zum einen ist die Berechnung von $\kappa$ aus den Freiheitsgraden der Molekülen eine Näherung, zum anderen scheint die Versuchsdurchführung sehr stark von der durchführenden Person abhängig.
+Auch in anderen Praktikumsbeispielen zeigte sich bereits, das Schwingungsdauern und andere Zeitmessungen von Hand, durch mehrmaliges Wiederholen und dem Messen mehrerer Schwingungen, im Rahmen der Möglichkeiten einer Stoppuhr, zu guten Ergebnissen führen.\\
+Auch die anderen geäußerten Bedenken erweisen sich offenbar als Täuschung.
+\pagebreak
+
+
+
 
 %%%%%% Dampfdichtebestimmung %%%%%%%%
 
 \section{Dampfdichtebestim- mung}
+
 In diesem Teil von PW5 wurde die Dampfdichte $\alpha$ von Aceton bestimmt.\\
 Die Dampfdichte ist das Verhältnis der Dichte eines Gases zur Dichte von Luft. Da Aceton bei $0 ^\circ$C nicht gasförmig ist, sondern erst bei $56^\circ$C verdampft, wird Aceton näherungsweise als ideales Gas angenommen. So kann (nach der allgemeinen Gasgleichung) von Messungen bei höheren Temperaturen rückgerechnet werden. Durch Umformung kann daraus die Dichte des Gases durch andere bekannte/ gemessene Werte ausgedrückt werden.
 $$\frac{p}{\rho_D \cdot T}= \frac{p_N}{\rho_N \cdot T_N}$$ 
 (Gasgleichung dividiert durch die Masse)\\
+\\
 Der Ausdruck für $\rho_N$ wird in $\alpha$ eingesetzt.
 $$\alpha = \frac{\rho_N}{\rho_{L,N}}=\frac{\rho_D}{\rho_{L,N}} \cdot \frac{p_N T}{p \cdot T_N}$$
 Da das Verhältnis der Dichten gleich dem der Molekularmassen ist, erhält man die Molekularmasse von Aceton, indem man $\alpha$ mit der von Luft multipliziert.\\
@@ -356,7 +374,10 @@ Außerdem sind noch Luftdruck, Höhe der Wassersäule und Raumtemperatur zu mess
 $$\alpha = \frac{m}{V} \cdot \frac{760}{p} \cdot \frac{1 + \frac{1}{273.15} \cdot \vartheta}{0.001293}$$
 wobei
 $$p= Luftdruck - \frac{Wassersaeule}{13.6} - p_w$$
-erhält man schließlich $\alpha$.
+erhält man schließlich $\alpha$.\\
+\\
+\\
+
 
 \subsection{Messwerte und Ergebnisse}
 
@@ -367,7 +388,9 @@ verdrängtes Volumen: $(57 \pm 0.2)$ cm$^3$\\
 Masse$_{Aceton}: (0.177 \pm 0.08)$ g\\
 \\
 $$\alpha_{Aceton} = (2.95 \pm 0.14)$$
-$$molare Masse = (85.2 \pm 4.1) g/mol$$
+$$molare Masse = (85.2 \pm 4.1) g/mol$$\\
+\\
+\\
 
 
 

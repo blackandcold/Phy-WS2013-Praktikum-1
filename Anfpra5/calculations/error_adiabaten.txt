@@ -1,0 +1,19 @@
+sqrt(
+	(
+		(
+		(2*pi/(1.08)seconds)^2
+		*(10litres)/(
+						((8mm)^2 *pi)^2
+						*(993millibars + (16.828grams * 9.81m/s^2 /((8mm)^2*pi)))
+					)
+		)*0.008grams
+	)^2 +
+	(
+		(
+			(-2 * 16.828grams * 4 * pi^2 * 10litres)/(
+			((8mm)^2 *pi)^2 *(993millibars + (16.828grams * 9.81m/s^2 /((8mm)^2*pi)))*((1.08)seconds)^3)
+		)*0.01seconds
+	)^2
+)
+
+sqrt(6.8E-4 + 4.5E-7) = 0.0260854

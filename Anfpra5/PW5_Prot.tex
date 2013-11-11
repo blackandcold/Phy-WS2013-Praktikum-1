@@ -139,6 +139,20 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Gasthermometer}
+Im ersten Teil von PW5 sollen das Boyle-Mariotte'sche Gesetz für ideale Gase und deren Spannungskoeffizient $\beta$ bestimmt werden.\\
+Ein idealisiertes Gas hat einen einfachen Zusammenhang zwischen Volumen, Druck und Temperatur und ist dadurch gekennzeichnet, dass Interaktion zwischen seinen Molekülen und deren Volumen vernachlässigbar sind.\\
+In diesem Versuch ist Luft das Gas, dessen Volumen und Druck betrachtet werden. Bei Raumtemperatur ist Luft weit vom Phasenübergang zur Flüssigkeit entfernt und kann daher näherungsweise als ideales Gas betrachtet werden.\\
+Eine Eigenschaft wird durch das Boyle-Mariotte'sche Gesetz beschrieben:\\
+$p\cdot V= const$
+Also bei konstanter Temperatur ist auch das Produkt aus Druck und Temperatur (für alle Kombinationen) konstant.\\
+Zum Nachweis wird ein \textbf{Gasthermometer} verwendet: 2 Glasgefäße sind über einen Schlauch miteinander verbunden und parallel an einer Messskala angebracht. In dem System befindet sich Quecksilber. Das eine Gefäß ist abgeschlossen und enthält eine Luftkammer, abgeschlossen vom Quecksilber (Messgefäß). Das andere Gefäß ist offen, sodass der Umgebungsluftdruck auf das Quecksilber wirkt (siehe Abbildung \ref{fig:gas_therm_aufbau}).\\
+Verschiebt man die beiden Behälter zueinander, lassen sich, bei konstanter Temperatur, verschiedene Luftvolumina im Messgerät sowie Höhendifferenzen der beiden Quecksilbersäulen ablesen.\\
+Die Quecksilber-Höhendifferenz addiert (oder subtrahiert) zum Außenluftdruck ergibt den Druck, der in der Luftkammer herrscht. Die Produkte der Volumen/Druck-Paare sollen für alle Kombinationen gleich sein.\\
+\\
+Außerdem soll der Spannungskoeffizient $\beta$ von Luft bestimmt werden. Dieser sollte $\frac{1}{T_0}$ sein, wobei $T_0 = 273.15K$. Dieser ist der Faktor, mit dem sich der Druck eines idealen Gases bei konstant gehaltenem Volumen linear mit der Temperatur ändert.\\
+Das Volumen der Luftkammer des Gasthermometers wird konstant gehalten, während der Druck bei verschiedenen Temperaturen bestimmt wird. Aus 
+$$ \beta = \frac{1}{p_0} \cdot \frac{\Delta p}{\Delta \vartheta} $$
+lässt sich der Spannungskoeffizient durch einen linearen Fit der Druck/Temperatur-Wertepaare bestimmen ($p_0$ ist dabei der Druck bei $T_0$.
 
 \begin{figure}[H]
 	\centering
@@ -155,12 +169,78 @@
 %\end{itemize}
 
 \subsection{Messwerte und Ergebnisse}
-Außendruck: 993mBar\\
+Luftdruck im Labor: $(993\pm 1)$mBar\\
+Raumtemperatur: $(22 \pm 1)^\circ $C
+
+
+
+
+
+
+
+%%%% TO DO SHORTY:
+%%% bitte einheiten in die tabelle einfügen (2. zeile) und die spalte "Produkte" als Integerdarstellung statt der unpraktischen 10erpotenzen ausführen
+
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={Druck, Laenge, Produkt, Fehler},
+			%columns/Druck/.style={column name=$Druck\\[mmHg]$},
+			col sep=&,
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								column type/.add={}{|} 
+								}
+			]{
+			Druck & Laenge & Produkt & Fehler
+			%[mmHg] \pm1; [mm] \pm1; [mmHg*mm]; [mmHg*mm]
+			917 &213 &195280 &950 
+			794 &229 &181780 &830 
+			745 &245 &182480 &790 
+			713 &256 &182480 &760
+			681 &266 &181090 &740 
+	}
+	\caption{Druck/Volumen bei Raumtemperatur}
+	\label{fig:Messergebnis1_1}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{./figure/Spannungskoeffizient-lin_Fit.png}
+	\caption{Temperatur gegen mmHg-Differenz, linearer Fit}
+	\label{fig:gas_therm_Spannungskoeffizient}
+\end{figure}
+%B (y-intercept) = 8,350436459016395e-01 +/- 3,812549620209208e-03
+%A (slope) = 3,164236065573769e-03 +/- 9,031174786969129e-05
+
+$$\frac{\Delta p}{\Delta \vartheta} = (3.164 \pm 0.091) mbar/ ^\circ C$$
+$$ p_0 = (835.0 \pm 3.9) mbar$$\\
+\\
+$$\beta = (0.00379 \pm 0.00012) K^-1$$
+$$T_0 =(263.9 \pm 8.0)K$$
+
 
 
 \subsection{Diskussion}
 
-
+Wie in Abbildung \ref{fig:Messergebnis1_1} zu sehen, liegen 4 der multiplizierten Druck/Länge Wertepaare, innerhalb der Unsicherheit, gut beieinander. Das Boyle-Mariott'sche Gesetz scheint also, in guter Näherung, auch für Luft zu gelten.\\
+Einzig die erste Messung weicht deutlich ab. Mögliche Erklärungen dafür wären:\\
+\indent - Ein Fehler beim Ablesen der Skala. Über die gesamte Arbeit am Gasthermometer wurden einige Messungen doppelt gecheckt und diskutiert, das die Kombination aus vielen nicht-durchnummerierten Strichen in der Vertikalen und der nicht-perfekten Sicht beider Durchführenden zu Unsicherheit geführt hat.\\
+Da dieser Messwert aus der allerersten Kontrolle an der Skala überhaupt stammt, und dabei das Bewusstsein für dieses Problem noch nicht voll vorhanden war,  lässt sich ein Lesefehler hier nicht ausschließen.\\
+\indent - Eine weitere Möglichkeit ist ein systematischer Fehler im Messaufbau, der erst bei größeren Abständen / Drücken anschlägt: Das erste Wertepaar wurde bei deutlich höherem Druck abgelesen, als alle anderen. Das bedeutet, dass sowohl der Höhenunterschied zwischen beiden Behältern verhältnismäßig groß ist, wie auch der Druck auf die Luft im Messgefäß. Möglicherweise ergeben sich bei extremeren Einstellungen ungewollte Effekte.\\
+\\
+Der ermittelte Spannungskoeffizient stimmt mit dem erwarteten Wert in Näherung überein. In Abbildung \ref{fig:gas_therm_Spannungskoeffizient} ist zu erkennen, dass die gemessenen Werte zwar sehr deutlich eine Gerade annähern, aber durchaus starke Schwankungen in beide Richtungen aufweisen.\\
+Ein systematischer Fehler ist nicht zu erwarten. Die Schwankungen könnten der Messmethodik geschuldet sein, jedenfalls wären hier Verbesserungen sicher möglich:\\
+Die Messkammer wird aufgeheizt und das Druckverhältnis für verschiedene Temperaturen gemessen. Aufgrund der begrenzten Zeit im Praktikum wurde versucht, das einigermaßen zügig durchzuführen. Da nicht nur die Luft sondern auch das Quecksilber im Messgerät erhitzt wird, entsteht eine Temperatur-Differenz zwischen dem Quecksilber im Messbehälter und demjenigen im Vorratsbehälter. Ein Halten des Systems auf gleichmäßiger Temperatur, für einige Minuten und vor jeder Messung, wäre möglicherweise besser.\\
+Jedenfalls sind Fehler durch Material und Umgebung nicht auszuschließen, da innerhalb kurzer Zeit verschiedene Temperaturen durchgesteppt werden, jedoch nur in einem abgegrenzten Teil des Gasthermometers.\\
+Schließlich sind auch etwaige Ablesefehler und -ungenauigkeiten, wie oben argumentiert, nicht auszuschließen.\\
+Interessant wäre schließlich, wie gut das Ergebnis bei genauer linearen Messergebnissen wäre; Also wenn der Einfluss der Messung auf das Ergebnis sehr viel kleiner wäre und damit die Näherung, Luft (deren genaue Zusammensetzung uns hier auch unbekannt ist) als ideales Gas zu deuten, klarer erkennbar wäre.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -247,8 +327,21 @@ Da der Fehler bei der Messung der Kugelmasse von 0.005g zweimal in die Messung e
 %%%%%% Dampfdichtebestimmung %%%%%%%%
 
 \section{Dampfdichtebestimmung}
-
-
+In diesem Teil von PW5 wurde die Dampfdichte $\alpha$ von Aceton bestimmt.\\
+Die Dampfdichte ist das Verhältnis der Dichte eines Gases zur Dichte von Luft. Da Aceton bei $0 ^\circ$C nicht gasförmig ist, sondern erst bei $56^\circ$C verdampft, wird Aceton näherungsweise als ideales Gas angenommen. So kann (nach der allgemeinen Gasgleichung) von Messungen bei höheren Temperaturen rückgerechnet werden. Durch Umformung kann daraus die Dichte des Gases durch andere bekannte/ gemessene Werte ausgedrückt werden.
+$$\frac{p}{\rho_D \cdot T}= \frac{p_N}{\rho_N \cdot T_N}$$ 
+(Gasgleichung dividiert durch die Masse)\\
+Der Ausdruck für $\rho_N$ wird in $\alpha$ eingesetzt.
+$$\alpha = \frac{\rho_N}{\rho_{L,N}}=\frac{\rho_D}{\rho_{L,N}} \cdot \frac{p_N T}{p \cdot T_N}$$
+Da das Verhältnis der Dichten gleich dem der Molekularmassen ist, erhält man die Molekularmasse von Aceton, indem man $\alpha$ mit der von Luft multipliziert.\\
+\\
+Im Versuch wird Aceton in einem (auf $90^\circ$C erhitzten) Glaszylinder verdampft und verdrängt dabei Luft. Diese wird in einen mit Wasser gefüllten Messzylinder umgeleitet, in welchem das verdrängte Volumen abgelesen werden kann, und damit das Volumen des verdampften Acetons.
+Da dieses rasch verdunstet, ist es wichtig, es schnell und und unmittelbar vor dem Verdampfen, zu wägen.\\
+Außerdem sind noch Luftdruck, Höhe der Wassersäule und Raumtemperatur zu messen, sowie der Dampfdruck des gesättigten Wasserdampfes aus einer Tabelle zu entnehmen. Aus
+$$\alpha = \frac{m}{V} \cdot \frac{760}{p} \cdot \frac{1 + \frac{1}{273.15} \cdot \vartheta}{0.001293}$$
+wobei
+$$p= Luftdruck - \frac{Wassersaeule}{13.6} - p_w$$
+erhält man schließlich $\alpha$.
 
 \subsection{Messwerte und Ergebnisse}
 

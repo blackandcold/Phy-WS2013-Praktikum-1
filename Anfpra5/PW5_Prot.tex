@@ -183,9 +183,7 @@ lässt sich der Spannungskoeffizient durch einen linearen Fit der Druck/Temperat
 
 \begin{multicols}{2}
 
-
-
-
+\noindent
 Luftdruck im Labor: $(993\pm 1)$mBar\\
 Raumtemperatur: $(22 \pm 1)^\circ $C
 
@@ -363,12 +361,20 @@ In diesem Teil von PW5 wurde die Dampfdichte $\alpha$ von Aceton bestimmt.\\
 Die Dampfdichte ist das Verhältnis der Dichte eines Gases zur Dichte von Luft. Da Aceton bei $0 ^\circ$C nicht gasförmig ist, sondern erst bei $56^\circ$C verdampft, wird Aceton näherungsweise als ideales Gas angenommen. So kann (nach der allgemeinen Gasgleichung) von Messungen bei höheren Temperaturen rückgerechnet werden. Durch Umformung kann daraus die Dichte des Gases durch andere bekannte/ gemessene Werte ausgedrückt werden.
 $$\frac{p}{\rho_D \cdot T}= \frac{p_N}{\rho_N \cdot T_N}$$ 
 (Gasgleichung dividiert durch die Masse)\\
-\\
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{./figure/dampfdruck.png}
+	\caption{Versuchsaufbau zur Ermittlung der Dampfdichte von Aceton}
+	\label{fig:dampfdruck_aufbau}
+\end{figure}
+\begin{multicols}{2}
+\noindent
 Der Ausdruck für $\rho_N$ wird in $\alpha$ eingesetzt.
 $$\alpha = \frac{\rho_N}{\rho_{L,N}}=\frac{\rho_D}{\rho_{L,N}} \cdot \frac{p_N T}{p \cdot T_N}$$
 Da das Verhältnis der Dichten gleich dem der Molekularmassen ist, erhält man die Molekularmasse von Aceton, indem man $\alpha$ mit der von Luft multipliziert.\\
 \\
-Im Versuch wird Aceton in einem (auf $90^\circ$C erhitzten) Glaszylinder verdampft und verdrängt dabei Luft. Diese wird in einen mit Wasser gefüllten Messzylinder umgeleitet, in welchem das verdrängte Volumen abgelesen werden kann, und damit das Volumen des verdampften Acetons.
+Im Versuch wird Aceton in einem (auf $90^\circ$C erhitzten) Glaszylinder verdampft und verdrängt dabei Luft. Diese wird in einen mit Wasser gefüllten Messzylinder umgeleitet, in welchem das verdrängte Volumen abgelesen werden kann, und damit das Volumen des verdampften Acetons (Abb. \ref{fig:dampfdruck_aufbau}).
 Da dieses rasch verdunstet, ist es wichtig, es schnell und und unmittelbar vor dem Verdampfen, zu wägen.\\
 Außerdem sind noch Luftdruck, Höhe der Wassersäule und Raumtemperatur zu messen, sowie der Dampfdruck des gesättigten Wasserdampfes aus einer Tabelle zu entnehmen. Aus
 $$\alpha = \frac{m}{V} \cdot \frac{760}{p} \cdot \frac{1 + \frac{1}{273.15} \cdot \vartheta}{0.001293}$$

@@ -46,6 +46,8 @@
 %
 % - - Shorty:
 %
+% - - Tabelle "Messwerte Linsenbrennweite"
+%		bitte bei jedem neuen e eine trennlinie... bin zu deppert ^^
 
 % - - Patrick
 %
@@ -161,6 +163,47 @@ $$g_{konkav}= -(b_{konvex}-d_{konv-konk})$$
 
 
 \subsection{Messwerte und Ergebnisse}
+
+
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={e,g1,g2},
+			col sep=&,
+			columns/e/.style={column name=\makecell{$e$\\$[cm]$}, precision=1, zerofill}, %
+			columns/g1/.style={column name=\makecell{$g1$\\$[cm]$}, precision=1, zerofill},
+			columns/g2/.style={column name=\makecell{$g2$\\$[cm]$}, precision=1, zerofill},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								column type/.add={}{|}
+								}
+			]{
+			e & g1 & g2
+			40 & 17.5 & 22.8
+			      & 17.3 & 22.5
+			      & 17.2 & 23.5
+			      & 17.5 & 23.5
+			      & 17.5 & 23.0
+			
+			50 & 13.4 & 36.8
+			      & 13.3 & 36.7
+			45 & 14.5 & 30.6
+			      & 14.5 & 30.7
+			60 &  12.4 & 47.8
+			65 & 12.0 & 53.0
+			}
+	\caption{Je 2 Gegenstandsweiten bei verschiedenen Schirmabständen - Konvexlinse}
+	\label{fig:Gegenstandsweiten_Konvexlinse}
+\end{figure}
+
+
+
+
 
 \subsection{Diskussion}
 

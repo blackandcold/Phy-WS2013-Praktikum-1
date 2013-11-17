@@ -58,3 +58,31 @@ Konkavlinse:
 		SQRT(0.0893669605+0.000095367)
 		
 		
+		
+		
+		
+		
+Mikroskop:
+
+	(fehler für alle abschätzungen: 3mm, rechnung immer max fehler - wert)
+1. Tubus: 13/((10/200)*60) - 10/((10/200)*60)
+	Rechnung: 30 * 250 /(30*60)
+	fehler(alle:) 250 /(30*60)
+	
+2. Tubus: 13/((10/200)*40) - 10/((10/200)*40)
+	Rechnung: 50*250 /(30*60)
+	
+3. Tubus: 15/((10/200)*20) - 12/((10/200)*20)
+	Rechnung: 80*250 /(30*60)
+	
+4. Tubus: 13/((10/200)*20) - 10/((10/200)*20)
+	Rechnung: 65*250 /(30*60)
+	
+	Haar:
+
+
+
+Fernrohr:
+	
+	
+		

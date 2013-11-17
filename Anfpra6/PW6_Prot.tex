@@ -141,16 +141,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Brennweite von Linsen}
-Die Brennweite $f $ einer Linse ist der Abstand zwischen Brennpunkt und der angenommenen Brechungsebene einer Linse. \\
+Die \textbf{Brennweite $f $} einer Linse ist der Abstand zwischen Brennpunkt und der angenommenen Brechungsebene einer Linse. \\
 Für Sammellinsen (konvexe) gehen (idealerweise) alle parallel zur optischen Achse einfallenden Strahlen durch den Brennpunkt.\\
 Für Konkave Linsen, die Parallelstrahlen so brechen, dass sie auseinanderstreuen, liegt ein imaginärer Brennpunkt vor der Linse, in welchem die Verlängerungen der Strahlen gebündelt sind. Daher haben die Brennweiten von Zerstreuungslinsen ein negatives Vorzeichen.\\
 \\
 In diesem Beispiel soll die Brennweite von einer Konkav- und einer Konvexlinse bestimmt werden.\\
-Durch geometrische Überlegungen, aus der Abbildung eines Gegenstands durch eine Linse (Gegenstandsweite $g$, Bildweite $b$) lässt sich, anhand der 3 Hauptstrahlen die Abbildungsgleichung für Linsen herleiten:
+Durch geometrische Überlegungen, aus der Abbildung eines Gegenstands durch eine Linse (\textbf{Gegenstandsweite $g$}, \textbf{Bildweite $b$}) lässt sich, anhand der 3 Hauptstrahlen die Abbildungsgleichung für Linsen herleiten:
 $$\frac{1}{f}=\frac{1}{g}+ \frac{1}{b}$$
 Zur Bestimmung wird ein Gegenstand (hier eine Schablone) durch eine Linse auf einen Abbildungsschirm scharf gestellt. Durch mehrmalige Messung der Gegenstands- und Bildweite, wird also die Brennweite einer Konvexlinse bestimmt.\\
 Eine zweite in diesem Versuch angewandte Methode ist das Besselverfahren:\\
-Es wird dabei ausgenutzt, dass bei festem Abstand $e$ zwischen Gegenstand und Bild, an 2 Positionen der Linse ein scharfe Abbildung gegeben ist (jedenfalls $e > 4\cdot f$).\\
+Es wird dabei ausgenutzt, dass bei festem \textbf{Abstand $e$} zwischen Gegenstand und Bild, an 2 Positionen der Linse ein scharfe Abbildung gegeben ist (jedenfalls $e > 4\cdot f$).\\
 $d =$ $Abstand$ $zwischen$ $beiden$ $Positionen$
 $e=$ $Abstand$ $Gegenstand-Schirm$\\
 \\
@@ -258,7 +258,7 @@ $$Brechkraft: (0.10219 \pm 0.00047) Dioptrien$$\\
 
 
 \subsection{Diskussion}
-Aus der Messreihe der Gegenstandsweite für $e=40.0cm$ wurde der erste gemessene Wert für $g_1$ entfernt. Dieser wurde erhalten, noch bevor das Licht im Raum gedimmt wurde und eine geeignete Arbeitsweise zum Scharfstellen der Abbildungen gefunden wurde. Daher darf der Messwert, der mit $g_1 = 16.7 cm$ deutlich niedriger als alle 5 anderen ist, als falsch angesehen werden.\\
+Aus der Messreihe der Gegenstandsweite für $e=40.0cm$ wurde der erste gemessene Wert für $g_1$ entfernt. Dieser wurde erhalten, noch bevor das Licht im Raum gedimmt wurde und eine geeignete Arbeitsweise zum Scharfstellen der Abbildungen gefunden wurde. Daher darf der Messwert, der mit $g_1 = 16.7 cm$ deutlich niedriger als alle 5 anderen ist, als falsch angesehen werden(Abb. \ref{fig:Gegenstandsweiten_Konvexlinse}).\\
 \\
 An den Ergebnissen für die Brennweite $f$ der Konvexlinse gibt es vor allem 2 Auffälligkeiten:\\
 - Die verschieden Ergebnisse aus dem Besselverfahren liegen knapp und plausibel beieinander, das Ergebnis aus der Abbildungsgleichung liegt jedoch, wenn auch nur leicht, außerhalb des Unsicherheitsbereiches des Bessel-Gesamtergebnisses.\\
@@ -289,22 +289,131 @@ In Kenntnis des Unsicherheitsbereiches der Herstellerangabe und, indem der Versu
 \subsection{Diskussion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Microskop}
+\section{Mikroskop}
+
+In diesem Teil von PW6 soll ein (vereinfachtes) Mikroskop gebaut werden, und seine Vergrößerungseigenschaften sollen untersucht werden.\\
+Es besteht aus einem vorgegebenen Rahmen mit Beleuchtung von unten, einem Objektträger (hier eine geeichte Strichplatte zur Längenmessung) und 2 Sammellinsen. Die Sammellinse mit der kleineren Brennweite dient als \textbf{Objektiv} und wird direkt über dem Objekt angebracht. Darüber, in einigem Abstand, wird die andere Linse als \textbf{Okular} montiert.\\
+Die Distanz zwischen beiden Linsen beträgt mindestens die Summe der beiden Brennweiten. Die Länge, die darüber hinausgeht ist die \textbf{Tubuslänge $t$}.
+Die Vergrößerung des Mikroskops ist gegeben durch:
+$$V_M=\frac{t}{f_{Obj}}\frac{s_0}{f_{Ok}}$$
+wobei $s_0=250mm$ der Abstand des Auges vom Standardnahpunkt ist.\\
+Indem ein Maßstab außerhalb des Systems mit der Skala auf dem Objektträger verglichen wird, soll die Vergrößerung bei verschiedenen Tubuslängen experimentell festgestellt, wie auch berechnet werden.\\
+Anschließend soll noch die Dicke eines Haares vermessen werden.
+
 
 \subsection{Messwerte und Ergebnisse}
 
+Strichplatte: $10mm$ $\widehat{=}$ $200'$\\
+Objektiv: $f_{Obj}=30mm$\\
+Okular: $f_{Ok}=60mm$\\
+
+\begin{itemize}
+
+	\item 1. Tubus:\\
+	$t_1=(30 \pm 1) mm$\\
+	Messung:\\
+	$60' \approx 10mm$\\
+	\\
+	$V_M= (3.3 \pm 1.0)fach$\\
+	Rechnung: \\
+	$V_M=(4.17\pm 0.14)fach$
+	
+	\item 2. Tubus:\\
+	$t_2=(50 \pm 1) mm$\\
+	Messung:\\
+	$40' \approx 10mm$\\
+	\\
+	$V_M= (5.0 \pm 1.5)fach$\\
+	Rechnung: \\
+	$V_M=(6.94 \pm 0.14)fach$
+	
+	\item 3. Tubus:\\
+	$t_3=(80 \pm 1) mm$\\
+	Messung:\\
+	$20' \approx 12mm$\\
+	\\
+	$V_M= (12.0 \pm 3.0)fach$\\
+	Rechnung: \\
+	$V_M=(11.11 \pm 0.14)fach$
+	
+	\item 34. Tubus:\\
+	$t_4=(65 \pm 1) mm$\\
+	Messung:\\
+	$20' \approx 10mm$\\
+	\\
+	$V_M= (10.0 \pm 3.0)fach$\\
+	Rechnung: \\
+	$V_M=(9.03 \pm 0.14)fach$
+	
+	
+\end{itemize}
+
+\noindent Vermessung eines \textbf{Haares}:\\
+\textit{(courtesy of Johanna Akbarzadeh)}\\
+Tubuslänge $t= (80 \pm 1)mm$\\
+Dicke des Haares: $(2 \pm 1)'$\\
+$$d_{Haar} = (0.10 \pm 0.05)mm$$
+
+
+
 \subsection{Diskussion}
+
+Dieser einfache Aufbau liefert die erwarteten Ergebnisse. Dabei ist - im Vergleich von Messung und Rechnung - vor allem auch die Ungenauigkeit der Methode gut zu erkennen, bzw. ihre Abhängigkeit vom Geschick der Augenmuskulatur und Sehkraft.\\
+Beide Experimentierenden weisen hier Defizite auf (nach Gesprächen im Aufenthaltsraum, dürfte es durchaus KollegInnen geben, denen dieses Experiment genauer gelungen ist).\\
+Daher wurde im Vergleich eines Maßstabes mit der Skala im Mikroskop eine vergleichsweise große Unsicherheit von $\pm 3mm$ für alle Messungen angenommen. Vor allem Tubuslänge $t_1$ und $t_2$ zeigen, dass dies notwendig ist, wobei das gerechnete Ergebnis für  $V_M(t_2)$ sogar außerhalb des abgeschätzten Unsicherheitsbereiches liegt.\\
+Die Versuche 1 und 2 aus PW6 haben zwar gezeigt, dass auch die verwendeten Linsen durchaus deutliche Abweichungen haben könnten, aufgrund der Erfahrung aus der Durchführung dieses Experimentes sind jedoch wohl menschliche Ungenauigkeiten die Hauptursache für die groben Ergebnisse.\\
+Es wurden verschiedene Positionen für den äußeren Maßstab versucht, letztendlich ist aber das gleichzeitige betrachten 2er Systeme mit 2 Augen eine, für uns zumindest, außerordentlich schwierige Methode, und vor allem als Lehrbeispiel geeignet.\\
+Der lineare Zusammenhang zwischen Tubuslänge und Vergrößerung, der aus der Rechnung deutlich hervorgeht, ist mit diesem Experiment nicht bestätigt: Während für $t_1$ und $t_2$ das gemessene Ergebnis niedriger ausfällt, als das erwartete, liegen die Vergrößerungen bei $t_3$ und $t_4$ höher.\\
+Nachdem aber damit zu rechnen ist, dass die Verzerrungen vor allem aus den groben Abschätzungen stammen, lässt sich keinesfalls aus den Ergebnissen darauf schließen, dass der lineare Zusammenhang aus der Rechnung falsch sei.\\
+\\
+Mit einem großen Unsicherheitsbereich liegt auch die Dicke des Haares innerhalb der Erwartung.\\
+Der Wikipedia-Artikel über das menschliche Haar gibt dessen Dicke mit bis zu $0.12mm$ für das Haupthaar an.\\
+\\
+Eine leichte Verbesserung des Aufbaus ergab sich durch das montieren einer dritten Linsenfassung, ohne Linse, ursprünglich als Schutz vor den Führungsstangen. Die zusätzliche Stabilität durch das Anlehnen der Augenpartie, hat dabei ein deutlich stabileres Ablesen erst ermöglicht.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fernrohr}
+In diesem versuch werden 2 einfache Fernrohre gebaut und deren errechnete Vergrößerung an einer Skala in ein paar m Entfernung überprüft.\\
+Das astronomische Fernrohr besteht aus 2 Sammellinsen. Ihr Abstand ist genau die Summe beider Brennweiten, wobei das erzeugt Bild umgekehrt ist. Für kleine Sehwinkel, wie bei einem Fernrohr der Fall, gelten gleiche Verhältnisse für die Winkel der Mittelpunktsstrahlen zum Bild zwischen den Linsen, und den Quotienten aus Abbildung und Brennweiten:
+$$V_f=\frac{\epsilon}{\epsilon_1}=\frac{f_{obj}}{f_{ok}}$$
+Das holländische Fernrohr hat als Okular eine Zerstreuungslinse und liefert damit ein richtig orientiertes Bild. Der Abstand zwischen den Linsen ist hier die Differenz der Brennweitenbeträge.
 
 \subsection{Messwerte und Ergebnisse}
+Objektiv (Sammellinse): $f_{obj}=60mm$\\
+Okulare:\\
+astronomisches: $f_{ok}=30mm$\\
+holländisches: $f_{ok}=40mm$\\
+\\
+\textbf{astronomisches Fernrohr:}\\
+Messung Braun: $3'_{FR} \widehat{=} 6'_{real}\Rightarrow V_F=2 fach$\\
+Messung Kurz: $2'_{FR} \widehat{=} 4'_{real}\Rightarrow V_F=2 fach$\\
+\\
+Rechnung: $V_F = \frac{60}{30}=2fach$\\
+\\
+\textbf{astronomisches Fernrohr:}\\
+Messg Braun: $3'_{FR} \widehat{=} 2'_{real}\Rightarrow V_F=1.5fach$\\
+Messg Kurz: $1.5'_{FR} \widehat{=} 1'_{real}\Rightarrow V_F=1.5fach$\\
+\\
+Rechnung: $V_F = \frac{40}{30}=1.33fach$\\
+
+
+
 
 \subsection{Diskussion}
 
+Ähnlich dem Mikroskop-Versuch,  gestaltet sich auch hier der Vergleich zwischen einem realen und einem vergrößerten Maßstab, jeweils mit einem Auge, als schwierig. Es ist unmittelbar aus dem Experiment klar, dass die Messung sehr ungenau ist.\\
+Eine realistische Abschätzung der Unsicherheit wäre wohl etwa ein halber Streifen an der Tafel. Bei einem Vergleich mit wenigen Streifen (zB. Kurz, astronomisches Fernrohr) führt das zu einer Unsicherheit der Vergrößerung von bis zu 50\%.\\
+Diese Methode erweist sich also (zumindest unter den gegebenen Bedingungen und Fähigkeiten) als sehr ungenau.\\
+Dennoch stimmen die Ergebnisse mit der Rechnung überein (auch wenn für das holländische Fernrohr die Erwartungshaltung nach einem möglichst klaren Ergebnis wohl bei beiden Experimentierenden zu einem Bias geführt hat).\\
+\\
+Die theoretische Berechnung der Vergrößerungen gilt für kleine Sehwinkel, da die Kleinwinkel-Näherung des Tangens verwendet wird.\\
+Es ist jedoch davon auszugehen, dass diese Näherung bei Weitem genauer ist, als die Bestimmung der Vergrößerung durch die Augen.\\
+(Leider wurde die Entfernung des Fernrohrs zur Wand und die höhe der Tafel nicht gemessen, aber selbst für eine grobe Schätzung trifft die Kleinwinkel-Näherung gut zu:
+$$\frac{1m}{4m}=0.25\approx 0.245= \arctan (\frac{1m}{4m})$$
+
 \section{Quellen}
 $[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw6/PW6PL4.pdf}\\
-%$[2]$ 
+$[2]$ Haaresbreite: \url{http://de.wikipedia.org/wiki/Haar}
 
 \end{multicols}
 \end{document}

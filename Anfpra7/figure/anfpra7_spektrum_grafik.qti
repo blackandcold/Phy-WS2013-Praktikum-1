@@ -1,0 +1,150 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+Tabelle1	30	4	21.11.13 14:30
+geometry	162	230	445	220	
+header	Brechnungsindex n[Y]	Wellenlänge [nm][X]	1[yEr]	2[xEr]
+ColWidth	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	1.614	643	0.0099	2
+1	1.628	508	0.0099	2
+2	1.633	478	0.0099	2
+3	1.636	467	0.0099	2
+4	1.641	441	0.0099	2
+</data>
+</table>
+<multiLayer>
+Grafik1	1	1	21.11.13 15:08
+geometry	630	116	513	461	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	501	403
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	Wellenlängen [nm]	Brechungsindex n			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Lucida Grande	15	75	0	0	0
+ScaleFont0	Lucida Grande	13	75	0	0	0
+ScaleFont1	Lucida Grande	13	75	0	0	0
+ScaleFont2	Lucida Grande	13	75	0	0	0
+ScaleFont3	Lucida Grande	13	75	0	0	0
+AxisFont0	Lucida Grande	13	50	0	0	0
+AxisFont1	Lucida Grande	13	50	0	0	0
+AxisFont2	Lucida Grande	13	50	0	0	0
+AxisFont3	Lucida Grande	13	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Tabelle1_Wellenlänge [nm]	Tabelle1_Brechnungsindex n	1	0	#000000	0	1	3	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+ErrorBars	1	Tabelle1_Wellenlänge [nm]	Tabelle1_Brechnungsindex n	Tabelle1_1	1	8	#000000	1	1	1	0
+ErrorBars	0	Tabelle1_Wellenlänge [nm]	Tabelle1_Brechnungsindex n	Tabelle1_2	1	8	#000000	1	1	1	0
+<Function>
+<Type>0</Type>
+<Title>NichtlinearFit1</Title>
+<Expression>A+B/x^2</Expression>
+<Variable>x</Variable>
+<Range>441	643</Range>
+<Points>100</Points>
+<Constant>A	1.58973368393414</Constant>
+<Constant>B	9968.43919961128</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#000000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	1.6	1.66	0	8	5	0	0
+scale	1	1.6	1.66	0	8	5	0	0
+scale	2	400	650	0	8	5	0	0
+scale	3	400	650	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>406.2656641604</x>
+<y>1.6579933110368</y>
+<right>463.451776649746</right>
+<bottom>1.65242524916944</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(4)%(4)
+</Text>
+<Font>Lucida Grande	13	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
+<log>
+[21.11.13 15:15	Diagramm: ''Grafik1'']
+Nichtlinearer Fit von Datensatz: Tabelle1_Brechnungsindex n, unter Verwendung der Funktion: A+B/x^2
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Skalierter Levenberg-Marquardt Algorithmus mit Tolleranz = 0,0001
+Von x = 6,430000000000000e+02 bis x = 4,410000000000000e+02
+A = 1,589733683934140e+00 +/- 9,033659153860940e-04
+B = 9,968439199611275e+03 +/- 2,159644777247912e+02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,992931943266231e-07
+R^2 = 0,998593886211242
+Angepasstes R^2 = 0,997187772422484
+RMSE (Standardabweichung) = 0,000446422663321009
+RSS (Summe der quadrierten Restwerte) = 5,97879582979869e-07
+---------------------------------------------------------------------------------------
+Iterationen = 3
+Status = success
+---------------------------------------------------------------------------------------
+</log>

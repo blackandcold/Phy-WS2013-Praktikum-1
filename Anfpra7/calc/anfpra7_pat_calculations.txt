@@ -1,0 +1,20 @@
+Brechungsindizes spektrum cadmium lampe:
+
+rot: sin((47°39' + 60°)/2)/sin(60°/2)
+
+fehlerabschätzung: (cos((47°39' + 60°)/2)/sin(60°/2)*1/2*1/12)
+
+(5 winkelminuten entspricht 1/12)
+
+
+
+refraktometer:
+ N (messprisma): SQRT(((cos(61°)+sin(39°28'))/sin(61°))^2 + 1)
+ 
+ 
+ flüssigkeit B:
+ 
+ winkel r: 61° - 39°28'
+ 
+ r in rad: arcsin(sin(6°2')/1.625)
+ e = 61-3.70855 degrees =57°17'

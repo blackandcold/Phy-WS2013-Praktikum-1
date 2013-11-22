@@ -153,6 +153,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dispersionskurve eines Glasprismas}
 Cadmiumlampe, 5 Linien, 
+Im ersten Experiment soll ein Glasprisma untersucht werden. Dabei wird eine Cadmium-Dampflampe verwendet welche 5 Spektren aussendet. Das Licht dieser Lampe wird durch einen Schlitz geregelt und auf das Prisma fokussiert. Zusätzlich ist ein Fernrohr angebracht welches mit einer Winkel-Skala rotierbar ist. Durch Einstellung des Nullpunktes ohne Prisma und anschließendes rotieren mit Prisma des Fernrohres bis zum Punkt der minimalen Ablenkung (Umkehrpunkt der Spektrallinien) kann $\delta_{min}$ für alle Spektren bestimmt werden. Der Versuchsaufbau mit Lampe, Blende, Prisma auf rotierbarem Tisch und Fernrohr ist in Abbildung \ref{fig:prisma_aufbau} ersichtlich. Zur Messung der Wellenlänge wurde ein mit einem Glasfaser verbundener Sensor verwendet welcher sich auf einem höhenverstellbarem Tisch befindet. Ersichtlich am rechten Bildrand. Um diese Messung durch zu führen wurde das Fernrohr weggeschwenkt und durch das Glasfaserkabel ersetzt. Das Prisma ist zu diesem Zweck nicht mehr notwendig.
+\\ 
+Zusätzlich kann durch die Wellenlänge und dem Winkel der Brechungsindex errechnet werden. Mit diesen Daten kann eine Dispersionskurve gefittet werden.\\
+Die Formel für die Kurve:
+$$n(\lambda) = A + \frac{B}{\lambda^2}$$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=-90,scale=0.11]{./figure/prisma_aufbau.jpg}
+	\caption{Versuchsaufbau Prisma}
+	\label{fig:prisma_aufbau}
+\end{figure}
 
 \subsection{Messwerte und Ergebnisse}
 
@@ -169,15 +181,46 @@ Cadmiumlampe, 5 Linien,
 			every last column/.style={column type/.add={}{|} }
 			]{
 			w & lambda
-			$47^\circ 50'$ & 550
+			47$^\circ$ 50' & 550
+			48$^\circ$ 58' & 508
+			49$^\circ$ 29' & 481
+			49$^\circ$ 45' & 466
+			50$^\circ$ 18' & 441
 			
 			}
 	\caption{Messwerte Winkel und Wellenlänge Cadmium Dampflampe}
 	\label{fig:werte_cadmiumdampflampe}
 \end{figure}
+441 - Dieser Wert konnte nicht aufgelöst werden und ist ein Literaturwert!
+
+% TODO KURVE UND FORMEL ZUR RECHNUNG, Fehler
+
+%A = 1,589733683934140e+00 +/- 9,033659153860940e-04
+%B = 9,968439199611275e+03 +/- 2,159644777247912e+02
+
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{./figure/Spektrum_Cadmiumdampflampe_PW7_Braun_Kurz.png}
+	\caption{Spektrum Cadmiumlampe - Wellenlänge/Intensität}
+	\label{fig:prisma_wellenlaenge}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{./figure/anfpra7_spektrum_grafik.png}
+	\caption{Brechungsindex abhängig von der Wellenlänge}
+	\label{fig:wellenlaenge_brechungsindex}
+\end{figure}
+
+\begin{multicols}{2}
 
 \subsection{Diskussion}
-
+Dank neuem Equipment und leichter Bedienbarkeit war der Aufbau kein Problem. Zu beachten ist eine genaue Nullpunktjustierung und die Mitte der Spektrallinien mit dem eingelassenen Fadenkreuz zu treffen um einen möglichst genauen Winkel messen zu können. Dank dem Nonimus ist eine Minutengenaue Messung möglich. Durch die Justierungsmaßnahmen und das Treffen der Mitte einer Spektrallinie entsteht jedoch ein geschätzter Fehler von $\pm 5'$\\
+\\
+Bei der Messung der Wellenlängen konnte der Sensor und die Software schnell eingerichtet und leicht verwendet werden. Zu bemerken war das Umgebungslicht zu großen Störungen führt und das violette Licht keinen erkennbaren Ausschlag produziert hat. Durch Abdunklung des Raumes konnten die Wellenlängen gemessen werden (\ref{fig:prisma_wellenlaenge}).\\
+\\
+In Abbildung \ref{fig:wellenlaenge_brechungsindex} ist das verhalten des Brechungsindex zur Wellenlänge aufgetragen. Die Dispersionskurve ist nicht linear!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lichtbrechung an einer planparallelen Platte}
@@ -191,6 +234,13 @@ Cadmiumlampe, 5 Linien,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Refraktometrie}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=-90,scale=0.11]{./figure/refrakto.jpg}
+	\caption{Verwendete Refraktometer}
+	\label{fig:geraete_refrakto}
+\end{figure}
+
 \subsection{Messwerte und Ergebnisse}
 
 
@@ -198,7 +248,7 @@ Cadmiumlampe, 5 Linien,
 
 
 \section{Quellen}
-$[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw6/PW6PL4.pdf}\\
+$[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw7/PW7.pdf}\\
 
 \end{multicols}
 \end{document}

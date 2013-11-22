@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	2
 <table>
 Tabelle1	30	4	21.11.13 14:30
-geometry	162	230	445	220	
+geometry	0	549	445	220	minimized	
 header	Brechnungsindex n[Y]	Wellenlänge [nm][X]	1[yEr]	2[xEr]
 ColWidth	100	100	100	100	
 <com>
@@ -23,7 +23,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Grafik1	1	1	21.11.13 15:08
-geometry	630	116	513	461	active
+geometry	284	28	844	518	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -32,7 +32,7 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	5	5	501	403
+ggeometry	6	5	826	460
 PlotTitle	 	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -46,20 +46,20 @@ AxesTitles	Wellenlängen [nm]	Brechungsindex n
 AxesTitleColors	#000000	#000000	#000000	#000000	
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
-TitleFont	Lucida Grande	15	75	0	0	0
-ScaleFont0	Lucida Grande	13	75	0	0	0
-ScaleFont1	Lucida Grande	13	75	0	0	0
-ScaleFont2	Lucida Grande	13	75	0	0	0
-ScaleFont3	Lucida Grande	13	75	0	0	0
-AxisFont0	Lucida Grande	13	50	0	0	0
-AxisFont1	Lucida Grande	13	50	0	0	0
-AxisFont2	Lucida Grande	13	50	0	0	0
-AxisFont3	Lucida Grande	13	50	0	0	0
+TitleFont	Lucida Grande	17	75	0	0	0
+ScaleFont0	Lucida Grande	15	75	0	0	0
+ScaleFont1	Lucida Grande	15	75	0	0	0
+ScaleFont2	Lucida Grande	15	75	0	0	0
+ScaleFont3	Lucida Grande	15	75	0	0	0
+AxisFont0	Lucida Grande	15	50	0	0	0
+AxisFont1	Lucida Grande	15	50	0	0	0
+AxisFont2	Lucida Grande	15	50	0	0	0
+AxisFont3	Lucida Grande	15	50	0	0	0
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#000000	#000000	#000000	#000000
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	255
-curve	Tabelle1_Wellenlänge [nm]	Tabelle1_Brechnungsindex n	1	0	#000000	0	1	3	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Tabelle1_Wellenlänge [nm]	Tabelle1_Brechnungsindex n	1	0	#000000	0	1	3	1	#000000	#000000	0	#000000	14	0	2	0	0	29	1
 ErrorBars	1	Tabelle1_Wellenlänge [nm]	Tabelle1_Brechnungsindex n	Tabelle1_1	1	8	#000000	1	1	1	0
 ErrorBars	0	Tabelle1_Wellenlänge [nm]	Tabelle1_Brechnungsindex n	Tabelle1_2	1	8	#000000	1	1	1	0
 <Function>
@@ -105,10 +105,10 @@ EnabledTickLabels	1	1	1	1
 <Color>#000000</Color>
 <FrameWidth>1</FrameWidth>
 <LineStyle>0</LineStyle>
-<x>406.2656641604</x>
-<y>1.6579933110368</y>
-<right>463.451776649746</right>
-<bottom>1.65242524916944</bottom>
+<x>408.06451612903</x>
+<y>1.6159885386819</y>
+<right>475.385694249649</right>
+<bottom>1.60756446991404</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -116,7 +116,7 @@ EnabledTickLabels	1	1	1	1
 \l(1)%(1)
 \l(4)%(4)
 </Text>
-<Font>Lucida Grande	13	50	0	0	0</Font>
+<Font>Lucida Grande	15	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
 <Background>#ffffff</Background>
 <Alpha>0</Alpha>
@@ -147,4 +147,5 @@ RSS (Summe der quadrierten Restwerte) = 5,97879582979869e-07
 Iterationen = 3
 Status = success
 ---------------------------------------------------------------------------------------
+
 </log>

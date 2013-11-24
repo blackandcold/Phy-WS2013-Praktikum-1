@@ -158,10 +158,11 @@ Dabei wird eine Cadmium-Dampflampe verwendet, die ein diskretes Emissionsspektru
 Ein Lichtstrahl dieser Lampe wird durch einen regelbaren Schlitz erzeugt und auf das Prisma gerichtet. Auch ist ein Fernrohr am Aufbau angebracht, welch, verbunden mit einem Goniometer, rotierbar ist. 
 Durch das Einstellen des Null-Grad-Punktes (Lichtstrahl ohne Prisma) und anschließendes Rotieren des Prisma-Tisches, bis zu dem Punkt, an dem sich die Bewegung der jeweiligen Spektrallinie, trotz weiterer Rotation des Tisches, umkehrt, kann $\delta_{min}$ für alle Spektren bestimmt werden. \\
 Der Versuchsaufbau mit Lampe, Blende, Prisma auf rotierbarem Tisch und Fernrohr ist in Abbildung \ref{fig:prisma_aufbau} ersichtlich.\\
-\\
+%Der Brechungsindex ergibt sich durch:
+%$$n = \frac{\sin{(\frac{\delta_{min} + \epsilon}{2})}}{\sin{(\frac{\epsilon}{2}})}$$
 Zur Messung der Wellenlänge wurde ein mit einem Glasfaserkabel verbundener Sensor verwendet, welcher sich auf einem höhenverstellbarem Tisch befindet (zu sehen im Hintergrund von Abb.\ref{fig:prisma_aufbau}). Um diese Messung durchzuführen, wurde das Fernrohr weggeschwenkt und durch das Glasfaserkabel ersetzt. Das Prisma ist dabei nicht mehr notwendig.
 \\ 
-Die Wellenlängen der einzelnen Spektrallinien werden gegen ihren jeweiligen Winkel der minimalen Auslenkung, $\delta_{min}$, aufgetragen. Es wird eine Kurve durch die Punkte gelegt, die den Brechungsindex des Prismas, abhängig von der Wellenlänge, angibt:
+Die Wellenlängen der einzelnen Spektrallinien werden gegen ihren jeweiligen Brechungsindex aufgetragen. Es wird eine Kurve durch die Punkte gelegt, die den Brechungsindex des Prismas, abhängig von der Wellenlänge, angibt:
 
 $$n(\lambda) = A + \frac{B}{\lambda^2}$$
 \\
@@ -224,12 +225,28 @@ violett, 441nm: Literaturwert von der Betreuerin zur Verfügung gestellt, da der
 
 \begin{multicols}{2}
 
+$$n(\lambda) = A + \sum_{j} \frac{B_j}{\lambda^{2j}}$$
+%A = 1,589733683934140e+00 +/- 9,033659153860940e-04
+%B = 9,968439199611275e+03 +/- 2,159644777247912e+02
+$A=(1.58973 \pm 0.00091)$\\
+$B_1 = (9970 \pm 220)nm^2$
+
+
 \subsection{Diskussion}
-Dank neuem Equipment und leichter Bedienbarkeit war der Aufbau kein Problem. Zu beachten ist eine genaue Nullpunktjustierung und die Mitte der Spektrallinien mit dem eingelassenen Fadenkreuz zu treffen um einen möglichst genauen Winkel messen zu können. Dank dem Nonimus ist eine Minutengenaue Messung möglich. Durch die Justierungsmaßnahmen und das Treffen der Mitte einer Spektrallinie entsteht jedoch ein geschätzter Fehler von $\pm 5'$\\
+%Dank neuem Equipment und leichter Bedienbarkeit war der Aufbau kein Problem. 
+%Zu beachten ist eine genaue Nullpunktjustierung und die Mitte der Spektrallinien mit dem eingelassenen Fadenkreuz zu treffen um einen möglichst genauen Winkel messen zu können. 
+%Dank dem Nonimus ist eine Minutengenaue Messung möglich. Durch die Justierungsmaßnahmen und das Treffen der Mitte einer Spektrallinie entsteht jedoch ein geschätzter Fehler von $\pm 5'$\\
+
+Der Brechungsindex ergibt sich durch:
+$$n = \frac{\sin{(\frac{\delta_{min} + \epsilon}{2})}}{\sin{(\frac{\epsilon}{2}})}$$
+Der Nonius am Apparat erlaubt eine Messung auf Winkelminuten genau. Da jedoch die anvisierten Spektrallinien eine gewisse Breite haben und vor allem das Ablesen des Nonius, auch mit Lupe, etwas schwierig und sicher nicht exakt ist, wird die Unsicherheit am Winkel der minimalen Auslenkung mit $\pm 5'$ abgeschätzt.\\
+Auf den Brechungsindex wirkt sich diese, mit etwa $\pm 0.050$, doch recht deutlich aus (siehe Fehlerbalken in Abb. \ref{fig:wellenlaenge_brechungsindex}).\\
+Für eine Abschätzung von $\pm 2$ Winkelminuten würde sich die Unsicherheit des Brechungsindex auf $\pm 0.020$ reduzieren, und damit noch immer die gefittete Dispersionskurve deutlich beinhalten.\\
+Dieser Genauigkeitsgewinn wäre zu erreichen durch bessere Lichtverhältnisse oder eine aufgehängte Lupe zur Ablesung, eine Digitalanzeige oder ähnliches. Abgesehen von Ableseschwierigkeiten sind die Autoren jedoch der Meinung, dass diese Genauigkeit mit diesem Aufbau problemlos erreichbar wäre.
 \\
-Bei der Messung der Wellenlängen konnte der Sensor und die Software schnell eingerichtet und leicht verwendet werden. Zu bemerken war das Umgebungslicht zu großen Störungen führt und das violette Licht keinen erkennbaren Ausschlag produziert hat. Durch Abdunklung des Raumes konnten die Wellenlängen gemessen werden (\ref{fig:prisma_wellenlaenge}).\\
+Die Messung der Wellenlängen durch den Sensor ist einfach aufzubauen und durchzuführen. Zu bemerken war das Umgebungslicht zu großen Störungen führt. Durch Abdunklung des Raumes konnten die Wellenlängen der Peaks mit vergleichsweise geringer Umgebungslichtverschmutzung gemessen werden (\ref{fig:prisma_wellenlaenge}).\\
 \\
-In Abbildung \ref{fig:wellenlaenge_brechungsindex} ist das verhalten des Brechungsindex zur Wellenlänge aufgetragen. Die Dispersionskurve ist nicht linear!
+In Abbildung \ref{fig:wellenlaenge_brechungsindex} ist das Verhalten des Brechungsindex zur Wellenlänge aufgetragen. Die nichtlineare Funktion, mit der die Dispersionskurve angenähert wurde, liegt gut an den gemessenen Punkten. Weitere Glieder der Reihe sind also zur hinreichenden Beschreibung von $n(\lambda)$ ohne weitere Messpunkte (mit einer anderen Lampe) nicht nötig.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lichtbrechung an einer planparallelen Platte}

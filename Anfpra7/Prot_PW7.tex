@@ -225,10 +225,69 @@ In Abbildung \ref{fig:wellenlaenge_brechungsindex} ist das verhalten des Brechun
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lichtbrechung an einer planparallelen Platte}
 
+Fällt Licht schräg durch eine Platte, wobei die Eintritts- und die Austritts-Grenzfläche parallel sind, wird ein Lichtstrahl 2 mal genau so gebrochen, dass er seine Richtung beibehält, aber um eine gewisse Distanz verschoben.\\
+Der Strahl wird beim Eintritt zum Lot hin gebrochen, und beim Austritt im gleichen Verhältnis vom Lot weg, sodass der Strahl seinen ursprünglichen Winkel zur Platte beibehält (siehe Abb. \ref{fig:planparallele_Skizze}).\\
+Dieser Umstand soll ausgenutzt werden, um mittels eines Mikroskops den Brechungsindex einer Glasplatte zu bestimmen: Sowohl an der Ober- als auch der Unterseite  der Platte sind Farbmarkierungen angebracht. Indem zuerst auf eine Markierung scharf gestellt wird, und danach auf eine der anderen Seite, lässt sich durch den Höhenunterschied des Objektivs die scheinbare Dicke der Platte feststellen, also diejenige $\delta$, die danke der Brechung des Lichtes wahrgenommen wird.\\
+Der Höhenunterschied am Objektiv kann durch die Skalierung am Grobtrieb des Mikroskops abgelesen werden.\\
+Außerdem wird die tatsächliche Dicke $d$ der Platte mit einer Mikrometerschraube an mehreren Stellen gemessen.\\
+Das Verhältnis beider Längen entspricht dem Verhältnis der Tangens der beiden Brechungswinkel. Für kleine Winkel ist dieses auch gleich dem Verhältnis der beiden Sinus und damit dem Brechungsindex $n$ der Glasplatte.
+$$\frac{\tan{\epsilon}}{\tan{\epsilon '}}=\frac{d}{b}\approx \frac{\sin{\epsilon}}{\sin{\epsilon '}}=n$$
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.65]{./figure/planparallele_Skizze.png}
+	\caption{Strahlengang in einer planparallelen Platte}
+	\label{fig:planparallele_Skizze}
+\end{figure}
+
+
 \subsection{Messwerte und Ergebnisse}
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={d,b},
+			col sep=&,
+			columns/d/.style={column name=\makecell{$d$\\$[mm]$}, precision=3, zerofill},
+			columns/b/.style={column name=\makecell{$\delta$\\$[mm]$}, precision=3, zerofill},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={
+								column type/.add={|}{}
+							        },
+			every last column/.style={
+								column type/.add={}{|}
+								}
+			]{
+			b & d
+			2.33 & 3.28
+			2.205 & 3.29
+			2.4 & 3.28
+			2.355 & 3.26
+			2.290 & 3.27
+			
+			}
+	\caption{Messwerte für d (tatsächliche) und $\delta$ (scheinbare) Dicke}
+	\label{fig:Messwerte_Glasplatte}
+\end{figure}
+
+%$\delta = (2.316 \pm 0.033)mm$\\
+$\delta = (2.3 \pm 0.1)mm$\\
+$d = (3.28 \ pm 0.01)mm$
+
+$$n = (1.426 \pm 0.063)$$
+
 
 
 \subsection{Diskussion}
+
+Bei der Messung der scheinbaren Dicke mit dem Mikroskop ist der Strahlengang fast senkrecht zur Platte, jedenfalls kleiner als 5$^\circ$. In dem Bereich ist die Kleinwinkel-Näherung sehr genau, außerdem sind die Fehler der Näherung für Sinus und Tangens in ihrer Richtung entgegengesetzt. Damit verringert sich der Fehler nocheinmal.\\
+Die Unsicherheit für $\delta$ wurde mit 0.1mm bewusst groß gewählt. Während der Messung zeigte sich, dass bei 2-maligem Scharfstellen auf eine Markierung Unterschiede von  0.04mm zwischen den gewählten Positionen sind. Die subjektive Wahrnehmung von Schärfe verbunden mit einem ungeübten Blick dafür, bewirken also, dass diese Messung deutlich ungenauer ist, als es die Skalierung des Grobtriebes zulassen würde. \\
+(Der standarderror of the mean für diese Messung wäre mit $\Delta \delta = 0.033mm$ kleiner, als die hier verwendeten 0.1mm und führen zu einer Unsicherheit $\Delta n = 0.021$, eben etwa 1/3 so groß.)\\
+Die Messungen der tatsächlichen Dicke der Platte waren gleichmäßig verteilt und streuen nur schwach.\\
+Die größte Quelle für Ungenauigkeiten ist in dieser Messung also sicherlich die menschliche Einschätzung, die vor allem durch Übung im Umgang mit dem Mikroskop zu verbessern wäre.\\
+Das Ergebnis liegt jedenfalls im Bereich der Brechungsindizes für verschiedene Gläser, und dürfte damit valide sein.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

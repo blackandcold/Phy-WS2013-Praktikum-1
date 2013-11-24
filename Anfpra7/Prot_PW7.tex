@@ -233,22 +233,49 @@ In Abbildung \ref{fig:wellenlaenge_brechungsindex} ist das verhalten des Brechun
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Refraktometrie}
-
+Ziel dieses Experiments ist es den Brechungsindex von Flüssigkeiten zu bestimmen. Zu diese Zweck wurde ein Abbe’sches Handrefraktometer (1) (Abb. \ref{fig:geraete_refrakto} Vordergrund) und  Abbe’schen Refraktometer (2) (Abb.  \ref{fig:geraete_refrakto} Standgerät im Hintergrund) verwendet. Als ersten Schritt wird beim Handrefraktometer der Brechungsindex ohne Flüssigkeit des Messprismas gemessen. Bei allen Brechungsindizes wird der Winkel zur Totalreflexion gemessen, welcher als hell-dunkel Übergang mit der angebrachten Winkelskala feststellen lässt. Zur Bestimmung des Brechungsindex der Messlinse wird monochromatischen Licht einer Na - Lampe verwendet.
 \begin{figure}[H]
 	\centering
 	\includegraphics[angle=-90,scale=0.11]{./figure/refrakto.jpg}
 	\caption{Verwendete Refraktometer}
 	\label{fig:geraete_refrakto}
 \end{figure}
+\noindent
+Danach wird die Probeflüssigkeit auf das Messprisma aufgebracht und das Beleuchtungsprisma aufgesetzt. Durch den neuen Totalreflexionswinkel ergibt sich mit dem Gleichungssystem (16),(17),(18) (aus [1]) durch Umformung der Brechungsindex der Flüssigkeit. Beim Standgerät ist bereits eine geeichte Skala integriert und ermöglicht somit eine direkte Messung des Brechungsindex.
 
 \subsection{Messwerte und Ergebnisse}
+Gewählt wurde die \textbf{Flüssigkeit B}. Die Nulllage des \textbf{Refraktometers (1)}
+$$\phi_0 = 122^\circ 18'$$
+Die Totalreflexion des Messprismas
+$$\phi_{MT} = 161^\circ 46'$$
+$$42' + 38^\circ + 46' = 39^\circ 28' = i$$
+$$\phi_{Lot} = 61^\circ (Leitfaden)$$
+$$N = 1.625\footnote{Formel aus [1] (19)} $$
+Messung für Flüssigkeit B:\\
+$$\phi_{FlüssigkeitB} = 128^\circ 20'$$
+Nach abziehen der Nulllage ergibt sich:
+$$i = 6^\circ 02'$$
+$$e = 57^\circ 17'$$
+$$r = 3^\circ 42'$$
+$$n_B = 1.367$$
+Nach der Tabelle (aus $[2]$) entspricht die gemessene Flüssigkeit dem Literaturwert von Ethanol ($n_{Ethanol} = 1,3614$) am ehesten.\\
+\\
+Messung von \textbf{Flüssigkeit B} mit dem \textbf{Standgerät (2)}:\\
+$$n_B = 1.363$$
+Wir haben eine Zusätzliche nicht verlangte Messung der Flüssigkeit A durchgeführt:
+$$n_A = 1.358$$
 
+% TODO Fehlerrechnung
 
 \subsection{Diskussion}
-
+Die Genauigkeit der Messung mit dem Handrefraktometer ist dank alter Technik, Ausgebrochener Prismen und Klebestreifen als Prismafixierung beeinträchtigt. überraschender Weise ist der unterschied nur in der dritten Nachkommastelle festzustellen.\\
+\\
+Die Zusätzliche Messung der Flüssigkeit A hat beim ersten Versuch keine Totalreflexion hervorgerufen, was mit großer Wahrscheinlichkeit aus einem Gemisch von Flüssigkeit A und B in der Pipette herrührt. Bei der zweiten Messung ergab sich der Wert wie oben angegeben. Dieser Wert entspricht in etwa Aceton $(aus [3] n_{Aceton}=1.359)$
 
 \section{Quellen}
 $[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw7/PW7.pdf}\\
+$[2]$ Brechungsindex \url{http://de.wikipedia.org/wiki/Brechungsindex}\\
+$[3]$ Brechungsindex Aceton \url{http://www.chemicalbook.com/ChemicalProductProperty_DE_CB3130928.htm}
 
 \end{multicols}
 \end{document}

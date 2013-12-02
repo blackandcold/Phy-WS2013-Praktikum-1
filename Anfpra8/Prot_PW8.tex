@@ -179,13 +179,61 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{./figure/beugung.png}
+	\caption{Beugungsmuster Einzelspalt (echtes Foto; schwarz durch weiß ersetzt)}
+	\label{fig:beugungsmuster}
+\end{figure}
+
+\begin{multicols}{2}
+
 \section{Beugung am Spalt und Doppelspalt}
+Im ersten Experiment soll ein Einzelspalt und ein Doppelspalt über die Beugung von monochromatischem Licht untersucht werden. Unsere Lichtquelle für monochromatisches Licht stellt ein Laser mit Wellenlänge $\lambda = 632.8nm$ dar. Dadurch ergibt sich ein rotes Beugungsmuster auf dem Schirm (Abb. \ref{fig:beugungsmuster}). 
+\\
+Durch die Vermessung des Abstandes vom Einzelspalt zum Schirm (Abb. \ref{fig:messwerte_einzelspalt}) und dem Abstand zwischen den Minima kann direkt die Spaltbreite ermittelt werden [1](Glg. 13):
+$$a = \frac{n*\lambda}{sin(\alpha_{min,n})} $$
+$$\alpha = arctan(\frac{b}{R})$$
+b...Abstand zwischen zwei Minima\\
+R...Abstand vom Spalt zum Schirm\\
+\\
+Beim Doppelspalt ergibt sich ein ähnliches Beugungsmuster nur das der Zentrale helle Punkt mehrere Minima und Maxima enthält. Durch eine Herleitung über die Beziehung zwischen Spaltbreite und Spaltabstand kann der Spaltabstand ermittelt werden:
+
+$$ some formula TODO $$
+
+Wesentlich in beiden Fällen ist das wir eine Fernfeldbeugung beobachten. Konkret muss der Abstand zum Beobachtungsschirm R folgender Gleichung genügen:
+$$R \textgreater \frac{a^2}{\lambda}$$
+wobei\\
+a...Weite des Spaltes\\
+$\lambda$...Wellenlänge des verwendeten Lichtes\\
+\\
 
 
 \subsection{Messwerte und Ergebnisse}
 
 
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.9]{./figure/einzelspalt_beugung.png}
+	\caption{Beugungsmuster Einzelspalt mit Werten}
+	\label{fig:messwerte_einzelspalt}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.9]{./figure/doppelspalt_beugung.png}
+	\caption{Beugungsmuster Doppelspalt mit Werten; ohne Minima und Maxima in der 0ten Ordnung}
+	\label{fig:messwerte_doppelspalt}
+\end{figure}
+
+\begin{multicols}{2}
+
+Tabelle, Grafik Regression, Fehlerrechnung
+
 \subsection{Diskussion}
+
+Wackelgeschichte, Scharfstellen, Doppelspalt-Maxima/Minima 9 statt 11
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Wellenlängenmessung am Gitter}
@@ -205,15 +253,14 @@
 
 
 \subsection{Messwerte und Ergebnisse}
-\
+
 
 
 \subsection{Diskussion}
 
 \section{Quellen}
-$[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw7/PW7.pdf}\\
-%$[2]$ Brechungsindex \url{http://de.wikipedia.org/wiki/Brechungsindex}\\
-%$[3]$ Brechungsindex Aceton \url{http://www.chemicalbook.com/ChemicalProductProperty_DE_CB3130928.htm}
+$[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw8/PW8.pdf}\\
+%$[2]$
 
 \end{multicols}
 \end{document}

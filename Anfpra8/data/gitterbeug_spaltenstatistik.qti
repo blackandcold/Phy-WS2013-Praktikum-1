@@ -1,0 +1,34 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	1
+<table>
+Tabelle1	30	4	02.12.13 20:44
+geometry	27	31	674	403	active
+header	gruen [nm][X]	gelb [nm][Y]	blau [nm][Y]	Error[xEr]
+ColWidth	100	100	100	100	
+<com>
+<col nr="0">
+col("gruen [nm]")*100
+</col>
+<col nr="1">
+col("gelb [nm]")*100
+</col>
+<col nr="2">
+col("blau [nm]")*100
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	546.3	580.8	434.1	2
+1	547.2	577.6	431.4	2
+2	546.6	578.5	427.5	2
+3	549.5	584.4	442	2
+4	548.7	579	445.9	2
+5	547.3	579.4	439.1	2
+</data>
+</table>
+<open>1</open>

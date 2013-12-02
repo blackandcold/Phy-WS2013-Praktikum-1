@@ -328,15 +328,82 @@ Beim Doppelspalt war eine genaue Einstellung des Lasers nur bei absoluter Dunkel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Wellenlängenmessung am Gitter}
 
-
+Nachdem im 1. Versuch also die Beugungserscheinungen von Licht am Einzel- und am Doppelspalt
+untersucht wurden, geht es in diesem Teil von PW8 um die Beugung am Gitter.\\
+Jeder einzelne Spalt des Gitters erzeugt seine Einzelspaltbeugung, wobei Inteferenzen durch die Wellen aus all den anderen Spalten entstehen, ähnlich wie beim Doppelspalt. Im Unterschied zu diesem inteferieren nach dem Gitter jedoch Wellen aus einer sehr großen Zahl von Einzelspalten.
+Daraus resultiert ein Beugungsbild von sehr schmalen, stark ausgeprägten Maxima mit sehr kleinen, praktisch dunklen, Gebieten dazwischen.\\
+Durch die Beugung von Lichtstrahlen an einem Gitter soll das Spektrum einer Lampe bestimmt werden:\\
+Die untersuchte Lampe strahlt nur einige bestimmte Wellenlängen ab. Da die Beugung von der Wellenlänge abhängt, werden die verschiedenen Farben unterschiedlich stark gebeugt. Durch die engen und deutlichen Beugungsmaxima, die vom Gitter verursacht werden, lassen sich die Beugungswinkel der einzelnen Farben bestimmen und ihre Wellenlänge berechnen:
+$$\lambda = \sin{\alpha_{max,n}}\cdot \frac{b}{n}$$
+wobei $b$ (beim Doppelspalt der Abstand zwischen beiden Spalten) hier der Gitterkonstante $g=10 \mu m$ entspricht.\\
+Zur Messung der jeweiligen Winkel wird mit einem Kollimatorrohr ein Parallelstrahlenbündel durch das Gitter geschickt und die verschiedenen Beugungsmaxima mit einem Fernrohr auf einem Goniometer anvisiert.\\
+%reference auf die zeichnung%
+Zuerst wird die Nulllage des Systems durch Zielen auf das zentrale Maximum ermittelt. In diesem sind alle Farben der Lampe vereint, daher ist es (annähernd) weiß.\\
+Es werden 3 Beugungen, jeweils links und rechts des zentralen Maximums, von insgesamt 3 Spektralfarben auf diese Art vermessen (siehe Abb. \ref{fig:beugungeswinkel_quecksilberspektrum}). Aus allen gemessenen Beugungswinkel werden die entsprechenden Wellenlängen berechnet. Die Bildung des Mittelwertes ergibt schließlich die Wellenlänge der jeweiligen Farbe sodass, im Vergleich mit den Literaturwerten verschiedener Lampen, ermittelt werden kann, um welche Spektrallampe es sich handelt.
 
 \subsection{Messwerte und Ergebnisse}
 
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={ordnung, gruen, gelb, blau},
+			col sep=&,
+			columns/ordnung/.style={string type, column name=\makecell{$Ordnung$\\Maximum} }, 
+			columns/gruen/.style={string type, column name=\makecell{$gruen$\\$[Grad]$\\$\pm 2'$} }, 
+			columns/gelb/.style={string type, column name=\makecell{$gelb$\\$[Grad]$\\$\pm 2'$}, precision=0},
+			columns/blau/.style={string type, column name=\makecell{$blau$\\$[Grad]$\\$\pm 2'$}, precision=0},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={column type/.add={|}{} },
+			every last column/.style={column type/.add={}{|} }
+			]{
+			ordnung & gruen & gelb & blau
+			links 1: & 3$^\circ$ 8' & 3$^\circ$ 19' & 2$^\circ$ 27'
+			rechts 1: & 3$^\circ$ 9' & 3$^\circ$ 21' & 2$^\circ$ 32'
+			links 2: & 6$^\circ$ 17' & 6$^\circ$ 38' & 4$^\circ$ 57'
+			rechts 2: & 6$^\circ$ 18' & 6$^\circ$ 39' & 5$^\circ$ 7'
+			links 3: & 9$^\circ$ 26' &  &
+			rechts 3: & 9$^\circ$ 27' &  &
+			links 4: & & 13$^\circ$ 26' & 10$^\circ$ 0'
+			rechts 4: & & 13$^\circ$ 24' & 10$^\circ$ 7'
+			
+			
+			
+						
+			}
+	\caption{Beugungswinkel 3er Spektralfarben, je 6 Messungen}
+	\label{fig:beugungeswinkel_quecksilberspektrum}
+\end{figure}
 
 
+Gitterkonstante $g= 10 \mu m$
+
+$$gruen: \lambda_{gruen}=(547.60 \pm 0.76)nm$$
+$$gelb: \lambda_{gelb}=(579.9 \pm 1.5)nm$$
+$$blau: \lambda_{blau}=(436.7 \pm 4.3)nm$$\\
+
+
+
+\noindent \textbf{Quecksilberdampflampe:}\\
+Wellenlängen (Literaturwert [2]):\\
+$gruen: \lambda_{gruen}=546.07nm$\\
+$gelb: \lambda_{gelb}=579.07nm$\\
+$blau: \lambda_{blau}=435.83nm$\\
 
 \subsection{Diskussion}
-
+Jeder der 3 Wellenlängen wurde durch ein Mittel aus 6 berechneten Einzelwerten ermittelt. 
+Die angegebene Unsicherheit ist der Standarderror of the mean mit student-t-Korrektur.\\
+\\
+Alle 3 gemessenen Spektralfarben weisen Wellenlängen auf, die sehr nah am Literaturwert liegen. Einzig  für die Farbe grün liegt dieser außerhalb des gemessenen Unsicherheitsbereiches.\\
+Der jedoch ist von allen 3 Farben der engste und dürfte daher etwas zu klein abgeschätzt worden sein. Die Streuung der Messwerte für grün ist vergleichsweise gering, was sich in einem kleineren Standarderror niederschlägt, als dem der anderen beiden Farben. Die ursprüngliche Messunsicherheit wurde für alle 3 Farben gleich gewählt mit $0^\circ \pm 2'$.\\
+\\
+Da die Werte so gering streuen, und die Ergebnisse der anderen beiden Farben gut am erwarteten Wert liegen, ist es wahrscheinlich, dass ein leichter systematischer Fehler vorliegt.\\
+Auffällig ist, dass die Ergebnisse für die Wellenlängen  auf der rechten Seite tendenziell eher zu hoch, auf der linken eher zu niedrig sind. Das deutet stark darauf hin, dass die Nulllage zu ungenau bestimmt wurde.\\
+Es konnten jedoch durch neue Berechnungen mit verschobener Nullage keine Ergebnisse erzielt werden, die näher am Literaturwert liegen und die Werte der anderen beiden Farben nicht kompromittieren. Die Tendenz nach rechts ist zwar zu erkennen, dürfte aber nicht ausschlaggebend sein, oder gerade nur so, um den Wert für grün, dank seiner geringen Streuung, leicht zu verrücken.\\
+Andere Ursachen, wie fehlerhafte Messungen (grün war die erste Messreihe) sind nicht auszuschließen.\\
+Um dieser Abweichung auf den Grund zu gehen, müsste der Versuch also wiederholt werden.\\
+\\
+Da die vorliegenden Ergebnisse jedoch klar ausreichen, um das Emissionsspektrum aus den vorgeschlagenen Möglichkeiten eindeutig als Quecksilberdampflampe zu identifizieren, sind die Messung und die berechneten Werte jedenfalls genau genug, um die gestellte Frage zu klären.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newtonsche Ringe}
@@ -350,6 +417,7 @@ Beim Doppelspalt war eine genaue Einstellung des Lasers nur bei absoluter Dunkel
 
 \section{Quellen}
 $[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw8/PW8.pdf}\\
+$[2]$ Quecksilberdampflampe, \url{http://de.wikipedia.org/wiki/Quecksilberdampflampe}\\
 %$[2]$
 
 \end{multicols}

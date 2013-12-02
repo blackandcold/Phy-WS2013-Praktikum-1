@@ -254,7 +254,7 @@ wobei $b$ (beim Doppelspalt der Abstand zwischen beiden Spalten) hier der Gitter
 Zur Messung der jeweiligen Winkel wird mit einem Kollimatorrohr ein Parallelstrahlenbündel durch das Gitter geschickt und die verschiedenen Beugungsmaxima mit einem Fernrohr auf einem Goniometer anvisiert.\\
 %reference auf die zeichnung%
 Zuerst wird die Nulllage des Systems durch Zielen auf das zentrale Maximum ermittelt. In diesem sind alle Farben der Lampe vereint, daher ist es (annähernd) weiß.\\
-Es werden 3 Beugungen, jeweils links und rechts des zentralen Maximums, von insgesamt 3 Spektralfarben auf diese Art vermessen. Die Bildung des Mittelwertes ergibt schließlich die Wellenlänge der jeweiligen Farbe und, im Vergleich mit den Literaturwerten verschiedener Lampen, kann ermittelt werden, um welche Spektrallampe es sich handelt.
+Es werden 3 Beugungen, jeweils links und rechts des zentralen Maximums, von insgesamt 3 Spektralfarben auf diese Art vermessen (siehe Abb. \ref{fig:beugungeswinkel_quecksilberspektrum}). Aus allen gemessenen Beugungswinkel werden die entsprechenden Wellenlängen berechnet. Die Bildung des Mittelwertes ergibt schließlich die Wellenlänge der jeweiligen Farbe sodass, im Vergleich mit den Literaturwerten verschiedener Lampen, ermittelt werden kann, um welche Spektrallampe es sich handelt.
 
 \subsection{Messwerte und Ergebnisse}
 
@@ -295,17 +295,30 @@ Gitterkonstante $g= 10 \mu m$
 
 $$gruen: \lambda_{gruen}=(547.60 \pm 0.76)nm$$
 $$gelb: \lambda_{gelb}=(579.9 \pm 1.5)nm$$
-$$blau: \lambda_{blau}=(436.7 \pm 4.3)nm$$
+$$blau: \lambda_{blau}=(436.7 \pm 4.3)nm$$\\
 
 
-\noindent Es handelt sich um eine Quecksilberdampflampe.\\
+
+\noindent \textbf{Quecksilberdampflampe:}\\
 Wellenlängen (Literaturwert [2]):\\
 $gruen: \lambda_{gruen}=546.07nm$\\
 $gelb: \lambda_{gelb}=579.07nm$\\
 $blau: \lambda_{blau}=435.83nm$\\
 
 \subsection{Diskussion}
-
+Jeder der 3 Wellenlängen wurde durch ein Mittel aus 6 berechneten Einzelwerten ermittelt. 
+Die angegebene Unsicherheit ist der Standarderror of the mean mit student-t-Korrektur.\\
+\\
+Alle 3 gemessenen Spektralfarben weisen Wellenlängen auf, die sehr nah am Literaturwert liegen. Einzig  für die Farbe grün liegt dieser außerhalb des gemessenen Unsicherheitsbereiches.\\
+Der jedoch ist von allen 3 Farben der engste und dürfte daher etwas zu klein abgeschätzt worden sein. Die Streuung der Messwerte für grün ist vergleichsweise gering, was sich in einem kleineren Standarderror niederschlägt, als dem der anderen beiden Farben. Die ursprüngliche Messunsicherheit wurde für alle 3 Farben gleich gewählt mit $0^\circ \pm 2'$.\\
+\\
+Da die Werte so gering streuen, und die Ergebnisse der anderen beiden Farben gut am erwarteten Wert liegen, ist es wahrscheinlich, dass ein leichter systematischer Fehler vorliegt.\\
+Auffällig ist, dass die Ergebnisse für die Wellenlängen  auf der rechten Seite tendenziell eher zu hoch, auf der linken eher zu niedrig sind. Das deutet stark darauf hin, dass die Nulllage zu ungenau bestimmt wurde.\\
+Es konnten jedoch durch neue Berechnungen mit verschobener Nullage keine Ergebnisse erzielt werden, die näher am Literaturwert liegen und die Werte der anderen beiden Farben nicht kompromittieren. Die Tendenz nach rechts ist zwar zu erkennen, dürfte aber nicht ausschlaggebend sein, oder gerade nur so, um den Wert für grün, dank seiner geringen Streuung, leicht zu verrücken.\\
+Andere Ursachen, wie fehlerhafte Messungen (grün war die erste Messreihe) sind nicht auszuschließen.\\
+Um dieser Abweichung auf den Grund zu gehen, müsste der Versuch also wiederholt werden.\\
+\\
+Da die vorliegenden Ergebnisse jedoch klar ausreichen, um das Emissionsspektrum aus den vorgeschlagenen Möglichkeiten eindeutig als Quecksilberdampflampe zu identifizieren, sind die Messung und die berechneten Werte jedenfalls genau genug, um die gestellte Frage zu klären.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newtonsche Ringe}
@@ -319,6 +332,7 @@ $blau: \lambda_{blau}=435.83nm$\\
 
 \section{Quellen}
 $[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw8/PW8.pdf}\\
+$[2]$ Quecksilberdampflampe, \url{http://de.wikipedia.org/wiki/Quecksilberdampflampe}\\
 %$[2]$
 
 \end{multicols}

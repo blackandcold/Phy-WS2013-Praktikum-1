@@ -1,5 +1,7 @@
 Kap 2: Spektrum quecksilberlampe:
 
+nulllage links -4', rechts +4'
+
 
 sin(°')*10E-6/n
 
@@ -19,3 +21,15 @@ blau: 4.341E-7				4.314E-7	4.275E-7		4.420E-7	4.459E-7			4.391E-7
 Ergebnis: 436.7+-4.3
 
 
+
+
+grün test: (nullage verschoben, weil grün a bissl daneben is.. vor allem rechtsseitige werte zu hoch, links eher zu niedrig)
+
++-3
+5.473	5.487	5.496		5.466	5.472	5.463
+
++-5
+
+5.454	5.458	5.437	5.524
+
+... unbefriedigend

@@ -190,33 +190,39 @@
 \begin{multicols}{2}
 
 \section{Beugung am Spalt und Doppelspalt}
-Im ersten Experiment soll ein Einzelspalt und ein Doppelspalt über die Beugung von monochromatischem Licht untersucht werden. Unsere Lichtquelle für monochromatisches Licht stellt ein Laser mit Wellenlänge $\lambda = 632.8nm$ dar. Dadurch ergibt sich ein rotes Beugungsmuster auf dem Schirm (Abb. \ref{fig:beugungsmuster}). 
+Im ersten Experiment soll ein Einzelspalt und ein Doppelspalt über die Beugung von monochromatischem Licht untersucht werden. Unsere Lichtquelle für monochromatisches Licht stellt ein roter Laser dar. Dadurch ergibt sich ein rotes Beugungsmuster auf dem Schirm (Abb. \ref{fig:beugungsmuster}). 
 \\
 Durch die Vermessung des Abstandes vom Einzelspalt zum Schirm (Abb. \ref{fig:messwerte_einzelspalt}) und dem Abstand zwischen den Minima kann direkt die Spaltbreite ermittelt werden [1](Glg. 13):
 $$a = \frac{n*\lambda}{sin(\alpha_{min,n})} $$
-$$\alpha = arctan(\frac{b}{R})$$
-b...Abstand zwischen zwei Minima\\
+$$\alpha_n = arctan(\frac{b_n}{R})$$
+a...Spaltbreite\\
+$b_n$...Abstand zwischen Minimum und 0-ter Ordnung\\
 R...Abstand vom Spalt zum Schirm\\
+$\lambda$...Wellenlänge des verwendeten Lichtes\\
 \\
 Beim Doppelspalt ergibt sich ein ähnliches Beugungsmuster nur das der Zentrale helle Punkt mehrere Minima und Maxima enthält. Durch eine Herleitung über die Beziehung zwischen Spaltbreite und Spaltabstand kann der Spaltabstand ermittelt werden:
 
-
-%%%%%%%%%%%%%%%
-$$ some formula TODO $$
-
-
-%%%%%%%%%%%%%
-
+$$ a = \frac{\lambda * n}{\alpha_n} $$
+und
+$$\frac{d}{a} = x$$
+\noindent
+x... Minima im Zentrum -1 halbiert\\
+d... Spaltabstand (Mitte zu Mitte)\\
+\\
+Den Winkel erhalten wir wieder wie beim Einzelspalt.
 Wesentlich in beiden Fällen ist das wir eine Fernfeldbeugung beobachten. Konkret muss der Abstand zum Beobachtungsschirm R folgender Gleichung genügen:
 $$R \textgreater \frac{a^2}{\lambda}$$
-wobei\\
-a...Weite des Spaltes\\
-$\lambda$...Wellenlänge des verwendeten Lichtes\\
 \\
-
+%d/a = x\\
+%wobei: a = lambda*n/alpha_n (wellenlänge mal ordnung / gemessener winkel der jeweiligen ordnung)\\
+%
+%alpha_n = atan(messung/(2*R)) weil wir ja eine länge gemessen haben, in entfernung R... der faktor 1/2 kommt, weilma immer beide seiten gemessen und halbiert haben
+%11 maxima -> x = 6
 
 \subsection{Messwerte und Ergebnisse}
 
+Wellenlänge des Laser der bei Einzel- und Doppelspalt verwendet wurde:
+$$\lambda = 632.8nm$$
 
 \end{multicols}
 \begin{figure}[H]
@@ -228,17 +234,96 @@ $\lambda$...Wellenlänge des verwendeten Lichtes\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.9]{./figure/doppelspalt_beugung.png}
-	\caption{Beugungsmuster Doppelspalt mit Werten; ohne Minima und Maxima in der 0ten Ordnung}
+	\caption{Beugungsmuster Doppelspalt mit Werten; ohne Minima und Maxima in der 0-ten Ordnung}
 	\label{fig:messwerte_doppelspalt}
 \end{figure}
 
 \begin{multicols}{2}
+\noindent
+\textbf{Einzelspalt}\\
+Mit den Messwerten aus \ref{tab:werte_doppelspalt} wurde mit den Formel aus der Einleitung in QTI-Plot eine Lineare Regression durchgeführt welche in Abbildung \ref{fig:einzelspalt_linreg} ersichtlich ist. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{./figure/linreg_einzelspalt.png}
+	\caption{Lineare Regression Einzelspalt}
+	\label{fig:einzelspalt_linreg}
+\end{figure}
+Daraus ergibt sich eine Spaltbreite von 
+$$a = (0.1234 \pm 0.0065)mm$$
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={abstand, n},
+			col sep=&,
+			columns/abstand/.style={precision=2, zerofill, column name=\makecell{$Abstand$\\$(\pm 0.05)[mm]$} }, 
+			columns/n/.style={column name=\makecell{$n$\\$(Ordnung)$}, precision=0},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={column type/.add={|}{} },
+			every last column/.style={column type/.add={}{|} }
+			]{
+			abstand & n
+			12.9 & 1
+			24.45 & 2
+			37.40 & 3
+			49.35& 4
+			62.45 & 5
+			74.45 & 6
+			87.45 & 7
+			100.25 & 8
+			
+			}
+	\caption{Messwerte Einzelspalt}
+	\label{tab:werte_einzelspalt}
+\end{figure}
 
-Tabelle, Grafik Regression, Fehlerrechnung
+\noindent
+\textbf{Doppelspalt}\\
+Wir konnten \textbf{11 Maxima} in der 0-ten Ordnung zählen was zu \textbf{x = 6} führt. 
+Mit den Messwerten aus \ref{tab:werte_doppelspalt} wurde mit den Formel aus der Einleitung in QTI-Plot eine Lineare Regression durchgeführt welche in Abbildung \ref{fig:doppelspalt_linreg} ersichtlich ist. 
+Zusätzlich musste der Abstand R gemessen werden um den Winkel zu berechnen:
+$$R = (108.1 \pm 0.2)cm$$
+Die Steigung ergibt folgende Spaltbreite:
+$$a = (0.122 \pm 0.001)mm$$
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={abstand, n},
+			col sep=&,
+			columns/abstand/.style={precision=2, zerofill, column name=\makecell{$Abstand$\\$(\pm 0.05)[mm]$} }, 
+			columns/n/.style={column name=\makecell{$n$\\$(Ordnung)$}, precision=0},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={column type/.add={|}{} },
+			every last column/.style={column type/.add={}{|} }
+			]{
+			abstand & n
+			11.9 & 1
+			22.75 & 2
+			34.05 & 3
+			45.65& 4
+			57.15 & 5
+			67.30 & 6
+			}
+	\caption{Messwerte Doppelspalt}
+	\label{tab:werte_doppelspalt}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{./figure/linreg_doppelspalt.png}
+	\caption{Lineare Regression Doppelspalt}
+	\label{fig:doppelspalt_linreg}
+\end{figure}
+\noindent
+Zu letzt ist noch der Spaltabstand mit der Formel 
+$$\frac{d}{a} = x$$
+\noindent
+zu berechnen.
+$$d = x*a = 6 * 0.122 = (0.732 \pm 0.001)mm$$
 
 \subsection{Diskussion}
-
-Wackelgeschichte, Scharfstellen, Doppelspalt-Maxima/Minima 9 statt 11
+Die Ausrichtung des Lasers auf den Spalt gestaltete sich etwas wackelig, da der Laser per Hand gedreht wurde. Nach wenigen Versuchen war jedoch ein brauchbares Muster am Schirm zu erkennen. Die Messfehler durch Schublehre und Maßband waren erstaunlich gering, was mit der zusätzlichen Regression zu einem guten Ergebnis geführt hat.\\
+Beim Doppelspalt war eine genaue Einstellung des Lasers nur bei absoluter Dunkelheit und gleichzeitiger Beobachtung der 0-ten Ordnung erfolgreich, da bei einer kleinen Abweichung bereits die Minima und Maxima verschwimmen. Trotz guter Justierung konnten bei den ersten Zählungen nur 9 statt 11 Maxima gesehen werden.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Wellenlängenmessung am Gitter}

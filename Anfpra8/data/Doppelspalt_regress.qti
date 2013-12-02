@@ -3,12 +3,12 @@ QtiPlot 0.9.8 project file
 <windows>	2
 <table>
 Tabelle1	30	4	28.11.13 14:49
-geometry	0	0	664	373	
-header	tan(alpha/2) [mm]	n	Beugungswinkel [rad][X]	n*lambda [mm][Y]
-ColWidth	100	100	174	100	
+geometry	0	0	664	373	active
+header	tan(a/2) [mm]	n	Beugungswinkel [rad][X]	n*lambda [mm][Y]
+ColWidth	153	100	174	138	
 <com>
 <col nr="2">
-atan(col("tan(alpha/2) [mm]")/2/1081)
+atan(col("tan(a/2) [mm]")/2/1081)
 </col>
 <col nr="3">
 col("n")*0.0006328
@@ -30,7 +30,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Grafik1	1	1	28.11.13 14:59
-geometry	664	0	545	461	active
+geometry	664	0	545	461	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -40,7 +40,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	533	403
-PlotTitle	Titel	#000000	4228
+PlotTitle	Spaltabstand	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
 <ScaleFonts>1</ScaleFonts>
@@ -49,7 +49,7 @@ Margin	0
 Border	0	#000000
 grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
 EnabledAxes	1	1	1	1	
-AxesTitles	%(?X)	%(?Y)			
+AxesTitles	Beugungswinkel [rad]	n*lambda [mm]			
 AxesTitleColors	#000000	#000000	#000000	#000000	
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
@@ -66,7 +66,7 @@ AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#000000	#000000	#000000	#000000
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	255
-curve	Tabelle1_Beugungswinkel [rad]	Tabelle1_n*lambda [mm]	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Tabelle1_Beugungswinkel [rad]	Tabelle1_n*lambda [mm]	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	0	2	0	0	29	1
 <Function>
 <Type>0</Type>
 <Title>LinearFit1</Title>
@@ -112,8 +112,8 @@ EnabledTickLabels	1	1	1	1
 <LineStyle>0</LineStyle>
 <x>0.0057518796992481</x>
 <y>0.0038829431438127</y>
-<right>0.0131954887218045</right>
-<bottom>0.00354347826086957</bottom>
+<right>0.0118115942028986</right>
+<bottom>0.00355813953488372</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -148,4 +148,5 @@ Angepasstes R^2 = 0,999457458431951
 RMSE (Standardabweichung) = 2,38807319278158e-05
 RSS (Summe der quadrierten Restwerte) = 2,2811574296328e-09
 ---------------------------------------------------------------------------------------
+
 </log>

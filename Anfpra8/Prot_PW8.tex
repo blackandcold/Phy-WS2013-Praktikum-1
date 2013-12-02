@@ -323,6 +323,55 @@ Da die vorliegenden Ergebnisse jedoch klar ausreichen, um das Emissionsspektrum 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newtonsche Ringe}
 
+Die Newtonringe sind ein Inteferenzbild von Licht, dass durch eine sehr schwach gekrümmte plan-konvexe Linse fällt, an die direkt eine Glasplatte anschließt. Zwischen Platte und Linse ist also, abgesehen vom Berührungspunkt, ein kurzer Abschnitt Luft, der, dank der schwachen Krümmung der Linse, nahezu ein rechtwinkeliges Dreieck bildet (siehe Abb. \ref{fig:newtonringe_reflexion}).\\
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.80]{./figure/newtonringe_strahlengang.png}
+	\caption{Strahlengang in Transmission}
+	\label{fig:newtonringe_transmission}
+\end{figure}
+
+
+Durch den Unterschied im Brechungsindex, zwischen Glas und Luft und durch teilweise Reflexion, werden aus jedem einfallenden Strahl eine Vielzahl (nahezu) paralleler Strahlen mit leicht unterschiedlichen Phasen. Aus der Überlagerung der Erzeugnisse aller einfallender Strahlen ergeben sich schließlich die beobachtbaren Newtonringe, ein Inteferenzmuster.\\
+Das gleiche Prinzip gilt auch für die Strahlen, die reflektiert werden und durch die Linse wieder austreten. Auch hier entstehen fast-parallele Strahlen mit Phasenunterschieden.\\
+Um den Effekt schön zu erzielen, ist Licht mit ausreichend großer Kohärenzlänge nötig. In diesem Versuch wird eine Halogenlampe verwendet.
+\\
+Das Licht aus der Lampe fällt auf das System aus Linse und Glasplatte. Unter Verwendung 2er Strahlteiler und Sammellinsen werden sowohl die Newtonringe in Reflexion, als auch die in Transmission, direkt nebeneinander auf einen Schirm projiziert (Abb. \ref{fig:newtonringe_aufbau}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{./figure/newtonringe_aufbau.png}
+	\caption{Versuchsaufbau - Newtonringe}
+	\label{fig:newtonringe_aufbau}
+\end{figure}
+
+\noindent $Strahlteiler: ST1, ST2$\\
+$Sammellinsen: L1, L2$\\
+$Linse-Glasplatte: LP$\\
+\\
+Wird der Versuchsaufbau ohne Farbfilter eingeschaltet, lassen sich die Newtonringe zwar gut als solche erkennen, jedoch nicht eindeutig begrenzen. Die verschiedenen Spektralfarben werden unterschiedlich stark "abgelenkt": Die unterschiedlichen Wellenlängen bewirken, dass die Phasenverschiebungen verschiedene Minima und Maxima für verschiedene Spektralfarben erzeugen. Dadurch verschmieren die Ringe.\\
+Je weiter außen sie betrachtet werden, desto unschärfer wird das Bild.\\
+Durch den Farbfilter wird eine Wellenlänge herausgegriffen. Das verringert die Intensität deutlich, führt jedoch zu einer sehr viel klareren Abgrenzung der einzelnen Ringe voneinander.\\
+der hier verwendete Farbfilter:\\
+grün: $\lambda = (518 \pm 3) nm$\\
+\\
+Aus geometrischen Betrachtungen ergibt sich für den Zusammenhang zwischen dem Radius $r$ der Newtonringe und dem Krümmungsradius $R$ der Linse:
+$$r^2 = (2R-d)d$$
+$d$... Abstand zwischen Linse und Platte\\
+Auslöschung liegt im reflektierten Fall vor, wenn:
+$$2d_k + \frac{\lambda}{2}=(2k+1)(\frac{\lambda}{2})$$
+Da $R$ sehr viel größer ist als $d$ gilt also für Auslöschungen im Reflexionsfall:
+$$r_k^2 =kR\lambda$$
+konstruktive Interferenz:
+$$r_k^2=(2k+1R \frac{\lambda}{2})$$
+Im Fall der Ringe in Transmission gelten beide Gleichungen für die jeweils andere Art von Interferenz.\\
+\\
+Der Krümmungsradius $R$ soll bestimmt werden, indem die Radien $r_k$ verschiedener Maxima bzw. Minima in beiden Interferenzbildern gemessen werden um so R in linearer Regression zu ermitteln:
+$$R=\frac{r_k^2}{k \lambda}$$
+
+Dazu ist außerdem auf der Glasplatte des Systems ein mm-Maßstab angebracht, der es erlaubt, die Größenverhältnisse der Abbildung zu bestimmen.
 
 \subsection{Messwerte und Ergebnisse}
 

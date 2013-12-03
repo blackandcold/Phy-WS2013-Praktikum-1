@@ -289,8 +289,11 @@ $$d = 6\cdot 0.122 = (0.732 \pm 0.001)mm$$
 Die Ausrichtung des Lasers auf den Spalt gestaltet sich etwas wackelig in diesem Aufbau, da der Laser per Hand gedreht wurde. Ein und ausschalten verstellt ihn leicht. Nachdem aber alle Messungen pro Spalt in einem Durchgang durchgeführt wurden, entsteht hierbei kein Fehler.\\
 Die Messunsicherheiten durch Schublehre und Maßband konnten klein abgeschätzt werden (ihre Auflösungen), was, nach den linearen Fits, zu guten Ergebnissen geführt hat.\\
 %Beim Doppelspalt war eine genaue Einstellung des Lasers nur bei absoluter Dunkelheit und gleichzeitiger Beobachtung der 0-ten Ordnung erfolgreich, da bei einer kleinen Abweichung bereits die Minima und Maxima verschwimmen. Trotz guter Justierung konnten bei den ersten Zählungen nur 9 statt 11 Maxima gesehen werden.  
+Die Schwierigkeit im Abzählen der Minima im zentralen Beugungsmaximum des Doppelspaltes ist stark von der Qualität der Abbildung abhängig. Mehrere Versuche (verschiedene Laserausrichtungen) ließen unklar, ob es sich um 9 oder 11 Minima handelt. Der verwendete Wert wurde von der Betreuerin bestätigt.\\
+Die Messungen sind ob der verwendeten Messinstrumente erstaunlich genau. Mögliche Verbesserungen wären vor allem eine stabilere und feinjustierbare Laserhalterung und ein besseres Aufzeichnungssystem (als Bleistift auf dem Schirm).\\
+Da die Ergebnisse jedoch im $10 \mu m$ Bereich liegen und plausibel sind, ist der Aufbau im Rahmen der Aufgabe ausreichend komplex.
 
-
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Wellenlängenmessung am Gitter}
 
@@ -302,8 +305,15 @@ Durch die Beugung von Lichtstrahlen an einem Gitter soll das Spektrum einer Lamp
 Die untersuchte Lampe strahlt nur einige bestimmte Wellenlängen ab. Da die Beugung von der Wellenlänge abhängt, werden die verschiedenen Farben unterschiedlich stark gebeugt. Durch die engen und deutlichen Beugungsmaxima, die vom Gitter verursacht werden, lassen sich die Beugungswinkel der einzelnen Farben bestimmen und ihre Wellenlänge berechnen:
 $$\lambda = \sin{\alpha_{max,n}}\cdot \frac{b}{n}$$
 wobei $b$ (beim Doppelspalt der Abstand zwischen beiden Spalten) hier der Gitterkonstante $g=10 \mu m$ entspricht.\\
-Zur Messung der jeweiligen Winkel wird mit einem Kollimatorrohr ein Parallelstrahlenbündel durch das Gitter geschickt und die verschiedenen Beugungsmaxima mit einem Fernrohr auf einem Goniometer anvisiert.\\
+Zur Messung der jeweiligen Winkel wird mit einem Kollimatorrohr ein Parallelstrahlenbündel durch das Gitter geschickt und die verschiedenen Beugungsmaxima mit einem Fernrohr auf einem Goniometer anvisiert (Abb. \ref{fig:aufbau_gitter}).\\
 %reference auf die zeichnung%
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{./figure/gitter_beugung_zeichnung.png}
+	\caption{Versuchsaufbau - Gitterbeugung}
+	\label{fig:aufbau_gitter}
+\end{figure}
+
 Zuerst wird die Nulllage des Systems durch Zielen auf das zentrale Maximum ermittelt. In diesem sind alle Farben der Lampe vereint, daher ist es (annähernd) weiß.\\
 Es werden 3 Beugungen, jeweils links und rechts des zentralen Maximums, von insgesamt 3 Spektralfarben auf diese Art vermessen (siehe Abb. \ref{fig:beugungeswinkel_quecksilberspektrum}). Aus allen gemessenen Beugungswinkel werden die entsprechenden Wellenlängen berechnet. Die Bildung des Mittelwertes ergibt schließlich die Wellenlänge der jeweiligen Farbe sodass, im Vergleich mit den Literaturwerten verschiedener Lampen, ermittelt werden kann, um welche Spektrallampe es sich handelt.
 
@@ -474,7 +484,7 @@ Wellenlänge: $\lambda = (518\pm 3)nm$
 \end{multicols}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.70]{./figure/newtonringe_reflex_regress.png}
+	\includegraphics[scale=0.60]{./figure/newtonringe_reflex_regress.png}
 	\caption{Newtonringe - Reflexion: $R=2r_k^2*\frac{1}{\lambda (2k+1)}$}
 	\label{fig:newtonringe_reflex_regress}
 \end{figure}
@@ -486,7 +496,7 @@ $$R_{Reflexion} = 13.73 \pm 0.27)m$$
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.70]{./figure/newtonringe_transmiss_regress.png}
+	\includegraphics[scale=0.60]{./figure/newtonringe_transmiss_regress.png}
 	\caption{Newtonringe - Transmission: $R=r_k^2\frac{1}{\lambda *k}$}
 	\label{fig:newtonringe_transmiss_regress}
 \end{figure}
@@ -525,7 +535,7 @@ $[2]$ Quecksilberdampflampe, \url{http://de.wikipedia.org/wiki/Quecksilberdampfl
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.60]{./figure/laser_kanone.png}
+	\includegraphics[scale=0.65]{./figure/laser_kanone.png}
 	\caption{Beugung am Doppelspalt}
 	\label{fig:laser_kanone}
 \end{figure}

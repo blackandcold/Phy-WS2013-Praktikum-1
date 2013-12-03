@@ -190,9 +190,10 @@
 \begin{multicols}{2}
 
 \section{Beugung am Spalt und Doppelspalt}
-Im ersten Experiment soll ein Einzelspalt und ein Doppelspalt über die Beugung von monochromatischem Licht untersucht werden. Unsere Lichtquelle für monochromatisches Licht stellt ein roter Laser dar. Dadurch ergibt sich ein rotes Beugungsmuster auf dem Schirm (Abb. \ref{fig:beugungsmuster}). 
+Im ersten Experiment sollen ein Einzelspalt und ein Doppelspalt über die Beugung von monochromatischem Licht untersucht werden. Die Lichtquelle ist ein roter Laser (Wellenlänge $\lambda = 632.8nm$). \\
+Die Ausbreitung von Licht kann beschrieben werden durch Kugelwellen an jedem Punkt (Huygens-Fresnel-Prinzip). Fällt das Licht auf den Spalt (oder auch den Doppelspalt oder ein Gitter), ergeben sich Gangunterschiede durch die Begrenzungen. Dadurch ergibt sich ein (hier rotes) Beugungsmuster auf dem Schirm (Abb. \ref{fig:beugungsmuster}). 
 \\
-Durch die Vermessung des Abstandes vom Einzelspalt zum Schirm (Abb. \ref{fig:messwerte_einzelspalt}) und dem Abstand zwischen den Minima kann direkt die Spaltbreite ermittelt werden [1](Glg. 13):
+Durch die Vermessung des Abstandes vom Einzelspalt zum Schirm (Abb. \ref{fig:messwerte_einzelspalt}) und dem Abstand zwischen den Minima kann auf den Beugungswinkel (für jedes Minimum) geschlossen werden, und daraus direkt die Spaltbreite ermittelt werden [1](Glg. 13):
 $$a = \frac{n*\lambda}{sin(\alpha_{min,n})} $$
 $$\alpha_n = arctan(\frac{b_n}{R})$$
 a...Spaltbreite\\
@@ -200,17 +201,17 @@ $b_n$...Abstand zwischen Minimum und 0-ter Ordnung\\
 R...Abstand vom Spalt zum Schirm\\
 $\lambda$...Wellenlänge des verwendeten Lichtes\\
 \\
-Beim Doppelspalt ergibt sich ein ähnliches Beugungsmuster nur das der Zentrale helle Punkt mehrere Minima und Maxima enthält. Durch eine Herleitung über die Beziehung zwischen Spaltbreite und Spaltabstand kann der Spaltabstand ermittelt werden:
-
+Beim Doppelspalt ergibt sich ein ähnliches Beugungsmuster, mit dem Unterschied, dass der zentrale helle Punkt mehrere Minima und Maxima enthält. Diese entstehen durch Interferenz der Wellen aus beiden Spalten.\\
+Der Spaltabstand $d$ und die Spaltbreite $a$ ergeben in ihrem Verhältnis die Ausprägung der Interferenz. So kann (durch zählen der Interferenz-Minima und Bestimmung der Spaltbreite,wie im Einzelspalt) der Spaltabstand bestimmt werden.
 $$ a = \frac{\lambda * n}{\alpha_n} $$
 und
 $$\frac{d}{a} = x$$
 \noindent
-x... Minima im Zentrum -1 halbiert\\
+x... Minima in eine Richtung im zentralen Beugungsmaximum\\
 d... Spaltabstand (Mitte zu Mitte)\\
 \\
-Den Winkel erhalten wir wieder wie beim Einzelspalt.
-Wesentlich in beiden Fällen ist das wir eine Fernfeldbeugung beobachten. Konkret muss der Abstand zum Beobachtungsschirm R folgender Gleichung genügen:
+Die Winkelmessung erfolgt wie beim Einzelspalt.
+In beiden Fällen wird eine Fernfeldbeugung beobachtet (die Wellen sind näherungsweise eben). Konkret muss der Abstand zum Beobachtungsschirm R folgender Gleichung genügen:
 $$R \textgreater \frac{a^2}{\lambda}$$
 \\
 %d/a = x\\
@@ -242,11 +243,11 @@ $$R \textgreater \frac{a^2}{\lambda}$$
 Wellenlänge des Laser der bei Einzel- und Doppelspalt verwendet wurde:
 $$\lambda = 632.8nm$$
 
-\textbf{Einzelspalt}\\
-Mit den Messwerten aus \ref{tab:werte_doppelspalt} wurde mit den Formel aus der Einleitung in QTI-Plot eine Lineare Regression durchgeführt welche in Abbildung \ref{fig:einzelspalt_linreg} ersichtlich ist. 
+\noindent \textbf{Einzelspalt}\\
+Aus den Messwerten aus \ref{tab:werte_einzelspalt} wurde in QTI-Plot eine Lineare Regression durchgeführt (Abbildung \ref{fig:einzelspalt_linreg}). 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{./figure/linreg_einzelspalt.png}
+	\includegraphics[scale=0.40]{./figure/linreg_einzelspalt.png}
 	\caption{Lineare Regression Einzelspalt}
 	\label{fig:einzelspalt_linreg}
 \end{figure}
@@ -281,9 +282,9 @@ $$a = (0.1234 \pm 0.0065)mm$$
 
 \noindent
 \textbf{Doppelspalt}\\
-Wir konnten \textbf{11 Maxima} in der 0-ten Ordnung zählen was zu \textbf{x = 6} führt. 
-Mit den Messwerten aus \ref{tab:werte_doppelspalt} wurde mit den Formel aus der Einleitung in QTI-Plot eine Lineare Regression durchgeführt welche in Abbildung \ref{fig:doppelspalt_linreg} ersichtlich ist. 
-Zusätzlich musste der Abstand R gemessen werden um den Winkel zu berechnen:
+Es konnten \textbf{11 Maxima} in der 0-ten Ordnung gezählt werden, was zu \textbf{x = 6} führt. 
+Mit den Messwerten aus \ref{tab:werte_doppelspalt} wurde in QTI-Plot eine Lineare Regression durchgeführt (Abbildung \ref{fig:doppelspalt_linreg}). 
+Außerdem musste der Abstand $R$ (Spalt-Schirm) gemessen werden um den Winkel zu berechnen:
 $$R = (108.1 \pm 0.2)cm$$
 Die Steigung ergibt folgende Spaltbreite:
 $$a = (0.122 \pm 0.001)mm$$
@@ -317,11 +318,11 @@ $$a = (0.122 \pm 0.001)mm$$
 	\label{fig:doppelspalt_linreg}
 \end{figure}
 \noindent
-Zu letzt ist noch der Spaltabstand mit der Formel 
+Der Spaltabstand $d$ ergibt sich durch:
 $$\frac{d}{a} = x$$
 \noindent
-zu berechnen.
-$$d = x*a = 6 * 0.122 = (0.732 \pm 0.001)mm$$
+\\
+$$d = 6\cdot 0.122 = (0.732 \pm 0.001)mm$$
 
 \subsection{Diskussion}
 Die Ausrichtung des Lasers auf den Spalt gestaltete sich etwas wackelig, da der Laser per Hand gedreht wurde. Nach wenigen Versuchen war jedoch ein brauchbares Muster am Schirm zu erkennen. Die Messfehler durch Schublehre und Maßband waren erstaunlich gering, was mit der zusätzlichen Regression zu einem guten Ergebnis geführt hat.\\

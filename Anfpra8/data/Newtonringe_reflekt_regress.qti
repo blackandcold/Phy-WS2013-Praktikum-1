@@ -2,10 +2,10 @@ QtiPlot 0.9.8 project file
 <scripting-lang>	muParser
 <windows>	2
 <table>
-Tabelle1	30	4	28.11.13 17:05
-geometry	0	0	547	364	
-header	messwert[mm]	k	1[X]	2[Y]
-ColWidth	100	100	100	212	
+Tabelle1	30	5	28.11.13 17:05
+geometry	0	0	547	364	active
+header	messwert[mm]	k	1[X]	2[Y]	3[yEr]
+ColWidth	100	100	100	212	100	
 <com>
 <col nr="2">
 (col("k")*2+1)
@@ -14,24 +14,24 @@ ColWidth	100	100	100	212
 2*(col("messwert[mm]")*5/18)^2/0.000518
 </col>
 </com>
-ColType	0;0/13	0;0/13	0;0/13	0;0/13
-ReadOnlyColumn	0	0	0	0
-HiddenColumn	0	0	0	0
-Comments					
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0
+HiddenColumn	0	0	0	0	0
+Comments						
 WindowLabel		2
 <data>
-0	6.15	0	1	11267.96439296
-1	10.5	1	3	32845.34534535
-2	14.3	2	5	60921.04008771
-3	17	3	7	86098.00276467
-4	19.8	4	9	116795.3667954
-5	22.2	5	11	146825.3968254
-6	24.1	6	13	173033.1521998
+0	6.15	0	1	11267.96439296	2500
+1	10.5	1	3	32845.34534535	2300
+2	14.3	2	5	60921.04008771	3100
+3	17	3	7	86098.00276467	3000
+4	19.8	4	9	116795.3667954	2800
+5	22.2	5	11	146825.3968254	3200
+6	24.1	6	13	173033.1521998	3100
 </data>
 </table>
 <multiLayer>
 Grafik1	1	1	28.11.13 17:09
-geometry	547	0	563	461	active
+geometry	547	0	563	461	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -41,7 +41,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	551	403
-PlotTitle	Titel	#000000	4228
+PlotTitle	 	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
 <ScaleFonts>1</ScaleFonts>
@@ -49,11 +49,11 @@ Background	#ffffff	255
 Margin	0
 Border	0	#000000
 grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
-EnabledAxes	1	1	1	1	
-AxesTitles	%(?X)	%(?Y)			
+EnabledAxes	1	0	1	0	
+AxesTitles	2k+1	2r^2/lambda [mm]			
 AxesTitleColors	#000000	#000000	#000000	#000000	
-AxesTitleAlignment	5124	5124	5124	5124
-AxesTitleDistance	2	2	2	2
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	2	-1	2	-1
 TitleFont	Lucida Grande	15	75	0	0	0
 ScaleFont0	Lucida Grande	13	75	0	0	0
 ScaleFont1	Lucida Grande	13	75	0	0	0
@@ -67,7 +67,7 @@ AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#000000	#000000	#000000	#000000
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	255
-curve	Tabelle1_1	Tabelle1_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Tabelle1_1	Tabelle1_2	1	0	#000000	0	1	3	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
 <Function>
 <Type>0</Type>
 <Title>LinearFit1</Title>
@@ -89,6 +89,7 @@ curve	Tabelle1_1	Tabelle1_2	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2
 <CurveType>0</CurveType>
 <Visible>1</Visible>
 </Function>
+ErrorBars	1	Tabelle1_1	Tabelle1_2	Tabelle1_3	1	8	#000000	1	1	1	0
 scale	0	0	200000	0	8	5	0	0
 scale	1	0	200000	0	8	5	0	0
 scale	2	0	14	0	8	5	0	0
@@ -106,30 +107,6 @@ LabelsSuffix
 TickLabelsSpace	4	4	4	4
 ShowTicksPolicy	0	0	0	0
 EnabledTickLabels	1	1	1	1
-<Legend>
-<Frame>1</Frame>
-<Color>#000000</Color>
-<FrameWidth>1</FrameWidth>
-<LineStyle>0</LineStyle>
-<x>0.35087719298246</x>
-<y>193311.0367893</y>
-<right>3.82456140350877</right>
-<bottom>173913.043478261</bottom>
-<attachTo>1</attachTo>
-<onTop>1</onTop>
-<visible>1</visible>
-<Text>
-\l(1)%(1)
-\l(2)%(2)
-</Text>
-<Font>Lucida Grande	13	50	0	0	0</Font>
-<TextColor>#000000</TextColor>
-<Background>#ffffff</Background>
-<Alpha>0</Alpha>
-<Angle>0</Angle>
-<AutoUpdate>1</AutoUpdate>
-<TeXOutput>0</TeXOutput>
-</Legend>
 </graph>
 <LinkXAxes>0</LinkXAxes>
 <ScaleLayers>1</ScaleLayers>
@@ -149,4 +126,5 @@ Angepasstes R^2 = 0,997169347996552
 RMSE (Standardabweichung) = 2.826,46431440906
 RSS (Summe der quadrierten Restwerte) = 39.944.502,6031395
 ---------------------------------------------------------------------------------------
+
 </log>

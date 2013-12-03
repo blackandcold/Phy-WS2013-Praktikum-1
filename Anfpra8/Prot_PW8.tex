@@ -221,8 +221,7 @@ $$R \textgreater \frac{a^2}{\lambda}$$
 
 \subsection{Messwerte und Ergebnisse}
 
-Wellenlänge des Laser der bei Einzel- und Doppelspalt verwendet wurde:
-$$\lambda = 632.8nm$$
+
 
 \end{multicols}
 \begin{figure}[H]
@@ -240,6 +239,9 @@ $$\lambda = 632.8nm$$
 
 \begin{multicols}{2}
 \noindent
+Wellenlänge des Laser der bei Einzel- und Doppelspalt verwendet wurde:
+$$\lambda = 632.8nm$$
+
 \textbf{Einzelspalt}\\
 Mit den Messwerten aus \ref{tab:werte_doppelspalt} wurde mit den Formel aus der Einleitung in QTI-Plot eine Lineare Regression durchgeführt welche in Abbildung \ref{fig:einzelspalt_linreg} ersichtlich ist. 
 \begin{figure}[H]
@@ -456,13 +458,99 @@ Im Fall der Ringe in Transmission gelten beide Gleichungen für die jeweils ande
 Der Krümmungsradius $R$ soll bestimmt werden, indem die Radien $r_k$ verschiedener Maxima bzw. Minima in beiden Interferenzbildern gemessen werden um so R in linearer Regression zu ermitteln:
 $$R=\frac{r_k^2}{k \lambda}$$
 
+\noindent Die Inteferenzringe werden auf ein Blatt Papier projiziert, markiert und anschließend mit einer Schublehre vermessen.
 Dazu ist außerdem auf der Glasplatte des Systems ein mm-Maßstab angebracht, der es erlaubt, die Größenverhältnisse der Abbildung zu bestimmen.
 
 \subsection{Messwerte und Ergebnisse}
 
+Umrechnungsfaktor Reflexion: $\frac{5}{18}$\\
+\indent $18mm_{Messung} = 5mm_{wirklich}$\\
+Transmission: $\frac{1}{5}$\\
+\indent $25mm_{Messung} = 5mm_{wirklich}$\\
+\\
+Wellenlänge: $\lambda = (518\pm 3)nm$
 
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={reflex, transmiss},
+			col sep=&,
+			columns/reflex/.style={column name=\makecell{Radius $r_k$\\Reflexion\\$[mm]$\\ $\pm 0.1mm$} }, 
+			columns/transmiss/.style={column name=\makecell{Radius $r_k$\\Transmission\\ $[mm]$\\ $\pm 0.1mm$}}, 
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={column type/.add={|}{} },
+			every last column/.style={column type/.add={}{|} }
+			]{
+			reflex & transmiss
+			%6.2 & 
+%			10.5 & 13.6
+%			14.3 & 19.4
+%			17.0 & 23.1
+%			19.8 & 26.1
+%			22.2 & 29.4
+%			24.1 & 32.0
+			
+			1.7 & 2.7
+			2.9 & 3.9
+			4.0 & 4.6
+			4.7 & 5.2
+			5.6 & 5.9
+			6.2& 6.4
+			6.7 & 			
+			
+			
+			}
+	\caption{gemessene Radien der Newtonringe}
+	\label{fig:radien_newtonringe}
+\end{figure}
+
+
+
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.70]{./figure/newtonringe_reflex_regress.png}
+	\caption{Newtonringe - Reflexion: $R=2r_k^2*\frac{1}{\lambda (2k+1)}$}
+	\label{fig:newtonringe_reflex_regress}
+\end{figure}
+
+%Aus der Steigung: R der Linse
+$$R_{Reflexion} = 13.73 \pm 0.27)m$$
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.70]{./figure/newtonringe_transmiss_regress.png}
+	\caption{Newtonringe - Transmission: $R=r_k^2\frac{1}{\lambda *k}$}
+	\label{fig:newtonringe_transmiss_regress}
+\end{figure}
+
+$$R_{Transmission}=(12.82 \pm 0.87)m$$
+
+%B (y-intercept) = 1,509918148328588e+04 +/- 2,520381237651498e+03
+%A (slope) = 1,281922284232692e+04 +/- 8,668173766933726e+02
+\begin{multicols}{2}
 
 \subsection{Diskussion}
+
+Der Krümmungsradius $R$ aus den Messungen der Reflexions-Newtonringe stimmt sehr genau mit den Angaben der Betreuerin überein (etwa 13.7 m). Die Abweichung der einzelnen Messpunkte von der Regressionsgerade ist klein und auch die einzelnen Unsicherheiten auf der y-Achse konnten klein abgeschätzt werden (Abb. \ref{fig:newtonringe_reflex_regress}).
+\\
+(Die Unsicherheit von $\lambda$ ist vorgegeben, die der gemessenen Radien mit dem doppelten der Auflösung der Schublehre -$\pm 0.1 mm$ -  vorsichtig gewählt)
+\\
+\\
+Die Messung der aus den Transmissions-Ringen ist etwas problematischer:\\
+Zwar liegt das Ergebnis durchaus in der Nähe des erwarteten Wertes, die einzelnen Messwerte schwanken jedoch deutlich, im Vergleich zur anderen Messung. Das führt zu einer fast 4mal größeren Unsicherheit (Abb. \ref{fig:newtonringe_transmiss_regress}).\\
+Schon das Markieren der Ringe am Papier hat erwarten lassen, dass diese Messung ungenauer ist. Die hellen Ringe aus der Transmission waren deutlich schwieriger zu erkennen und weniger eindeutig.\\
+Teil der Aufgabenstellung ist die Frage nach dem Kontrast zwischen hellen und dunklen Ringen, der im transmittierten Inteferenzbild schwächer sein soll, als im reflektierten:\\
+Da weniger Licht an einer Grenzfläche reflektiert wird, als durchgeht, ist der Kontrast im Transmissionsfall (2 Reflexionen, siehe Abb. \ref{fig:newtonringe_transmission}) viele geringer, als im Reflexionsfall (nur 1 Reflexion).\\
+Dieser Effekt hat zur Schwierigkeit der Messung wesentlich beigetragen, und erklärt, zumindest teilweise, das ungenauere Ergebnis im Transmissionsfall.\\
+\\
+Die Vergrößerung der transmittierten Abbildung ist leicht größer, was zu einer Verkleinerung der Messunsicherheit führt. Die ist jedoch klein gegen die Ungenauigkeiten durch weniger Intensität und unklare Ringgrenzen.\\
+\\
+Der Versuch ließe sich vielleicht durch eine stärkere Lampe noch genauer durchführen. Umständlicher aber auch effektiv wäre womöglich ein vertikaler Aufbau, um die Markierung flach auf dem Tisch durchführen zu können oder zumindest eine stabile Wand als Schirm zu verwenden.\\
+Die erzielten Ergebnisse sind jedoch gut am erwarteten Wert.
 
 \section{Quellen}
 $[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw8/PW8.pdf}\\

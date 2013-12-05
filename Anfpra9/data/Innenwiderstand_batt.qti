@@ -1,0 +1,96 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	1
+<table>
+Tabelle1	30	4	05.12.13 15:46
+geometry	0	0	446	454	active
+header	R [Ohm]	U [V][Y]	I [mA]	I [A][X]
+ColWidth	100	100	100	100	
+<com>
+<col nr="3">
+col("I [mA]")/1000
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0
+HiddenColumn	0	0	0	0
+Comments					
+WindowLabel		2
+<data>
+0	200	1.528	7.6	0.0076
+1	190	1.526	8	0.008
+2	180	1.526	8.43	0.00843
+3	170	1.525	8.92	0.00892
+4	160	1.525	9.47	0.00947
+5	150	1.524	10.1	0.0101
+6	140	1.523	10.81	0.01081
+7	130	1.523	11.62	0.01162
+8	120	1.522	12.57	0.01257
+9	110	1.52	13.7	0.0137
+10	100	1.518	15.05	0.01505
+11	90	1.517	16.68	0.01668
+12	80	1.515	18.73	0.01873
+13	70	1.513	21.33	0.02133
+14	60	1.509	24.8	0.0248
+15	50	1.506	29.66	0.02966
+16	40	1.503	36.86	0.03686
+17	30	1.498	48.54	0.04854
+18	20	1.49	71.5	0.0715
+19	15	1.481	93.8	0.0938
+</data>
+</table>
+<open>1</open>
+<log>
+[05.12.13 16:07	Diagramm: ''Grafik1'']
+Lineare Regression von Datensatz: Tabelle1_U [V], unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 7,600000000000000e+00 bis x = 9,380000000000000e+01
+B (y-intercept) = 1,527772303516002e+00 +/- 1,048206172346534e-03
+A (slope) = -5,509464632244774e-04 +/- 3,197563972914672e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,028583716097849e-05
+R^2 = 0,942835288101268
+Angepasstes R^2 = 0,936110027877888
+RMSE (Standardabweichung) = 0,00320715405943938
+RSS (Summe der quadrierten Restwerte) = 0,000185145068897613
+---------------------------------------------------------------------------------------
+[05.12.13 16:10	Diagramm: ''Grafik1'']
+Lineare Regression von Datensatz: Tabelle1_U [V], unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 2,480000000000000e-02 bis x = 9,379999999999999e-02
+B (y-intercept) = 1,517915111672525e+00 +/- 5,983099038456424e-04
+A (slope) = -3,948442457568166e-01 +/- 1,059876306629983e-02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4,043790461052911e-07
+R^2 = 0,997126118712903
+Angepasstes R^2 = 0,995210197854838
+RMSE (Standardabweichung) = 0,000635908048467173
+RSS (Summe der quadrierten Restwerte) = 1,61751618442131e-06
+---------------------------------------------------------------------------------------
+[05.12.13 16:12	Diagramm: ''Grafik1'']
+Lineare Regression von Datensatz: Tabelle1_U [V], unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 7,600000000000000e-03 bis x = 1,370000000000000e-02
+B (y-intercept) = 1,535373577559584e+00 +/- 9,226122406319469e-04
+A (slope) = -1,103890294367154e+00 +/- 8,954203818857429e-02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,975297476930099e-07
+R^2 = 0,949995000387731
+Angepasstes R^2 = 0,935707857641369
+RMSE (Standardabweichung) = 0,000545462874715595
+RSS (Summe der quadrierten Restwerte) = 2,38023798154401e-06
+---------------------------------------------------------------------------------------
+[05.12.13 16:13	Diagramm: ''Grafik1'']
+Lineare Regression von Datensatz: Tabelle1_U [V], unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 8,000000000000000e-03 bis x = 1,370000000000000e-02
+B (y-intercept) = 1,534274875542767e+00 +/- 7,148901176716445e-04
+A (slope) = -1,009120699475539e+00 +/- 6,768864810503808e-02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,376429897633831e-07
+R^2 = 0,969466519876437
+Angepasstes R^2 = 0,959288693168583
+RMSE (Standardabweichung) = 0,000371002681612092
+RSS (Summe der quadrierten Restwerte) = 9,63500928343542e-07
+---------------------------------------------------------------------------------------
+</log>

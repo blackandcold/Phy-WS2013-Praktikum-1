@@ -187,7 +187,9 @@
 
 Eine Möglichkeit, einen Widerstand zu messen, ohne mit 2 Messgeräten (und 2 Messunsicherheiten) Spannung und Strom zu bestimmen ist eine Wheatstone-Brückenschaltung.
 \\
-Der zu messende Widerstand (hier $R_x$) und 3 andere werden, je 2 und 2 parallel, und in beiden Zweigen in Serie geschaltet.
+Der zu messende Widerstand (hier $R_x$) und 3 andere werden, paarweise parallel geschaltet, und innerhalb beider Zweige in Serie. 
+
+Die beiden Zweige der Parallelschaltung werden durch ein Voltmeter verbunden, wie in Abb. \ref{fig:wheatstone_schaltplan} skizziert.
 
 
 
@@ -198,8 +200,21 @@ Der zu messende Widerstand (hier $R_x$) und 3 andere werden, je 2 und 2 parallel
 	\label{fig:wheatstone_schaltplan}
 \end{figure}
 
+An beiden Zweigen der Parallelschaltung liegt die gleiche Spannung an (Kirchhoff Schleifenregel). Diese teilt sich an den in Serie geschalteten Widerständen in derem Verhältnis auf.\\
+Die Spannung im Messgerät ("Indikatorzweig") verschwindet genau dann, wenn die Verhältnisse der Widerstände an beiden Brückenzweigen gleich sind.
 
+$$\frac{R_x}{R_0} = \frac{R_a}{R_b}$$
+$$\Rightarrow R_x = R_0 \cdot \frac{R_a}{R_b}$$
 
+Es genügt also, $R_0$ zu kennen, sowie das Verhältnis von $R_a$ zu $R_b$. Ihre Widerstandswerte sind nicht von Bedeutung.\\
+\\
+In diesem Versuch werden die WIderstände $R_a$,$R_b$ durch einen Draht realisiert, der an einer Längenskala befestigt ist, an der auch ein beweglicher Schleifer montiert ist. Durch diesen wird wird die Unterteilung in 2 Widerstände erzeugt (das Voltmeter ist am Schleifer angeschlossen).
+\\
+Da der Draht über die ganze Länge die gleiche Dicke hat, ist der Widerstand pro Längeneinheit überall gleich. Somit ist das Verhältnis der Drahtstücke, die durch den Schleifer getrennt werden gleichzeitig das Verhältnis der Widerstände.\\
+Als $R_0$ wird eine Widerstandsdekade verwendet, auf der sich, in diskreten Schritten, Widerstände in von 1$ \Omega$ bis 10M$\Omega$ einstellen lassen
+\\
+Der Schleifer wird so lange verrückt, bis am Messgerät keine Spannung anliegt. Dann sind die Spannungsverhältnisse in beiden Zweigen gleich und der gesuchte Widerstand kann berechnet werden.\\
+Es ist dabei eigentlich nicht notwendig, die Widerstandsdekade anders einzustellen. In der Diskussion wird jedoch näher erklärt, warum es sinnvoll ist, nicht das $R_a$-$R_b$-Verhältnis zu ändern, sondern $R_0$ anzupassen.
 
 \subsection{Messwerte und Ergebnisse}
 

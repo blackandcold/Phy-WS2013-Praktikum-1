@@ -1,0 +1,30 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	1
+<table>
+Tabelle1	30	5	05.12.2013 17:19:18
+geometry	0	0	693	335	active
+header	r1[X]	Leerlauf u[Y]	Widerstand A u	Widerstand C	Widerstand B u
+ColWidth	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0
+HiddenColumn	0	0	0	0	0
+Comments						
+WindowLabel		2
+<data>
+0	0	0	0	0	0
+1	0.1	0.1	0.1	0.1	0.1
+2	0.2	0.2	0.1	0.2	0.1
+3	0.3	0.3	0.1	0.2	0.2
+4	0.4	0.4	0.1	0.3	0.2
+5	0.5	0.5	0.2	0.4	0.3
+6	0.6	0.6	0.2	0.4	0.3
+7	0.7	0.7	0.3	0.5	0.4
+8	0.8	0.8	0.3	0.7	0.5
+9	0.9	0.9	0.5	0.8	0.7
+10	1	1	1	1	1
+</data>
+</table>
+<open>1</open>

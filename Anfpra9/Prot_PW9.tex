@@ -437,7 +437,8 @@ Ohne weitere Behandlung der möglichen Fehler, die bei der Durchführung begange
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Belasteter Spannungsteiler}
-In diesem Experiment sollen mit Hilfe eines Potentiometers in einem Spannungsteiler-Schaltkreis (Abb. \ref{fig:schaltbild_spannungsteiler} b.) drei Widerstände vermessen werden. Im unbelasteten Fall also ohne Widerstand ergibt sich eine Gerade und im Fall mit Widerständen eine Abweichung. Gegenübergestellt werden
+In diesem Experiment sollen mit Hilfe eines Potentiometers in einem Spannungsteiler-Schaltkreis (Abb. \ref{fig:schaltbild_spannungsteiler} b.) drei Widerstände vermessen werden. \\
+Gegenübergestellt werden
 $$u = \frac{U_L}{U}$$
 und
 $$r_1 = \frac{R_1}{R}$$
@@ -445,7 +446,11 @@ wobei\\
 $R_1$\ldots eingestellter Widerstand am Potentiometer  \\
 $R$\ldots Gesamtwiderstand des Potentiometer (10k$\Omega$)\\
 $r_1$\ldots reduzierter Widerstand \\
-$u$\ldots reduzierte Spannung
+$u$\ldots reduzierte Spannung\\
+\\
+
+Im unbelasteten Fall, also ohne Widerstand, ergibt sich eine Gerade und im Fall mit Widerständen eine Abweichung. 
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.3]{./figure/spannungsteiler_schaltplan.png}
@@ -460,8 +465,12 @@ $$R_L = r_L * R$$
 den Lastwiderstand:\\
 $$R_L = - \frac{u*r_1 * (1-r_1)}{u-r_1} * R$$
 Verwendet wird der Wert der größten Abweichung von der Gerade.
-\subsection{Messwerte und Ergebnisse}
+
+
+
+
 \end{multicols}
+\subsection{Messwerte und Ergebnisse}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{./figure/spannungsteiler_u_r1.png}
@@ -476,11 +485,12 @@ $$R_A =  (960 \pm 170)\Omega$$
 $$R_B =  (2400 \pm 470)\Omega$$
 $$R_C =  (5250\pm 1300)\Omega$$
 \\
-Zur Fehlerabschätzung verwenden wir die Methode des Maximalfehlers. Hierbei wird in der Gleichung für $R_L$ der Fehler von $r_1$ und u hinzu bzw. weggezählt. Das ergibt eine maximale Abweichung.
-Durch die Verwendung der Cassy-Lab Software ergeben sich für die Spannungen Fehler von $\pm 0.01V$ und für $r_1$ durch den kleinsten abzulesenden Skalenteil [1](4.4) $\pm 0.01$.\\
+Zur Fehlerabschätzung wird die Methode des Maximalfehlers verwendet. Hierbei wird in der Gleichung für $R_L$ die Unsicherheit von $r_1$ und u hinzu bzw. abgezählt. Das ergibt eine maximale Abweichung.\\
 
-Wir setzten die Fehler $r_1 = (r_1- \Delta r_1); u_x = (u_X + \Delta u)$ und einmal $r_1 = (r_1+ \Delta r_1); u_x = (u_X - \Delta u)$ und erhalten die Obergrenzen und Untergrenzen der größtmöglichen Abweichung.
-Dadurch ergeben sich die oben genannten Fehler (größere Abweichung in positive oder negative Richtung).
+Durch die Verwendung der Cassy-Lab Software ergeben sich für die Spannungen Unsicherheiten von $\pm 0.01V$ und für $r_1$ durch den kleinsten abzulesenden Skalenteil [1](4.4) $\pm 0.01$.\\
+
+Wir setzten die Unsicherheiten $r_1 = (r_1- \Delta r_1); u_x = (u_X + \Delta u)$ und einmal $r_1 = (r_1+ \Delta r_1); u_x = (u_X - \Delta u)$ und erhalten die Obergrenzen und Untergrenzen der größtmöglichen Abweichung.\\
+Dadurch ergeben sich die oben genannten Fehler (größere der beiden Abweichungen, in positive oder negative Richtung).
 
 % R_X = (- \frac{(u_X + du)*(r_1- dr) * (1-(r_1- dr))}{(u_X + du)-(r_1- dr)} * 10000), dr=0.01, du=0.02, r_1=0.8, u_X=0.3
 
@@ -488,7 +498,9 @@ Dadurch ergeben sich die oben genannten Fehler (größere Abweichung in positive
 Die Schwierigkeiten in diesem Experiment sind der Einbau des Potentiometers und in unserem Fall das fehlerhafte Verhalten von Cassy-Lab. Leider konnten keine 3 Messreihen hintereinander in der selben Tabelle aufgenommen werden. Daher war es nötig die Werte manuell zu kopieren und in Origin auszuwerten. Der Aufbau und die Messung gestalteten sich nach erfolgreicher Einrichtung der Software als einfach. \\
 \textbf{Fehlerrechnung:}\\
 Aus den Einzelfehlern der Spannung konnten wir aufgrund fehlender Messwerte der Spannungen nicht direkt eine Fehlerfortpflanzung durchführen. Der Grund dafür ist, dass direkt in Cassy die Formel zur Berechnung von den $U_L$-Werten verwendet wurde und somit keine Einzelwerte vorliegen. Daher wurde der Fehler mit $\pm 0.02V$ abgeschätzt.\\
-Aufgrund der zu geringen Messwertanzahl ist eine ordentliche Feststellung der maximalen Abweichung der Kurven von der Mediane kaum möglich. Daher muss die Genauigkeit der Ergebnisse stark bezweifelt werden. Mit der Maximalabweichung könnte der wahre Wert dennoch im Bereich liegen.
+Aufgrund der zu geringen Messwertanzahl ist eine ordentliche Feststellung der maximalen Abweichung der Kurven von der Mediane kaum möglich. Daher muss die Genauigkeit der Ergebnisse stark bezweifelt werden. Mit der Maximalabweichung könnte der wahre Wert dennoch im Unsicherheitsbereich liegen.\\
+Dieser Versuch sollte optimalerweise nocheinmal durchgeführt werden, jetzt, nachdem die Ungereimtheiten in der Messsoftware beseitigt wurden und die Probleme bekannt sind.\\
+Eine Messung mit mehr als doppelt so vielen Messpunkten wäre mit Cassy-Lab, auch im Rahmen des Praktikums, zeitlich leicht zu bewerkstelligen und würde die Genauigkeit stark erhöhen.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

@@ -225,7 +225,7 @@ Die beiden Zweige der Parallelschaltung werden durch ein Voltmeter verbunden, wi
 \end{figure}
 
 An beiden Zweigen der Parallelschaltung liegt die gleiche Spannung an (Kirchhoff Schleifenregel). Diese teilt sich an den in Serie geschalteten Widerständen in derem Verhältnis auf.\\
-Die Spannung im Messgerät ("Indikatorzweig") verschwindet genau dann, wenn die Verhältnisse der Widerstände an beiden Brückenzweigen gleich sind.
+Die Spannung im Messgerät (Indikatorzweig) verschwindet genau dann, wenn die Verhältnisse der Widerstände an beiden Brückenzweigen gleich sind.
 
 $$\frac{R_x}{R_0} = \frac{R_a}{R_b}$$
 $$\Rightarrow R_x = R_0 \cdot \frac{R_a}{R_b}$$
@@ -242,9 +242,63 @@ Es ist dabei eigentlich nicht notwendig, die Widerstandsdekade anders einzustell
 
 \subsection{Messwerte und Ergebnisse}
 
+
+$$R_G = (1200 \pm 13) \Omega$$
+$$R_F = (324 \pm 3.5) \Omega$$
+$$R_F = (6900 \pm 75) \Omega$$
+\\
+
+\noindent Ergebnisse für $R_G$ und $R_F$ aus ersten Testmessungen, ohne Optimierung der Methode:
+\\
+$R_{G1} = (1290 \pm 23) \Omega$, $\frac{R_a}{R_b}=\frac{946}{54}$\\
+$R_{G2} = (1193\pm 13) \Omega$, $\frac{R_a}{R_b}=\frac{423}{576}$\\
+\\
+$R_{F1} = (330 \pm 7) \Omega$, $\frac{R_a}{R_b}=\frac{782}{218}$\\
+$R_{F2} = (318\pm 7) \Omega$, $\frac{R_a}{R_b}=\frac{182}{818}$\\
+
 \subsection{Diskussion}
+
+Erste Messungen wurden durchgeführt, indem, bei zufällig (grob geschätzt) eingestelltem $R_0$ das Ausgleichsverhältnis nur am Schiebewiderstandssystem eingestellt wurde.\\
+Das führt beispielsweise für $R_{G1}$ zu einem Verhältnis der Spannungen in beiden Zweigen von beinahe 20:1.\\
+In der zweiten Messung ($R_{G2}$) wurde das Verhältnis so gewählt, dass der Schleifer fast auf Mittelstellung ist, und damit $R_a$/$R_b$ beinahe 1 ist.\\
+Es sollten zuerst nur die Unsicherheiten betrachtet werden: Diejenige von $R_{G1}$ ist beinahe doppelt so groß, wie die von $R_{G2}$ (oder auch $R_G$):\\
+Es wurde jeweils die Unsicherheit der Widerstandsdekade mit 1\% vom eingestellten Wert angenommen (Herstellerangabe [2]) und die Längenskala mit $\pm$ 1 (von 1000 Skalenstrichen). Das entspricht ihrer Auflösung (lsd), da davon ausgegangen werden kann, dass die Eich- und Linearitätsunsicherheit davon schon gecovert werden.\\
+Liegen nun $R_a$ und $R_b$ weit auseinander, ist die relative Unsicherheit durch den größeren Längenabschnitt zwar eher klein, am kürzeren Längenabschnitt jedoch groß.\\
+Da die Digitalisierungs-Unsicherheiten beider Längen korrelieren (ist einer zu groß, muss der andere zu klein sein und umgekehrt), lassen sich hier noch kleine Optimierungen in der Rechnung durchführen, der Effekt ist aber nicht so groß im Vergleich mit dem des Ungleichgewichts.\\
+Die günstigste Position ist daher die Mitte, also ein 1:1 Verhältnis der Widerstände an beiden Zweigen. Hier zeigt sich auch der tiefere Sinn des Aufbaus mit der Widerstandsdekade anstatt eines festen $R_0$:
+\\
+Die beiden Schiebewiderstände werden genau auf Mittelstellung gebracht, und das Gleichgewicht am Indikatorzweig wird durch Veränderung von $R_0$ erzeugt. Auf diese Art wurden letztendlich alle 3 Widerstände gemessen. Gut zu erkennen an den Ergebnissen ist, dass die Unsicherheiten jeweils im Wesentlichen den 1\% von der Widerstandsdekade entsprechen.
+\\
+\\
+Diese Methode hat bietet noch zusätzliche Vorteile:\\
+Das Ergebnis kann direkt an der Dekade abgelesen werden, da ja $R_x$ gleich $R_0$ sein muss. Dadurch lassen sich mehrere Widerstände schneller messen und die Fehlerrechnung schneller durchführen ($R_a$/$R_b$ ist jetzt eine Konstante mit fester Unsicherheit).\\
+Der Schleifer wäre ersetzbar durch 2 gleiche, fixe, Widerstände. Das würde eventuelle systematische Fehler durch den Schleifkontakt und mangelnde Drahtspannung sowie seiner Aufhängung, beseitigen.\\
+\\
+Zuletzt soll noch der Messwert $R_{G1}$ betrachtet werden: Hier dürfte ein Messfehler passiert sein, da der Wert, trotz großer Unsicherheit weit außerhalb des erwarteten Bereichs liegt. Da insgesamt jedoch zu wenig Messungen vorliegen, lässt sich keine genauere Aussage machen, ob nicht dieser Wert näher am wahren Wert liegt.\\
+Da jedoch die anderen beiden Messungen gut beieinander liegen und auch die Testmessungen für $R_F$ seine finale Messung bestärken (die mit der gleichen Schiebereinstellung, wie die finale $R_G$
+-Messung durchgeführt wurde), ist es wahrscheinlich, dass $R_{G1}$ falsch gemessen wurde.\\
+\\
+Ob dabei die Präzision des Aufbaus mit dem Draht und dem Schleifer so einen großen Effekt haben ist fraglich, und müsste ausführlicher überprüft werden. Ein einfacher Ablesefehler an der Dekade ist denkbar.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Reale Spannungsquelle}
+In diesem Versuch soll der Innenwiderstand $R_i$ einer Batterie gemessen werden.\\
+Der Innenwiderstand ist ein Ohmscher Widerstand, der konstruktionsbedingt schon vor den Kontakten der Spannungsquelle zum Rest des Stromkreises auftritt. Ideale Spannungsquellen (deren Innenwiderstand = 0) lassen sich real nicht bauen, da ja schon jede beliebig kurze Leiterstrecke einen Widerstand darstellt.\\
+Dieser Umstand kann in einem Ersatzschaltbild dargestellt werden, in dem die reale Spannungsquelle als eine ideale, mit dem Innenwiderstand $R_i$ in Serie geschaltet, eingezeichnet wird:
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.80]{./figure/innenwiderstand_schaltskizze.png}
+	\caption{Ersatzschaltbild einer realen Spannungsquelle mit Verbraucher}
+	\label{fig:innenwiderstand_schaltskizze}
+\end{figure}
+
+
+
+
+
 
 
 \subsection{Messwerte und Ergebnisse}
@@ -275,8 +329,7 @@ In diesem Experiment sollen
 
 \section{Quellen}
 $[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw9/PW9.pdf}\\
-$[2]$ Quecksilberdampflampe, \url{http://de.wikipedia.org/wiki/Quecksilberdampflampe}\\
-%$[2]$
+$[2]$ Widerstandsdekade Cosinus R1-3000, \url{http://www.farnell.com/datasheets/13334.pdf}\\
 
 \end{multicols}
 

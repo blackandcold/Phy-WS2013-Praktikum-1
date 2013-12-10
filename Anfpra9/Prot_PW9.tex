@@ -271,16 +271,135 @@ Dieser Umstand kann in einem Ersatzschaltbild dargestellt werden, in dem die rea
 	\label{fig:innenwiderstand_schaltskizze}
 \end{figure}
 
+Es gilt also nach Kirchhoff:
+$$U-0 = (R_i + R_L) \cdot I = U_i + U_L$$
+Im Versuch messbar sind die Spannung $U_L$ am Verbraucher sowie der Strom, der in der Serienschaltung überall gleich sein muss.
+$$U_L = U_0 - R_i \cdot I$$
+Das entspricht, trägt man $U_L$ gegen $I$ in einem Diagramm auf,  einer Geradengleichung mit $U_0$ als y-Achsenabschnitt und -$R_i$ als Steigung.
+Die Spannung $U_L $ zwischen den Punkten A und B wird mit einem Voltmeter gemessen, der Strom $I$ mit dem Amperemeter zwischen A und dem Lastwiderstand $R_L$ (Abb. \ref{fig:innenwiderstand_schaltskizze}). Dieser wird im Versuch durch die Widerstandsdekade aus der Wheatstone-Messung realisiert.\\
+Zuerst wird die Leerlaufspannung der Batterie gemessen.\\
+Beginnend bei 200$\Omega $ werden an allen 10$\Omega$-Schritten Messungen durchgeführt, die letzte bei 15$\Omega$. Durch linearen Fit werden $U_0$ und $R_i$ bestimmt.\\
+Es ist darauf zu achten, den Stromkreis nur zur Messung zu schließen, und zwischen den Messungen kurze Pausen zu lassen, damit sich die Spannung stabilisiert.
 
 
-
-
-
-
+\end{multicols}
 \subsection{Messwerte und Ergebnisse}
+\textbf{$U_L$ wurde gemessen:}
 
+
+
+
+
+% Batterie ohne Fit... gemessen
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.58]{./figure/Batterie_UI_ohneFit.png}
+	\caption{Spannung/Strom-Diagramm; gemessene Spannungen}
+	\label{fig:Batterie_UI_ohneFit}
+\end{figure}
+
+
+% Batterie mit Fit... gemessen, bereich
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.58]{./figure/Batterie_UI_mitFit_Abschnitt.png}
+	\caption{Spannung/Strom-Diagramm; gemessene Spannungen - \\
+	Ausschnitt aus dem oberen Wertebereich}
+	\label{fig:Batterie_UI_mitFit_Abschnitt}
+\end{figure}
+
+
+
+
+\textbf{$U_L$ wurde aus $R_L$*I berechnet:}
+
+% Batterie gerechnet mit fit
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.58]{./figure/Batterie_RI-I_mitFit.png}
+	\caption{Spannung/Strom-Diagramm; berechnete Spannungen}
+	\label{fig:Batterie_RI-I_mitFit}
+\end{figure}
+
+% Batterie gerechnet mit fit, bereich
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.58]{./figure/Batterie_RI-I_mitFit_Abschnitt.png}
+	\caption{Spannung/Strom-Diagramm; berechnete Spannungen  - \\
+	Ausschnitt aus dem oberen Wertebereich}
+	\label{fig:Batterie_RI-I_mitFit_Abschnitt}
+\end{figure}
+
+
+
+
+\begin{multicols}{2}
+
+
+\begin{itemize}
+
+	\item
+	%% bereich aus UL
+	\noindent aus dem Fit in Abb. \ref{fig:Batterie_UI_mitFit_Abschnitt}:
+	$$U_0=(1535.7 \pm 53)mV$$
+	$$R_i=(1.14 \pm 0.56)\Omega$$
+	(Fit über einen \textbf{Teilbereich} aus den \textbf{gemessenen} Daten)\\
+	
+	
+	
+	\item
+	%% alles aus R*I
+	\noindent aus dem Fit in Abb. \ref{Spannung/Strom-Diagramm; berechnete Spannungen}:
+	$$U_0 = (1527.8 \pm 1.1)mV$$
+	$$R_i=(0.551 \pm 0.032)m \Omega$$
+	(Fit über einen \textbf{gesamten Bereich} aus den \textbf{berechneten} Daten)\\
+	
+	
+	\item
+	\noindent aus dem Fit in Abb. \ref{fig:Batterie_RI-I_mitFit_Abschnitt}:
+	%% bereich aus R*I
+	$$U_0=(1537 \pm 40)mV$$
+	$$R_i=(2.2 \pm 4.3)\Omega$$
+	(Fit über einen \textbf{Teilbereich} aus den \textbf{berechneten} Daten)\\
+	\\
+	\\
+\end{itemize}
+
+\noindent gemessene Leerlaufspannung:\\
+$U_{Leerlauf}=(1.537 \pm 0.002)V$
 
 \subsection{Diskussion}
+In der Betrachtung der Ergebnisse fallen sofort 2 große Abweichungen von der Theorie auf:\\
+\begin{itemize}
+	\item Die Punkte bilden keine Gerade
+	\item Die berechneten Quellenspannungen sind tendentiell niedriger als die gemessenen Leerlaufspannungen
+\end{itemize}
+
+\noindent Das Problem mit der Quellenspannung, die ja aus dem y-Achsenabschnitt des Fits gelesen wird, ist vermutlich eine Folge des ersten Problems, dass hier keine wirklich lineare Kurve vorliegt, und kann daher aus den gemessenen Daten nicht gesondert behandelt werden.\\
+Der Effekt wurde jedoch als Indikator verwendet, dafür wie geeignet eine ermittelte Gerade als Aussage über das System sei: Beide Geraden, die nur durch einen Teil der Punkte gelegt wurden (denjenigen mit den höheren Klemmspannungen) ergeben Quellspannungen die, im Unsicherheitsbereich, plausibel sind.\\
+(Dabei wurde in Abb.\ref{fig:Batterie_UI_ohneFit} gar keine Gerade durch den gesamten Datensatz mit den gemessenen Spannungen gelegt, da das zu keiner sinnvollen Aussage führt.)\\
+Es scheint sich also, bei großen Strömen und kleinen Spannungen, eine Verzerrung der Kennlinie zu ergeben.\\
+(In der Anleitung ist angegeben, dass dies bei kleinen Strömen der Fall sei. Fits durch den linearen Anteil bei großen Strömen ergeben jedoch unplausible Quellenspannungen, da diese nicht kleiner als die Leerlaufspannung sein können.)
+\\
+Interessant ist auch, dass das Diagramm, in dem die Spannung aus dem gemessenen Strom und den (durch die Widerstandsdekade bekannten) Lastwiderstand $R_L$ berechnet wurde (Abb. \ref{fig:Batterie_RI-I_mitFit}) einen lineareren Verlauf zeigt, als dasjenige in dem Spannung und Strom gemessen wurden.\\
+(Die Daten stammen aus der gleichen Messung, es wurde also nicht einmal ein Multimeter aus dem Stromkreis entfernt. Der Einfluss des Voltmeters sollte ohnehin vernachlässigbar klein sein.)\\
+Prinzipiell lässt sich also das Experiment auch mit nur einem Messgerät durchführen (bei bekannten Lastwiderständen), in diesem speziellen Fall (mit dem Indikator Quellenspannung $U_0$) scheint jedoch das Ergebnis aus dem oberen \textbf{Teilbereich} der \textbf{gemessenen} Daten am plausibelsten.\\
+\\
+Wird $U_L$ berechnet ergibt sich eine sehr viel größere Unsicherheit (Unsicherheit von $R_L$ und I, wobei das Amperemeter unsicherer ist, als das Voltmeter), als durch die Messungen. Das drückt sich vor allem in einem unbrauchbaren Ergebnis für $R_i$ aus den \textbf{berechneten} Daten aus einem 
+\textbf{Teilbereich} aus (Abb. \ref{fig:Batterie_RI-I_mitFit_Abschnitt}). Der Verlauf der Daten ist annähernd linear, die großen Unsicherheiten erlauben jedoch verschiedenste Steigungen.\\
+\\
+Es erscheint also das Ergebnis aus einem Teilbereich der gemessenen Daten am plausibelsten:\\
+\noindent aus dem Fit in Abb. \ref{fig:Batterie_UI_mitFit_Abschnitt}:
+	$$U_0=(1535.7 \pm 53)mV$$
+	$$R_i=(1.14 \pm 0.56)\Omega$$
+	
+Ohne weitere Behandlung der möglichen Fehler, die bei der Durchführung begangen wurden, Erweiterung der Theorie (nichtlineare Kennlinie der Dekade, Temperatur im System, instabile Batterie), oder mehrmaliger Durchführung und Analyse, lassen diese Ergebnisse keine zufriedenstellende Aussage über Quellenspannung und Innenwiderstand der Batterie zu.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

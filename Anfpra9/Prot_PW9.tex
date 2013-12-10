@@ -309,21 +309,58 @@ Dieser Umstand kann in einem Ersatzschaltbild dargestellt werden, in dem die rea
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Belasteter Spannungsteiler}
-In diesem Experiment sollen 
+In diesem Experiment sollen mit Hilfe eines Potentiometers in einem Spannungsteiler-Schaltkreis (Abb. \ref{fig:schaltbild_spannungsteiler} b.) drei Widerstände vermessen werden. Im unbelasteten Fall also ohne Widerstand ergibt sich eine Gerade und im Fall mit Widerständen eine Abweichung. Gegenübergestellt werden
+$$u = \frac{U_L}{U}$$
+und
+$$r_1 = \frac{R_1}{R}$$
+wobei\\
+$R_1$\ldots eingestellter Widerstand am Potentiometer  \\
+$R$\ldots Gesamtwiderstand des Potentiometer (10k$\Omega$)\\
+$r_1$\ldots reduzierter Widerstand \\
+$u$\ldots reduzierte Spannung
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{./figure/spannungsteiler_schaltplan.png}
+	\includegraphics[scale=0.3]{./figure/spannungsteiler_schaltplan.png}
 	\caption{Schaltplan Spannungsteiler a) unbelastet b) belastet$^{[1]}$}
-	\label{fig:schaltbild_solarzelle}
+	\label{fig:schaltbild_spannungsteiler}
 \end{figure}
 \noindent
-
+Über Gleichung [1](13) erhalten wir für $r_L$:
+$$r_L = - \frac{u*r_1 * (1-r_1)}{u-r_1}$$
+und mit 
+$$R_L = r_L * R$$
+den Lastwiderstand:\\
+$$R_L = - \frac{u*r_1 * (1-r_1)}{u-r_1} * R$$
+Verwendet wird der Wert der größten Abweichung von der Gerade.
 \subsection{Messwerte und Ergebnisse}
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{./figure/spannungsteiler_u_r1.png}
+	\caption{Spannung am Lastwiderstand in einem belasteten Spannungsteiler als Funktion von $r_1$ für drei Werte von $r_L$}
+	\label{fig:spannungsteiler_lastwiderstaende}
+\end{figure}
+\begin{multicols}{2}
+\noindent
+Spannungsquelle U = $(8.03 \pm 0.01)V$
+Für R = $10k\Omega$ (Fehlerfrei anzunehmen)\\
+$$R_A =  (960 \pm 170)\Omega$$
+$$R_B =  (2400 \pm 470)\Omega$$
+$$R_C =  (5250\pm 1300)\Omega$$
+\\
+Zur Fehlerabschätzung verwenden wir die Methode des Maximalfehlers. Hierbei wird in der Gleichung für $R_L$ der Fehler von $r_1$ und u hinzu bzw. weggezählt. Das ergibt eine maximale Abweichung.
+Durch die Verwendung der Cassy-Lab Software ergeben sich für die Spannungen Fehler von $\pm 0.01V$ und für $r_1$ durch den kleinsten abzulesenden Skalenteil [1](4.4) $\pm 0.01$.\\
 
+Wir setzten die Fehler $r_1 = (r_1- \Delta r_1); u_x = (u_X + \Delta u)$ und einmal $r_1 = (r_1+ \Delta r_1); u_x = (u_X - \Delta u)$ und erhalten die Obergrenzen und Untergrenzen der größtmöglichen Abweichung.
+Dadurch ergeben sich die oben genannten Fehler (größere Abweichung in positive oder negative Richtung).
 
+% R_X = (- \frac{(u_X + du)*(r_1- dr) * (1-(r_1- dr))}{(u_X + du)-(r_1- dr)} * 10000), dr=0.01, du=0.02, r_1=0.8, u_X=0.3
 
 \subsection{Diskussion}
-
+Die Schwierigkeiten in diesem Experiment sind der Einbau des Potentiometers und in unserem Fall das fehlerhafte Verhalten von Cassy-Lab. Leider konnten keine 3 Messreihen hintereinander in der selben Tabelle aufgenommen werden. Daher war es nötig die Werte manuell zu kopieren und in Origin auszuwerten. Der Aufbau und die Messung gestalteten sich nach erfolgreicher Einrichtung der Software als einfach. \\
+\textbf{Fehlerrechnung:}\\
+Aus den Einzelfehlern der Spannung konnten wir aufgrund fehlender Messwerte der Spannungen nicht direkt eine Fehlerfortpflanzung durchführen. Der Grund dafür ist, dass direkt in Cassy die Formel zur Berechnung von den $U_L$-Werten verwendet wurde und somit keine Einzelwerte vorliegen. Daher wurde der Fehler mit $\pm 0.02V$ abgeschätzt.\\
+Aufgrund der zu geringen Messwertanzahl ist eine ordentliche Feststellung der maximalen Abweichung der Kurven von der Mediane kaum möglich. Daher muss die Genauigkeit der Ergebnisse stark bezweifelt werden. Mit der Maximalabweichung könnte der wahre Wert dennoch im Bereich liegen.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

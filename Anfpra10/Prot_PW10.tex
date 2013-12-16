@@ -203,32 +203,9 @@ Alle Messungen werden mit Cassy-Lab-Sensoren durchgeführt. Zuerst wird das Wass
 		
 \end{itemize}
 
-\end{multicols}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.60]{./figure/Rlyt_t_t0.png}
-	\caption{Widerstand Elektrolyt mit Exponentiellem Fit}
-	\label{fig:rlyt}
-\end{figure}
-\begin{multicols}{2}
 
-\end{multicols}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.60]{./figure/RNTC_NTC_temp.png}
-	\caption{Halbleiter Widerstand mit linearem Fit}
-	\label{fig:rntc}
-\end{figure}
-\begin{multicols}{2}
 
-\end{multicols}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.60]{./figure/RPTC_t_t0.png}
-	\caption{Metal Widerstand mit linearem Fit}
-	\label{fig:rptc}
-\end{figure}
-\begin{multicols}{2}
+\pagebreak
 
 \subsection{Messwerte und Ergebnisse}
 $U_{=} = (2.063 \pm 0.004)V$\\
@@ -236,41 +213,92 @@ $U_{=} = (2.063 \pm 0.004)V$\\
 $T_0 = 20^\circ C$ gesetzt\\
 
 %%%TO DO %%%%%%
-%Graphen importieren
-%Graphen indizieren und referenzieren
-%unsicherheit aus der regression entnehmen
+
 %fehlerrechnung:
 
-%Kaltleiter:
-% delta_alpha= alpha*SQRT((delta R_T0 / R_T0)^2+(delta Steigung/ Steigung)^2)
 
 
 %Halbleiter:
 % delta E_g = deltab * 2* boltzmanconstant
 
 
+
+\end{multicols}
 \noindent \textbf{Kaltleiter (PTC)}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.70]{./figure/RPTC_t_t0.png}
+	\caption{Metal Widerstand mit linearem Fit}
+	\label{fig:rptc}
+\end{figure}
 
-%$$ \alpha_{20} = (3400 \pm       )K^{-1}$$
-% $$R_{T_0=20} = (110.76 \pm    )\Omega$$
+$$ \alpha_{20} = (3469.3 \pm  2.8    )K^{-1}$$
+$$R_{T_0=20} = (110.76 \pm 0.01   )\Omega$$
+
+
 Vermutung: Platin
+
+
+
+\pagebreak
+
+
 
 \noindent \textbf{Halbleiter (NTC)}
 
-% $$b = (3597.04 \pm     )K$$
-% $$E_g = (0.6198 \pm    )eV$$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.70]{./figure/RNTC_NTC_temp.png}
+	\caption{Halbleiter Widerstand mit linearem Fit}
+	\label{fig:rntc}
+\end{figure}
+
+
+ $$b = (3597.1 \pm  3.1   )K$$
+$$E_g = (0.6198 \pm 0.0006   )eV$$
+
 Vermutung: Germanium
+
+\pagebreak
+
 
 \noindent \textbf{Elektrolyt}
 
 %% Kurve mit exp - fit
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.60]{./figure/Rlyt_t_t0.png}
+	\caption{Widerstand Elektrolyt mit Exponentiellem Fit}
+	\label{fig:rlyt}
+\end{figure}
 
+
+
+\begin{multicols}{2}
 \subsection{Diskussion}
 
-
-
+\textbf{(1) Kaltleiter:}
+Der gemessene Temperaturkoeffizient $\alpha_{20}$ entspricht in der Tabelle der Praktikumsanleitung ([1], S.7) am ehesten demjenigen von Platin:\\
+$\alpha_{Platin}= 3800K^{-1}$\\
+Dies wurde auch, nach der Auswertung, vom Betreuer bestätigt.\\
+Dennoch, der Literaturwert liegt deutlich außerhalb der Messunsicherheit des Ergebnisses. Da die einzelnen Messpunkte kaum von der angelegten Gerade streuen (wodurch sich letztendlich der kleine Unsicherheitsbereich ergibt, Abb. \ref{Metal Widerstand mit linearem Fit}), besteht die Vermutung, dass sich ein oder mehrere systematische Fehler im Versuchsaufbau befinden.\\
+Ohne Wiederholung, Änderungen oder genauere Untersuchungen, lässt sich dazu zwar keine genaue Aussage treffen, mögliche Ursachen jedoch wären die Zusammensetzung des Leiters (verunreinigtes Platin) oder eine Abweichung der Leitertemperatur von der Wassertemperatur (Isolierung oder Kontakt zum Heizstab).\\
+Nachdem auch die Theorie nur in Näherung gilt, ist möglicherweise auch hier eine Abweichung vom Literaturwert zu suchen.\\
+\\
+\textbf{(2) Heißleiter:}
+Die gemessene Gap-Energy deutet auf Germanium hin:\\
+Tabellenwerte ([1], S.5):\\
+Ge: $0.75$ @ $0 ^\circ K$\\
+$0.67$ @ $300 ^\circ K$\\
+Auch das wurde vom Betreuer bestätigt.\\
+Die Messung wurde von $80^\circ C$ bis etwa $35^\circ C$ gemacht, weswegen der gemessene Wert etwas niedriger liegt, als derjenige aus der Tabelle.\\
+Auch die Einzelwerte dieser Messung liegen gut an der gefitteten Gerade und verdeutlichen somit die Theorie(Abb. \ref{Halbleiter Widerstand mit linearem Fit}).\\
+\\
+\textbf{(3) Elektrolyt}
+In Abb. \ref{fig:rlyt} ist ein exponentieller Fit durch die gemessenen Widerstände, aufgetragen gegen die Temperatur. Es ist gut zu erkennen, dass auch für den Widerstand des Elektrolyts, abhängig von der Temperatur, ein exponentieller Verlauf gilt, wenn auch aus anderen Gründen, als im NTC.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,7 +320,7 @@ Vermutung: Germanium
 
 
 \section{Quellen}
-$[1]$ Leitfaden, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw10/PW10.pdf}\\
+$[1]$ Anleitung, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw10/PW10.pdf}\\
 $[2]$ 
 \end{multicols}
 

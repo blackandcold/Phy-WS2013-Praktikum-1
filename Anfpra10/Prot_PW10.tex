@@ -275,16 +275,58 @@ Vermutung: Germanium
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Transformator}
+In diesem Experiment soll das Verhalten eines Transformators untersucht werden. Zu diesem Zweck sind zwei Spulen (unterschiedlicher Windungszahlen) um einen Eisenkern befestigt. In Abbildung \ref{fig:schaltung_trafo} ist der Aufbau mit regelbarem Lastwiderstand und Messapparaturen ersichtlich.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{./figure/schaltskizze_trafo.png}
+	\caption{Versuchsanordnung zur Messung des Transformators (Quelle: [1](2.3))}
+	\label{fig:schaltung_trafo}
+\end{figure}
+\noindent
+Zusätzlich ist die \textbf{erzwungene} Netzspannung von 230V eingetragen. Diese hat zur Folge das die Spannung konstant bleibt. Wenn also im sekundären Kreis (K2) mehr Leistung aufgenommen wird, die Spannung im Primärkreis (K1) konstant gehalten wird, muss der Strom im K1 zunehmen.\\
 
+$$\frac{U_1}{U_2} = -u$$
+
+\noindent
+Aus Formel [1](9) ergibt sich nach einsetzen der Frequent an stelle von $\omega$ folgende Formel für die Induktivität $L_P$:
+
+$$L_P = \frac{U_1}{I_1 * 2*\pi * 50Hz}$$
 
 \subsection{Messwerte und Ergebnisse}
 
+$$u = -\frac{232.8V}{26.40V} = -8.81$$
+\noindent
+Weil u > 1, wird die Spannung hinunter transformiert => $U_1 > U_2$ \\
+\\
+$$L_P = \frac{232.8V}{5.33mA *2*\pi * 50 Hz} = (139 \pm )H$$
 
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{./figure/transformator_sI_pI_su.png}
+	\caption{Sekundärer Strom gegen primären Strom und sekundäre Spannung}
+	\label{fig:trafo_si_pi_su}
+\end{figure}
+\begin{multicols}{2}
+
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{./figure/transformator_pI_sP.png}
+	\caption{Primärer Strom gegen sekundäre Leistung}
+	\label{fig:trafo_pi_sp}
+\end{figure}
+\begin{multicols}{2}
 
 \subsection{Diskussion}
 
-
+In Abbildung \ref{fig:trafo_si_pi_su} ist zu sehen, das wegen konstanter Spannung im K1 bei höherem Verbrauch im K2 sich der primäre Strom ändert. Gleichzeitig fällt im K2 die Spannung ab.\\
+Genrell existiert ein Strom im K2 nur, wenn es eine Belastung gibt.\\
+Es entsteht bei dieser Belastung ein B-Feld, welches dem primären B-Feld entgegenwirkt.\\
+Bei der Berechnung von $L_P$ ist der Widerstand rein (selbst)induktiv wenn kein Abnehmer im K2 vorhanden ist. Also kein zusätzliches B-Feld existiert.\\
+Nicht beeinflussbare Fehlerquellen bei der Messung sind die Ungenauigkeiten der Messgeräte, Schwankungen der Netzspannung und ein nicht lineares Verhalten des Regelwiderstandes. \\
+In Abbildung \ref{fig:trafo_pi_sp} ist die Leistung in K2 in Abhängigkeit vom Strom in K1 zu sehen. Wird in K2 mehr Leistung aufgenommen, müsste der Strom in K1  ins unendliche gehen, was früher oder später zu einem durchbrennen der Leiterbahnen in K1 führen würde (sofern die Stromquelle nicht vorher dank Sicherungen abschaltet). Optimal sollte die Leistung nur bei kleinen Primärströmen entnommen werden.\\
 
 
 

@@ -269,7 +269,55 @@ Die Grenzfrequenz wird zuvor theoretisch ermittelt (bei bekannten $R_x$ und $C$)
 Außerdem wird die Phasendifferenz $\Delta \varphi$ zwischen $U_e$ und $U_a$ aus der Kreisfrequenz $\omega = 2 \pi f$ und den bekannten $R_x$ und $C$ berechnet und ebenfalls gegen 
 $\frac{f}{f_g}$ aufgetragen.
 
+
+
+\end{multicols}
 \section{Resultate}
+
+
+
+\subsection{Aufgabe 1}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.60]{./figure/Abweichung_Aufgabe1.png}
+	\caption{Abweichung von 1/$\sqrt{2}$ der gemessenen Werte zu Aufgabe 1}
+	\label{fig:abw_aufgabe1}
+\end{figure}
+
+\begin{multicols}{2}
+
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={freq, ueff_u0},
+			col sep=&,
+			columns/freq/.style={precision=1, zerofill, column name=\makecell{$Frequenz$\\$[Hz]$} }, 
+			columns/ueff_u0/.style={precision=5, zerofill, column name=\makecell{$\frac{U_{eff}}{U_0}$\\$none$}},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={column type/.add={|}{} },
+			every last column/.style={column type/.add={}{|} }
+			]{
+			freq & ueff_u0
+			100 & 0.6764
+			300 & 0.67099
+			449.5 & 0.6702
+			500 & 0.674
+			660 & 0.66795
+			855 & 0.67013
+			1000 & 0.66397
+			1143 & 0.65737
+			1337 & 0.65841
+			1500 &0.65973
+			2000 & 0.64384
+			2500 & 0.634
+			}
+	\caption{Messabweichungen}
+	\label{tab:werte_fluke_oszi}
+\end{figure}
+
 
 \subsection{Aufgabe 2}
 %OSZI RX
@@ -318,9 +366,9 @@ $$C=(1.9\pm 1.1)\mu F$$
 \textbf{Phasenverschiebung:}\\
 $\Delta T = (1520\pm 76) \mu s$\\
 Zeitmessung:
-$$\Delta \varphi = (82.0 \pm 4.2)^\circ$$
+$$\Delta \varphi_{Zeit} = (82.0 \pm 4.2)^\circ$$
 Berechnung aus den Widerständen:
-$$\Delta \varphi = (79.0 \pm 4.0)^\circ$$
+$$\Delta \varphi_{Widerst} = (79.0 \pm 4.0)^\circ$$
 
 \subsection{Aufgabe 4}
 %OSZI Spule
@@ -347,58 +395,35 @@ $$L=(26.0 \pm 1.3)H$$
 \textbf{Phasenverschiebung:}\\
 $\Delta T = (4.0\pm 0.2) \mu s$\\
 Zeitmessung:
+$$\Delta \varphi_{Zeit} = (43.2 \pm 2.2)^\circ$$
+Berechnung aus den Widerständen:
+$$\Delta \varphi_{Widerst} = (90.0 \pm 4.5)^\circ$$
+
+\noindent \textbf{Abweichung beider Ergebnisse um einen Faktor 2?}
 
 
+
+\end{multicols}
 \subsection{Aufgabe 6}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.25]{./figure/betrag_a.png}
+	\includegraphics[scale=0.40]{./figure/betrag_a.png}
 	\caption{Messung Betrag A mit linearem Fit}
 	\label{fig:betraga_linfit}
 \end{figure}
+
+
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.45]{./figure/betrag_a_zoom.png}
+	\includegraphics[scale=0.60]{./figure/betrag_a_zoom.png}
 	\caption{Messung Betrag A Fehlerabschätzung}
 	\label{fig:betraga_abweichung}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.25]{./figure/Abweichung_Aufgabe1.png}
-	\caption{Abweichung von 1/$\sqrt{2}$ der gemessenen Werte zu Aufgabe 1}
-	\label{fig:abw_aufgabe1}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-	\pgfplotstabletypeset[
-			columns={freq, ueff_u0},
-			col sep=&,
-			columns/freq/.style={precision=1, zerofill, column name=\makecell{$Frequenz$\\$[Hz]$} }, 
-			columns/ueff_u0/.style={precision=5, zerofill, column name=\makecell{$\frac{U_{eff}}{U_0}$\\$none$}},
-			every head row/.style={before row=\hline,after row=\hline\hline},
-			every last row/.style={after row=\hline},
-			every first column/.style={column type/.add={|}{} },
-			every last column/.style={column type/.add={}{|} }
-			]{
-			freq & ueff_u0
-			100 & 0.6764
-			300 & 0.67099
-			449.5 & 0.6702
-			500 & 0.674
-			660 & 0.66795
-			855 & 0.67013
-			1000 & 0.66397
-			1143 & 0.65737
-			1337 & 0.65841
-			1500 &0.65973
-			2000 & 0.64384
-			2500 & 0.634
-			}
-	\caption{Messabweichungen}
-	\label{tab:werte_fluke_oszi}
-\end{figure}
+\begin{multicols}{2}
+
 
 \section{Diskussion}
 

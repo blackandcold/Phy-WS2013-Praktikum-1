@@ -386,7 +386,7 @@ $$\Delta \varphi_{Widerst} = (79.0 \pm 4.0)^\circ$$
 	\label{fig:xy_spule}
 \end{figure}
 
-\textbf{induktiver WIderstand $X_L$:}\\
+\textbf{induktiver Widerstand $X_L$:}\\
 $U_{ges}=(5.26\pm 0.27)V$\\
 $U_0=(3.61 \pm 0.19)V$\\
 $$X_L=(4.9\pm 0.25)M\Omega$$
@@ -426,6 +426,30 @@ $$\Delta \varphi_{Widerst} = (90.0 \pm 4.5)^\circ$$
 
 
 \section{Diskussion}
+\subsection{Aufgabe 1:}
+In Abbildung \ref{fig:abw_aufgabe1} wurde auf der y-Achse das Verhältnis zwischen dem Quotienten $\frac{U_{eff}}{U_0}$ und der theoretischen Vorgabe von $1/\sqrt{2}$ aufgetragen.\\
+Im Idealfall sollte dieses Verhältnis genau 1 sein, wenn nämlich Theorie und Messung genau übereinstimmen.\\
+In der Grafik sind 2 Befunde zu erkennen:\\
+Erstens liegen die Messwerte zu Beginn etwa 5\% versetzt unter dem Sollwert von 1. Dort verlaufen sie jedoch annähernd linear und bleiben konstant, wie erwartet.\\
+Ab etwa 700 Hz tritt, wie erwartet ein, dass das Verhältnis von $U_{eff}$ zu $U_0$ immer stärker divergiert.\\
+\\
+Da das Fluke DVM vermutlich vor allem für Netzstrom 230Hz und etwas höhere Frequenzen optimiert ist, entspricht das durchaus der Erwartung bei einem qualitativ hochwertigen Messgerät. Bei noch höheren Frequenzen wird der Drift immer stärker, die Messung der Effektivspannung mit dem Gerät also unbrauchbar.\\
+Für die Abweichung des Verhältnisses beider Messwerte vom erwarteten Wert gibt es 2 mögliche Fehlerquellen:\\
+- Die Messung des Oszilloskopes (Spitze-Spitze halbiert, gemittelt über einige Perioden gemessen) könnte fehlerhaft sein.\\
+- Die gemessene Effektivspannung am DVM könnte fehlerhaft sein.\\
+\\
+Da jedoch das Oszilloskop allein mit einer Unsicherheit bis zu 5\% angenommen werden kann und auch das DVM Unsicherheiten hat, liegt diese Abweichung durchaus noch innerhalb der Erwartung.\\
+Auch die Schwankungen der Einzelmesswerte um etwa 1-2\% um den Kennlinienverlauf sprechen dafür.
+
+\subsection{Aufgaben 2-5}
+
+Wie erwartet ergibt sich durch den \textbf{Ohm'schen Widerstand} keine (wesentliche) Phasenverschiebung zwischen Spannung und Strom (Abb. \ref{fig:phase_rx}). Das ist gut erkennbar an der XY-Darstellung (Abb. \ref{fig:xy_rx}) dieser Messung, die eine etwa $45^\circ$ geneigte Gerade ist (da beide Spannungen in dieser Darstellung etwa gleich skaliert wurden).\\
+In dieser Darstellung wird der zeitlich Spannungsverlauf beider Messungen auf jeweils einer Achse dargestellt. Sind sie phasengleich erreichen sie also gleichzeitig ihre maximalen Auslenkungen, Nulldurchgänge und andere Punkte und ergeben so eine Gerade.\\
+\\
+In Abb. \ref{fig:phase_kondi} ist die Phasenverschiebung um etwa $\frac{\pi}{2}$ dargestellt, die der \textbf{Kondensator} verursacht.\\
+Im XY-Diagramm ergibt dieser Phasenversatz (je nach Skalierung beider Signale) eine Ellipse (Abb. \ref{fig:xy_kondi})\\
+Innerhalb ihrer Unsicherheiten stimmen die gemessene und die berechnete Phasenverschiebung miteinander überein. Auch der ermittelte Widerstand des Kondensators und seine Kapazität dürften dem wahren Wert gut nahe kommen:\\
+Eine Bestätigung erfahren $C$ und $R_x$ in Aufgabe 6, wo auf ihrer Basis die Grenzfrequenz des Filters berechnet wurde, die (siehe Diskussion Aufgabe 6) ausreichend nahe an der gemessenen Grenzfrequenz liegt.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

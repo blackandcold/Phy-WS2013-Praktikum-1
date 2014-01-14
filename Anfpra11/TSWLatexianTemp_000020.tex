@@ -1,0 +1,247 @@
+% -*- TeX:de -*-
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[12pt,a4paper]{article}
+\usepackage[german]{babel} % german text
+\usepackage[DIV12]{typearea} % size of printable area
+\usepackage[T1]{fontenc} % font encoding
+%\usepackage[latin1]{inputenc} % most likely on Windows
+\usepackage[utf8]{inputenc} % probably on Linux
+\usepackage{multicol}
+
+% PLOTTING
+\usepackage{pgfplots} 
+\usepackage{pgfplotstable}
+\usepackage{url}
+\usepackage{graphicx} % to include images
+\usepackage{tikz}
+\usepackage{subfigure} % for creating subfigures
+\usepackage{amsmath} % a bunch of symbols
+\usepackage{amssymb} % even more symbols
+\usepackage{booktabs} % pretty tables
+\usepackage{makecell} % multi row table heading
+
+% a floating environment for circuits
+\usepackage{float}
+\usepackage{caption}
+
+%\newfloat{circuit}{tbph}{circuits}
+%\floatname{circuit}{Schaltplan}
+
+% a floating environment for diagrams
+%\newfloat{diagram}{tbph}{diagrams}
+%\floatname{diagram}{Diagramm}
+
+\selectlanguage{german} % use german
+
+\begin{document}
+
+%%%%%%% DECKBLATT %%%%%%%
+\thispagestyle{empty}
+			\begin{center}
+			\Large{Fakultät für Physik}\\
+			\end{center}
+\begin{verbatim}
+
+
+\end{verbatim}
+							%Eintrag des Wintersemesters
+			\begin{center}
+			\textbf{\LARGE WS 2013/14}
+			\end{center}
+\begin{verbatim}
+
+
+\end{verbatim}
+			\begin{center}
+			\textbf{\LARGE{Physikalisches Praktikum\\ für das Bachelorstudium}}
+			\end{center}
+\begin{verbatim}
+
+
+
+
+\end{verbatim}
+
+			\begin{center}
+			\textbf{\LARGE{PROTOKOLL}}
+			\end{center}
+			
+\begin{verbatim}
+
+\end{verbatim}
+
+			\begin{flushleft}
+			\textbf{\Large{Experiment (Nr., Titel):}}\\
+							%Experiment Nr. und Titel statt den Punkten eintragen
+			\LARGE{PW11 Wechselstrom II}	
+			\end{flushleft}
+
+\begin{verbatim}
+
+\end{verbatim}	
+							%Eintragen des Abgabedatums, oder des Erstelldatums des Protokolls
+			\begin{flushleft}
+			\textbf{\Large{Datum:}} \Large{9.1.2014}
+			\end{flushleft}
+			
+\begin{verbatim}
+\end{verbatim}
+							%Namen der Protokollschreiber
+		\begin{flushleft}
+			\textbf{\Large{Namen:}} \Large{Patrick Braun, Johannes Kurz}
+			\end{flushleft}
+
+\begin{verbatim}
+
+
+\end{verbatim}
+							%Kurstag und Gruppennummer, zb. Fr/5
+			\begin{flushleft}
+			\textbf{\Large{Kurstag/Gruppe:}} \Large{DO/2}
+			\end{flushleft}
+
+\begin{verbatim}
+
+\end{verbatim}
+							%Name des Betreuers, das Praktikum betreute.
+			\begin{flushleft}
+			\LARGE{\textbf{Betreuer:}}	\Large{Clemens Nagel}	
+			\end{flushleft}
+
+%%%%%%% DECKBLATT ENDE %%%%%%%
+\pagebreak
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.35]{./figure/beugung.png}
+%	\caption{Beugungsmuster Einzelspalt (echtes Foto; schwarz durch weiß ersetzt)}
+%	\label{fig:beugungsmuster}
+%\end{figure}
+
+
+%\begin{figure}[H]
+%	\centering
+%	\pgfplotstabletypeset[
+%			columns={abstand, n},
+%			col sep=&,
+%			columns/abstand/.style={precision=2, zerofill, column name=\makecell{$Abstand$\\$(\pm 0.05)[mm]$} }, 
+%			columns/n/.style={column name=\makecell{$n$\\$(Ordnung)$}, precision=0},
+%			every head row/.style={before row=\hline,after row=\hline\hline},
+%			every last row/.style={after row=\hline},
+%			every first column/.style={column type/.add={|}{} },
+%			every last column/.style={column type/.add={}{|} }
+%			]{
+%			abstand & n
+%			12.9 & 1
+%			24.45 & 2
+%			37.40 & 3
+%			49.35& 4
+%			62.45 & 5
+%			74.45 & 6
+%			87.45 & 7
+%			100.25 & 8
+%			
+%			}
+%	\caption{Messwerte Einzelspalt}
+%	\label{tab:werte_einzelspalt}
+%\end{figure}
+%
+
+
+\section{Theorie}
+\subsection{Wechselstrom und Widerstände}
+PW11 beschäftigt sich mit Wechselspannungen und-strömen und deren Messung mit dem Oszilloskop.\\
+Deren Höhe wechselt, im Gegensatz zu Gleichspannungen und -strömen mit der Zeit, und das in allen betrachteten Anwendungen periodisch. Es kommen also zu Größe und Polarität im Gleichstrom auch Eigenschaften wie Periodendauer $T$, Frequenz $f$ dazu ($f = \frac{1}{T}$ mit der Dimension $[s^{-1}]$ bzw. $Hertz$ (Hz)).\\
+\\
+In diesem Praktikumsbeispiel werden, wie auch in der öffentlichen Stromversorgung, ausschließlich sinusförmig wechselnde Ströme und Spannungen verwendet, deren Größenverlauf eben einer Sinusfunktion, mit der Zeit im Argument, gleicht.\\
+$$U(t)=U_0\cdot sin(\omega t + \varphi_U)$$
+$$I(t)=I_0\cdot sin(\omega t + \varphi_I)$$
+$U_0$ und $I_0$ sind dabei die Amplituden (also die größte Auslenkung) beider Größen, und $\omega$ die Kreisfrequenz der Schwingung ($\omega = 2 \pi f$).\\
+Im Argument des Sinus steht also jeweils ein Winkel, der sich mit der Zeit ändert:
+$$\varphi (t) = \omega t$$
+Dazu kommen noch die Winkel $\varphi_U$ und $\varphi_I $ bei $t=0$, die sog. Phasenkonstanten. Diese beschreiben einen Versatz des zeitlichen Verlaufs zwischen Spannung und Strom in einem System ($\Delta \varphi = \varphi_u - \varphi_I$).\\
+\\
+Dieser mathematische Formalismus legt einen Übergang in die komplexen Zahlen nahe, zu einer Beschreibung der Schwingungen als komplexe Exponentialfunktion:
+$$\hat{U} = U_0e^{i \omega t + \varphi_U}$$
+$$\hat{I} = I_0e^{i \omega t + \varphi_I}$$
+wobei die tatsächlichen Spannungen und Ströme zu jeder Zeit dem Realteil entsprechen.\\
+Abgesehen von rechentechnischen Vorteilen, bringt diese Darstellung vor allem, dass das Ohm'sche Gesetz und die Kirchhoff'schen Regeln in der komplexen Schreibweise gleich anzuwenden sind, wie in Gleichstrom-Systemen. (Für die reelle Darstellung gilt dies nicht!)\\
+\\
+In PW11 werden 3 Grundtypen von Widerständen untersucht:\\
+Ohm'sche ($R$), kapazitive ($X_C$) und induktive ($X_L$) Widerstände.\\
+Im Komplexen lassen sich diese als Impedanz $Z$ nach dem Ohmschen Gesetz berechnen:
+$$Z=\frac{\hat{U}}{\hat{I}}=\frac{U_0}{I_0}\cdot e^{i(\varphi_U - \varphi_I)}=\frac{U_0}{I_0}\cdot e^{i \Delta \varphi}$$
+Dabei erzeugen Ohm'sche Widerstände keine Phasenunterschiede zwischen Spannung und Strom: $Z_R = R$\\
+Kapazitive Widerstände (Kondensatoren) lassen den Strom um $\frac{\pi}{2}$ oder $90^\circ$ der Spannung vorauseilen: $Z_C=-\frac{i}{\omega C}=-i X_C$
+Induktive Widerstände (Spulen) erzeugen eine Phasenverschiebung, die den Strom um  $\frac{\pi}{2}$ verschoben, der Spannung hinterherlaufen lässt:$Z_L=i \omega L = i X_L$\\
+Die reellen Widerstände sind einfach die  Beträge der komplexen Impedanzen. Phasendifferenzen wirken sich daher nicht auf den reellen Widerstand aus.
+
+\subsection{Aufgaben zur Serienschaltung verschiedener Widerstände}
+4 der 6 Aufgabenstellungen drehen sich um die verschiedenen Widerstandstypen in Serienschaltung mit einem bekannten Ohm'schen Widerstand.\\
+In Serie geschaltet addieren sich Widerstände auf, wobei bei komplexen Widerständen zu beachten ist, dass der Gesamtwiderstand der Betrag einer komplexen Zahl ist:
+$$Z_{ges}=R_0 + iX \Rightarrow |Z_{ges}|=\sqrt{R_0^2+X^2}$$
+Es werden in diesen AUfgaben nur Spannungen gemessen. Da die Kirchhoffschen Regeln und das Ohm'sche Gesetz gelten, lässt sich durch die Spannung am bekannten Widerstand der Strom berechnen, der widerum in der gesamten Schaltung gleich ist:
+$$\frac{U_{R_0}}{R_0}=I_0=\frac{U_{ges}}{|Z_{ges}|}=\frac{U_{ges}}{\sqrt{R_0^2+X^2}}$$
+Daraus kann also der unbekannte Widerstand $X$ berechnet werden.\\
+Wie beim Übergang zwischen kartesischer und polarer Darstellung in der komplexen Ebene kann also auch der Phasenverschiebungswinkel, bei bekannten Widerständen berechnet werden durch
+$$tan{\Delta \varphi}=\frac{Im(Z_{ges}}{Re(Z_{ges})}=\frac{X}{R_0}$$
+
+\subsection{Einfache elektronische Filter}
+Zuletzt soll noch ein Frequenzfilter aufgebaut und untersucht werden.\\
+In dieser einfachen Schaltung macht man sich die Frequenzabhängigkeit des Widerstandes eines Kondensators zu Nutze und dass Spannungen an Widerständen, die in Serie geschaltet sind, in derem Verhältnis geteilt werden:
+$$\frac{U_1}{R_1}=\frac{U_2}{R_2} \Rightarrow \frac{U_1}{U_2}=\frac{R_1}{R_2} $$
+$$Z_C=-\frac{i}{\omega C}=-i X_C$$
+An eine Serienschaltung (RC-Glied) aus einem Ohm'schen Widerstand $R$ und einem Kondensator $C$ wird also eine Eingangsspannung $\hat{U_e}$ gelegt und an einem der beiden Bauelemente die Ausgangsspannung $\hat{U_a}$ abgegriffen. Je nach Frequenz von $\hat{U_e}$ wird also $\hat{U_a}$ kleiner oder praktisch gleich der Eingangsspannung. Man sagt, hohe (oder tiefe) Frequenzen werden "durchgelassen" (high-pass/low-pass filter).\\
+Die Übertragungsfunktion $A(\omega)$ beschreibt, frequenzabhängig, das Verhältnis von Input und Output.
+$$A(\omega)=|A(\omega)|e^{i\Delta \varphi}=\frac{U_a}{U_e}e^{i\Delta \varphi}=\frac{\hat{U_a}}{\hat{U_e}}$$
+, wobei $\Delta \varphi$ hier die Phasenverschiebung zwischen Eingangs- und Ausgangsspannung ist.\\
+\\
+Der Betrag von $A(\omega)$ wird üblicherweise in Dezibel (dB) angegeben, einer logarithmischen Einheit:
+$$|A(\omega)| / dB = 20 log{\frac{U_a}{U_e}}$$
+Weiters wird die Grenzfrequenz $f_g$ definiert, als die Frequenz, an der die Ausgangsspannung auf das Niveau der Effektivspannung der Eingangsspannung, also $U_{e0}/\sqrt{2}$ abgesunken ist, also auf -3dB. Die Grenzfrequenz kann auch berechnet werden durch
+$$f_g=\frac{\omega_g}{2 \pi}= \frac{1}{2 \pi RC}$$
+
+\section{Aufbau und Methoden}
+
+Tekronix TPS 2012B Oszi\\
+Fluke 175\\
+HAMEG HM8040-3 Stromquelle\\
+
+
+
+\subsection{Aufgabe 1}
+\subsection{Aufgabe 2}
+\subsection{Aufgabe 3}
+\subsection{Aufgabe 4}
+\subsection{Aufgabe 5}
+\subsection{Aufgabe 6}
+
+\section{Resultate}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{./figure/betrag_a.png}
+	\caption{Messung Betrag A mit linearem Fit}
+	\label{fig:betraga_linfit}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.45]{./figure/betrag_a_zoom.png}
+	\caption{Messung Betrag A Fehlerabschätzung}
+	\label{fig:betraga_abweichung}
+\end{figure}
+
+\section{Diskussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Quellen}
+$[1]$ Anleitung, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw11/PW11.pdf}\\
+\end{multicols}
+
+
+\end{document}

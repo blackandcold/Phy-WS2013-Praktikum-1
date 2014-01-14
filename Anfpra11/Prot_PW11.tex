@@ -207,18 +207,48 @@ $$f_g=\frac{\omega_g}{2 \pi}= \frac{1}{2 \pi RC}$$
 
 \section{Aufbau und Methoden}
 
-Tekronix TPS 2012B Oszi\\
-Fluke 175\\
-HAMEG HM8040-3 Stromquelle\\
+Alle Versuche in PW11 werden auf einem Steckbrett aufgebaut, die zu vermessenden Bauteile sind in mit festen Steckern in den entsprechenden Abständen verbunden.\\
+Als Signalquelle dient ein Funktionsgenerator HAMEG HM8040-3, der hier sinusförmige Schwingungen ausgibt.\\
+Gemessen wird mit einem Tekronix TPS 2012B Oszilloskop und, in Aufgabe 1, ein Digitalvoltmeter Fluke 175.\\
+Sowohl das Oszilloskop (DSO) als auch der Funktionsgenerator sind über Koaxialkabel mit dem Steckbrett verbunden. Diese Kabel bestehen aus 2 Leitungen, wobei der Innenleiter das Signal führt und der Außenleiter $an$ $Masse$ liegt. Es ist in allen Schaltungen daher darauf zu achten, dass die Polung korrekt ist. Wird ein signalführender Leiter direkt mit Masse verbunden, liegt ein Kurzschluss vor.\\
+
+
+%Tekronix TPS 2012B Oszi\\
+%Fluke 175\\
+%HAMEG HM8040-3 Stromquelle\\
 
 
 
 \subsection{Aufgabe 1}
-\subsection{Aufgabe 2}
-\subsection{Aufgabe 3}
-\subsection{Aufgabe 4}
+
+%SCHALTBILD
+
+In dieser Aufgabe wird die Spannung an einem bekannten Ohm'schen Widerstand ($R_0 = 2.15 k\Omega$) sowohl mit dem DVM als auch dem DSO bei verschiedenen Frequenzen gemessen.\\
+Das DVM misst dabei die Effektivspannung $U_{eff}$, mit dem DSO wird die Amplitude $U_0$ gemessen. Dazu muss das DSO so eingestellt werden, dass die Spannungskurve am Bildschirm ruhend dargestellt werden kann. Anschließend kann der Unterschied zwischen 2 Spannungsspitzen $U_{PP}$ gemessen werden, dessen Hälfte die Amplitude ist.\\
+Die Messung wird für verschiedene Frequenzen, beginnend mit 100Hz, etwa in 500er Schritten durchgeführt, und der Quotient $U_{eff}/U_0$ gegen die Frequenz aufgetragen.\\
+Damit soll überprüft werden, dass das DVM bei höheren Frequenzen ungenauer misst, also der Quotient von einer Gerade abweicht, und ab welchem Frequenzbereich das der Fall ist.
+
+
+
+\subsection{Aufgabe 2, 3 und 4}
+%SCHALTBILD
+In allen 3 Aufgaben, werden der bekannte Widerstand $R_0$ und ein zweiter unbekannter ($R_x$ der Ohm'sche, $X_C$ der kapazitive und $X_L$ der induktive Widerstand) in Serie geschaltet.\\
+Mit den beiden Kanälen des DSO werden die Gesamtspannung $U_ges$ und die Spannung $U_0$ am $R_0$ gemessen. Würden die Spannungen an beiden Widerständen gemessen werden, müssten eine signalführende Leitung und eine Masseleitung verbunden werden, was zu einem Kurzschluss führen würde.\\
+Der unbekannte Widerstand kann jeweils berechnet werden und die Phasenverschiebung $\Delta \varphi$ ermittelt werden, in dem der Laufzeitunterschied zwischen Spannung und Strom mit dem Cursertool des DSO gemessen werden. (Spannung und Strom sind phasengleich am Funktionsgenerator. Daher ist die Differenz der Phasen der beiden Spannungen gleich der Phasendifferenz zwischen Spannung und Strom, die vom unbekannten Widerstand erzeugt wird.)\\
+Außerdem sollen die beiden Spannungen in der XY-Darstellung des DSO dargestellt und diskutiert werden.\\
+Für den kapazitiven und den induktiven Widerstand sind außerdem die Kapazität $C$ und die Induktivität $L$ zu berechnen.
+
 \subsection{Aufgabe 5}
+Für die in Aufgabe 2, 3 und 4 betrachteten Widerstände soll die Phasendifferenz $\Delta \varphi$ berechnet werden und mit den gemessenen Werten verglichen werden.
 \subsection{Aufgabe 6}
+% SCHALTBILD
+
+Durch eine Serienschaltung aus dem $R_x$ und dem $X_C$ (Aufgabe 2 \& 3) wird ein einfaches passives Hochpass-Filter gebaut, indem die Ausgangsspannung $U_a$ am $R_x$ abgegriffen wird.\\
+Wieder ist beim Aufbau der Schaltungen auf die korrekte Polung zu achten, um Kurzschlüsse auszuschließen.\\
+Mit den beiden Kanälen des DSO werden die Eingangsspannung $U_e$ und die Ausgangsspannung $U_a$ gemessen. Aus diesen beiden Spannungen wird die Übertragungsfunktion $|A(\omega)|$ in dB berechnet und im Bode-Diagramm gegen den Quotienten aus Frequenz und Grenzfrequenz (Eigenschaft des Filters) $\frac{f}{f_g}$ aufgetragen.\\
+Die Grenzfrequenz wird zuvor theoretisch ermittelt (bei bekannten $R_x$ und $C$) und im Diagramm durch Extrapolation des linearen Teils der Kennlinie mit den Messwerten verglichen.\\
+Außerdem wird die Phasendifferenz $\Delta \varphi$ zwischen $U_e$ und $U_a$ aus der Kreisfrequenz $\omega = 2 \pi f$ und den bekannten $R_x$ und $C$ berechnet und ebenfalls gegen 
+$\frac{f}{f_g}$ aufgetragen.
 
 \section{Resultate}
 

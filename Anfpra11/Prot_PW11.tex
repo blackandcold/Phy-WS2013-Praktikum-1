@@ -105,7 +105,7 @@
 \end{verbatim}
 							%Name des Betreuers, das Praktikum betreute.
 			\begin{flushleft}
-			\LARGE{\textbf{Betreuer:}}	\Large{Wilhelm Markowitsch}	
+			\LARGE{\textbf{Betreuer:}}	\Large{Clemens Nagel}	
 			\end{flushleft}
 
 %%%%%%% DECKBLATT ENDE %%%%%%%
@@ -153,13 +153,42 @@
 
 
 \section{Theorie}
+\subsection{Wechselstrom und Widerstände}
+PW11 beschäftigt sich mit Wechselspannungen und-strömen und deren Messung mit dem Oszilloskop.\\
+Deren Höhe wechselt, im Gegensatz zu Gleichspannungen und -strömen mit der Zeit, und das in allen betrachteten Anwendungen periodisch. Es kommen also zu Größe und Polarität im Gleichstrom auch Eigenschaften wie Periodendauer $T$, Frequenz $f$ dazu ($f = \frac{1}{T}$ mit der Dimension $[s^{-1}]$ bzw. $Hertz$ (Hz)).\\
+\\
+In diesem Praktikumsbeispiel werden, wie auch in der öffentlichen Stromversorgung, ausschließlich sinusförmig wechselnde Ströme und Spannungen verwendet, deren Größenverlauf eben einer Sinusfunktion, mit der Zeit im Argument, gleicht.\\
+$$U(t)=U_0\cdot sin(\omega t + \varphi_U)$$
+$$I(t)=I_0\cdot sin(\omega t + \varphi_I)$$
+$U_0$ und $I_0$ sind dabei die Amplituden (also die größte Auslenkung) beider Größen, und $\omega$ die Kreisfrequenz der Schwingung ($\omega = 2 \pi f$).\\
+Im Argument des Sinus steht also jeweils ein Winkel, der sich mit der Zeit ändert:
+$$\varphi (t) = \omega t$$
+Dazu kommen noch die Winkel $\varphi_U$ und $\varphi_I $ bei $t=0$, die sog. Phasenkonstanten. Diese beschreiben einen Versatz des zeitlichen Verlaufs zwischen Spannung und Strom in einem System ($\Delta \varphi = \varphi_u - \varphi_I$).\\
+\\
+Dieser mathematische Formalismus legt einen Übergang in die komplexen Zahlen nahe, zu einer Beschreibung der Schwingungen als komplexe Exponentialfunktion:
+$$\hat{U} = U_0e^{i \omega t + \varphi_U}$$
+$$\hat{I} = I_0e^{i \omega t + \varphi_I}$$
+wobei die tatsächlichen Spannungen und Ströme zu jeder Zeit dem Realteil entsprechen.\\
+Abgesehen von rechentechnischen Vorteilen, bringt diese Darstellung vor allem, dass das Ohm'sche Gesetz und die Kirchhoff'schen Regeln in der komplexen Schreibweise gleich anzuwenden sind, wie in Gleichstrom-Systemen. (Für die reelle Darstellung gilt dies nicht!)\\
+\\
+In PW11 werden 3 Grundtypen von Widerständen untersucht:\\
+Ohm'sche ($R$), kapazitive ($X_C$) und induktive ($X_L$) Widerstände.\\
+Im Komplexen lassen sich diese als Impedanz $Z$ nach dem Ohmschen Gesetz berechnen:
+$$Z=\frac{\hat{U}}{\hat{I}}=\frac{U_0}{I_0}\cdot e^{i(\varphi_U - \varphi_I)}=\frac{U_0}{I_0}\cdot e^{i \Delta \varphi}$$
+Dabei erzeugen Ohm'sche Widerstände keine Phasenunterschiede zwischen Spannung und Strom: $Z_R = R$\\
+Kapazitive Widerstände (Kondensatoren) lassen den Strom um $\frac{\pi}{2}$ oder $90^\circ$ der Spannung vorauseilen: $Z_C=-\frac{i}{\omega C}=-i X_C$
+Induktive Widerstände (Spulen) erzeugen eine Phasenverschiebung, die den Strom um  $\frac{\pi}{2}$ verschoben, der Spannung hinterherlaufen lässt.\\
+Die reellen Widerstände sind einfach die  Beträge der komplexen Impedanzen. Phasendifferenzen wirken sich daher nicht auf den reellen Widerstand aus.
+
+\subsection{}
+
+\section{Aufbau und Methoden}
 
 Tekronix TPS 2012B Oszi\\
 Fluke 175\\
 HAMEG HM8040-3 Stromquelle\\
 
 
-\section{Aufbau und Methoden}
 
 \subsection{Aufgabe 1}
 \subsection{Aufgabe 2}

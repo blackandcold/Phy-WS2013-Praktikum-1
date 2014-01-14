@@ -154,7 +154,7 @@
 
 \section{Theorie}
 \subsection{Wechselstrom und Widerstände}
-PW11 beschäftigt sich mit Wechselspannungen und-strömen und deren Messung mit dem Oszilloskop.\\
+PW11 beschäftigt sich mit Wechselspannungen und -strömen und deren Messung mit dem Oszilloskop.\\
 Deren Höhe wechselt, im Gegensatz zu Gleichspannungen und -strömen mit der Zeit, und das in allen betrachteten Anwendungen periodisch. Es kommen also zu Größe und Polarität im Gleichstrom auch Eigenschaften wie Periodendauer $T$, Frequenz $f$ dazu ($f = \frac{1}{T}$ mit der Dimension $[s^{-1}]$ bzw. $Hertz$ (Hz)).\\
 \\
 In diesem Praktikumsbeispiel werden, wie auch in der öffentlichen Stromversorgung, ausschließlich sinusförmig wechselnde Ströme und Spannungen verwendet, deren Größenverlauf eben einer Sinusfunktion, mit der Zeit im Argument, gleicht.\\
@@ -402,7 +402,6 @@ $$\Delta \varphi_{Widerst} = (90.0 \pm 4.5)^\circ$$
 \noindent \textbf{Abweichung beider Ergebnisse um einen Faktor 2?}
 
 
-
 \end{multicols}
 \subsection{Aufgabe 6}
 \begin{figure}[H]
@@ -421,6 +420,50 @@ $$\Delta \varphi_{Widerst} = (90.0 \pm 4.5)^\circ$$
 	\label{fig:betraga_abweichung}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{./figure/phasenverschiebungs.png}
+	\caption{Phasenverschiebungswinkel}
+	\label{fig:betraga_phase}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={freq, phi, betr_a},
+			col sep=&,
+			columns/freq/.style={precision=0, zerofill, column name=\makecell{$Frequenz$\\$[Hz]$}}, 
+			columns/phi/.style={precision=5, zerofill, column name=\makecell{$Phasenwinkel$\\$Grad$}},
+			columns/betr_a/.style={precision=5, zerofill, column name=\makecell{$Uebertragungs-$\\$funktion A$\\$[dB]$}},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={column type/.add={|}{} },
+			every last column/.style={column type/.add={}{|} }
+			]{
+			freq & phi & betr_a
+			280 & 92.736 & -18.95735
+			560 & 84.672 & -13.10471
+			840 & 78.624 & -9.82237
+			1120 & 68.544 & -7.70237
+			1400 & 64.512 & -6.16908
+			1680 & 60.48 & -5.06927
+			1980 & 54.1728 & -4.14896
+			2300 & 49.68 & -3.43061
+			2500 & 48.6 & -3.03373
+			2766 & 45.80496 & -2.5606
+			3100 & 41.292 & -2.17326
+			3500 & 37.8 & -1.75428
+			4000 & 34.56 & -1.37577
+			5197 & 29.93472 & -0.84326
+			7050 & 22.3344 & -0.47727
+			10500 & 17.01 & -0.19244
+			15330 & 12.69324 & -0.05238
+			20090 & 10.12536 & -0.01746
+			27980 & 8.05824 & 0.06977
+			}
+	\caption{Unveränderte Ergebnisse}
+	\label{tab:werte_fluke_oszi}
+\end{figure}
 
 \begin{multicols}{2}
 
@@ -453,6 +496,13 @@ Eine Bestätigung erfahren $C$ und $R_x$ in Aufgabe 6, wo auf ihrer Basis die Gr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\subsection{Aufgabe 6}
+
+Bei den berechneten Werten für den Phasenverschiebungswinkel und der Übertragungsfunktion (Abb. \ref{tab:werte_fluke_oszi}) ist der wahre Frequentiert zwischen 2500Hz und 2800Hz. Für den Wert von 2500Hz haben wir die Gesuchten -3dB für A und bei rund 2800Hz die 45Grad für den Winkel.\\
+Die Messung von A ergab durch lineare Regression (Abb. \ref{fig:betraga_linfit}) der anfänglichen Steigung eine Abweichung von 1 um rund 0.04 (Abb. \ref{fig:betraga_abweichung}) was 4\% entspricht.\\
+
+%phase
 
 \section{Quellen}
 $[1]$ Anleitung, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw11/PW11.pdf}\\

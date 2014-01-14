@@ -177,10 +177,32 @@ Im Komplexen lassen sich diese als Impedanz $Z$ nach dem Ohmschen Gesetz berechn
 $$Z=\frac{\hat{U}}{\hat{I}}=\frac{U_0}{I_0}\cdot e^{i(\varphi_U - \varphi_I)}=\frac{U_0}{I_0}\cdot e^{i \Delta \varphi}$$
 Dabei erzeugen Ohm'sche Widerstände keine Phasenunterschiede zwischen Spannung und Strom: $Z_R = R$\\
 Kapazitive Widerstände (Kondensatoren) lassen den Strom um $\frac{\pi}{2}$ oder $90^\circ$ der Spannung vorauseilen: $Z_C=-\frac{i}{\omega C}=-i X_C$
-Induktive Widerstände (Spulen) erzeugen eine Phasenverschiebung, die den Strom um  $\frac{\pi}{2}$ verschoben, der Spannung hinterherlaufen lässt.\\
+Induktive Widerstände (Spulen) erzeugen eine Phasenverschiebung, die den Strom um  $\frac{\pi}{2}$ verschoben, der Spannung hinterherlaufen lässt:$Z_L=i \omega L = i X_L$\\
 Die reellen Widerstände sind einfach die  Beträge der komplexen Impedanzen. Phasendifferenzen wirken sich daher nicht auf den reellen Widerstand aus.
 
-\subsection{}
+\subsection{Aufgaben zur Serienschaltung verschiedener Widerstände}
+4 der 6 Aufgabenstellungen drehen sich um die verschiedenen Widerstandstypen in Serienschaltung mit einem bekannten Ohm'schen Widerstand.\\
+In Serie geschaltet addieren sich Widerstände auf, wobei bei komplexen Widerständen zu beachten ist, dass der Gesamtwiderstand der Betrag einer komplexen Zahl ist:
+$$Z_{ges}=R_0 + iX \Rightarrow |Z_{ges}|=\sqrt{R_0^2+X^2}$$
+Es werden in diesen AUfgaben nur Spannungen gemessen. Da die Kirchhoffschen Regeln und das Ohm'sche Gesetz gelten, lässt sich durch die Spannung am bekannten Widerstand der Strom berechnen, der widerum in der gesamten Schaltung gleich ist:
+$$\frac{U_{R_0}}{R_0}=I_0=\frac{U_{ges}}{|Z_{ges}|}=\frac{U_{ges}}{\sqrt{R_0^2+X^2}}$$
+Daraus kann also der unbekannte Widerstand $X$ berechnet werden.\\
+Wie beim Übergang zwischen kartesischer und polarer Darstellung in der komplexen Ebene kann also auch der Phasenverschiebungswinkel, bei bekannten Widerständen berechnet werden durch
+$$tan{\Delta \varphi}=\frac{Im(Z_{ges}}{Re(Z_{ges})}=\frac{X}{R_0}$$
+
+\subsection{Einfache elektronische Filter}
+Zuletzt soll noch ein Frequenzfilter aufgebaut und untersucht werden.\\
+In dieser einfachen Schaltung macht man sich die Frequenzabhängigkeit des Widerstandes eines Kondensators zu Nutze und dass Spannungen an Widerständen, die in Serie geschaltet sind, in derem Verhältnis geteilt werden:
+$$\frac{U_1}{R_1}=\frac{U_2}{R_2} \Rightarrow \frac{U_1}{U_2}=\frac{R_1}{R_2} $$
+$$Z_C=-\frac{i}{\omega C}=-i X_C$$
+An eine Serienschaltung (RC-Glied) aus einem Ohm'schen Widerstand $R$ und einem Kondensator $C$ wird also eine Eingangsspannung $\hat{U_e}$ gelegt und an einem der beiden Bauelemente die Ausgangsspannung $\hat{U_a}$ abgegriffen. Je nach Frequenz von $\hat{U_e}$ wird also $\hat{U_a}$ kleiner oder praktisch gleich der Eingangsspannung. Man sagt, hohe (oder tiefe) Frequenzen werden "durchgelassen" (high-pass/low-pass filter).\\
+Die Übertragungsfunktion $A(\omega)$ beschreibt, frequenzabhängig, das Verhältnis von Input und Output.
+$$A(\omega)=|A(\omega)|e^{i\Delta \varphi}=\frac{U_a}{U_e}e^{i\Delta \varphi}=\frac{\hat{U_a}}{\hat{U_e}}$$
+, wobei $\Delta \varphi$ hier die Phasenverschiebung zwischen Eingangs- und Ausgangsspannung ist.\\
+\\
+Der Betrag von $A(\omega)$ wird üblicherweise in Dezibel (dB) angegeben, einer logarithmischen Einheit:
+$$|A(\omega)| / dB = 20 log{\frac{U_a}{U_e}}$$
+Weiters wird die Grenzfrequenz $f_g$ definiert, als die Frequenz, an der die Ausgangsspannung auf das Niveau der Effektivspannung der Eingangsspannung 
 
 \section{Aufbau und Methoden}
 

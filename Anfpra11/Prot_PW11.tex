@@ -402,7 +402,6 @@ $$\Delta \varphi_{Widerst} = (90.0 \pm 4.5)^\circ$$
 \noindent \textbf{Abweichung beider Ergebnisse um einen Faktor 2?}
 
 
-
 \end{multicols}
 \subsection{Aufgabe 6}
 \begin{figure}[H]
@@ -421,6 +420,50 @@ $$\Delta \varphi_{Widerst} = (90.0 \pm 4.5)^\circ$$
 	\label{fig:betraga_abweichung}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{./figure/phasenverschiebungs.png}
+	\caption{Phasenverschiebungswinkel}
+	\label{fig:betraga_phase}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\pgfplotstabletypeset[
+			columns={freq, phi, betr_a},
+			col sep=&,
+			columns/freq/.style={precision=0, zerofill, column name=\makecell{$Frequenz$\\$[Hz]$}}, 
+			columns/phi/.style={precision=5, zerofill, column name=\makecell{$Phasenwinkel$\\$Grad$}},
+			columns/betr_a/.style={precision=5, zerofill, column name=\makecell{$Uebertragungs-$\\$funktion A$\\$[dB]$}},
+			every head row/.style={before row=\hline,after row=\hline\hline},
+			every last row/.style={after row=\hline},
+			every first column/.style={column type/.add={|}{} },
+			every last column/.style={column type/.add={}{|} }
+			]{
+			freq & phi & betr_a
+			280 & 92.736 & -18.95735
+			560 & 84.672 & -13.10471
+			840 & 78.624 & -9.82237
+			1120 & 68.544 & -7.70237
+			1400 & 64.512 & -6.16908
+			1680 & 60.48 & -5.06927
+			1980 & 54.1728 & -4.14896
+			2300 & 49.68 & -3.43061
+			2500 & 48.6 & -3.03373
+			2766 & 45.80496 & -2.5606
+			3100 & 41.292 & -2.17326
+			3500 & 37.8 & -1.75428
+			4000 & 34.56 & -1.37577
+			5197 & 29.93472 & -0.84326
+			7050 & 22.3344 & -0.47727
+			10500 & 17.01 & -0.19244
+			15330 & 12.69324 & -0.05238
+			20090 & 10.12536 & -0.01746
+			27980 & 8.05824 & 0.06977
+			}
+	\caption{Unveränderte Ergebnisse}
+	\label{tab:werte_fluke_oszi}
+\end{figure}
 
 \begin{multicols}{2}
 

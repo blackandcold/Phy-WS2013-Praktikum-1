@@ -489,18 +489,28 @@ Auch die Schwankungen der Einzelmesswerte um etwa 1-2\% um den Kennlinienverlauf
 Wie erwartet ergibt sich durch den \textbf{Ohm'schen Widerstand} keine (wesentliche) Phasenverschiebung zwischen Spannung und Strom (Abb. \ref{fig:phase_rx}). Das ist gut erkennbar an der XY-Darstellung (Abb. \ref{fig:xy_rx}) dieser Messung, die eine etwa $45^\circ$ geneigte Gerade ist (da beide Spannungen in dieser Darstellung etwa gleich skaliert wurden).\\
 In dieser Darstellung wird der zeitlich Spannungsverlauf beider Messungen auf jeweils einer Achse dargestellt. Sind sie phasengleich erreichen sie also gleichzeitig ihre maximalen Auslenkungen, Nulldurchgänge und andere Punkte und ergeben so eine Gerade.\\
 \\
-In Abb. \ref{fig:phase_kondi} ist die Phasenverschiebung um etwa $\frac{\pi}{2}$ dargestellt, die der \textbf{Kondensator} verursacht.\\
+In Abb. \ref{fig:phase_kondi} ist die Phasenverschiebung, die der \textbf{Kondensator} verursacht.\\
 Im XY-Diagramm ergibt dieser Phasenversatz (je nach Skalierung beider Signale) eine Ellipse (Abb. \ref{fig:xy_kondi})\\
-Innerhalb ihrer Unsicherheiten stimmen die gemessene und die berechnete Phasenverschiebung miteinander überein. Auch der ermittelte Widerstand des Kondensators und seine Kapazität dürften dem wahren Wert gut nahe kommen:\\
-Eine Bestätigung erfahren $C$ und $R_x$ in Aufgabe 6, wo auf ihrer Basis die Grenzfrequenz des Filters berechnet wurde, die (siehe Diskussion Aufgabe 6) ausreichend nahe an der gemessenen Grenzfrequenz liegt.
+Innerhalb ihrer Unsicherheiten stimmen die gemessene und die berechnete Phasenverschiebung miteinander überein.\\
+Auch der ermittelte Widerstand des Kondensators und seine Kapazität dürften dem wahren Wert gut nahe kommen:\\
+Eine Bestätigung erfahren $C$ und $R_x$ in Aufgabe 6, wo auf ihrer Basis die Grenzfrequenz des Filters berechnet wurde, die (siehe Diskussion Aufgabe 6) ausreichend nahe an der gemessenen Grenzfrequenz liegt.\\
+\\
+In Abb. \ref{fig:phase_spule} ist der Spannungsverlauf (gesamt sowie am Widerstand) am \textbf{induktiven} Widerstand zu sehen.\\
+Wie beim Kondensator ergibt sich auch hier eine Phasenverschiebung und damit im XY-Diagramm eine Ellipse (Abb.\ref{fig:xy_spule}).\\
+Die beiden Ergebnisse für den Phasenversatz (gemessen und berechnet) weichen jedoch um etwa einen Faktor 2 voneinander ab:\\
+Nachdem die Rechnungen mehrmals gecheckt und neu durchgeführt wurden (was einen Fehler natürlich nicht vollständig ausschließt) bleibt vor allem die Frage: Ist der Fehler um den Faktor 2, oder sind es 2 unterschiedliche Ergebnisse durch einen Fehler, die zufällig dieses Verhältnis haben.\\
+Eine mögliche Erklärung wäre eine falsche Messung des Zeitversatzes beider Kurven (die schließlich mit dem Cursor manuell durchgeführt wurde).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \subsection{Aufgabe 6}
 
-Bei den berechneten Werten für den Phasenverschiebungswinkel und der Übertragungsfunktion (Abb. \ref{tab:werte_fluke_oszi}) ist der wahre Frequentiert zwischen 2500Hz und 2800Hz. Für den Wert von 2500Hz haben wir die Gesuchten -3dB für A und bei rund 2800Hz die 45Grad für den Winkel.\\
-Die Messung von A ergab durch lineare Regression (Abb. \ref{fig:betraga_linfit}) der anfänglichen Steigung eine Abweichung von 1 um rund 0.04 (Abb. \ref{fig:betraga_abweichung}) was 4\% entspricht.\\
+Bei den berechneten Werten für den Phasenverschiebungswinkel und der Übertragungsfunktion (in dB) (Abb. \ref{tab:werte_fluke_oszi}) liegt die Grenzfrequenz in der Kennlinie (Abb. \ref{fig:betraga_linfit}) bzw. die stärkste Winkeländerung (Abb. \ref{fig:betraga_phase}) etwa zwischen 2500Hz und 2800Hz. Für den Wert von 2500Hz haben wir die gesuchten -3dB für $A(\omega)$ und bei rund 2800Hz die 45Grad für den Winkel.\\
+Der theoretisch berechnete Wert für die Grenzfrequenz $f_g$ liegt bei etwa 2750 Hz.
+Die Messung von A ergab durch lineare Regression (Abb. \ref{fig:betraga_linfit}) der anfänglichen Steigung eine Abweichung von 1 um rund 0.04 (Abb. \ref{fig:betraga_abweichung}) also 4\%.\\
+
+Der Filter zeigt also das gesuchte Verhalten (höhere Spannung bei hohen Frequenzen, sie werden durchgelassen) mit der erwarteten Grenzfrequenz in einem Unsicherheitsbereich kleiner 5\%.
 
 %phase
 

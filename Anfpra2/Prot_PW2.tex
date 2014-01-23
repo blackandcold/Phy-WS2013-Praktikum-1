@@ -151,20 +151,130 @@
 %\end{figure}
 %
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dichte von Flüssigkeiten}
 
-\section{Theorie}
-\subsection{Wechselstrom und Widerstände}
+\subsection{Theorie}
+
+$$\rho = \frac{M}{V} = \frac{[kg]}{[m^3]}$$
+
+\subsection{Aufbau und Methoden}
+
+\subsection{Resultate}
+
+\textbf{Pyknometer}
+$$m_0 = (31.4 \pm 0.1)g$$
+$$m_1 = (82.7 \pm 0.1)g$$
+$$m_2 = (84.6 \pm 0.1)g$$
+
+$$T_{dest} = 22.9^\circ \pm 0.1^\circ$$
+
+$$\rho_{dest} = (997.5600 \pm xy) \frac{kg}{m^3}$$
+
+$$\rho_{Probe} = (1034.5067 \pm xy) \frac{kg}{m^3}$$
+
+\textbf{Auftrieb}
+$$m_{verdrängt} = (9.973 \pm 0.001)g$$ Wasser\\
+$$m_{verdrängt} = (10.347 \pm 0.001)g$$ Kupfersulfat\\
+
+\textbf{Densiometer}
+4 Messungen:
+$$\rho_{1.1}:   (1.0347 \pm 0.001) \frac{g}{cm^3}$$
+$$\rho_{1.2}:   (1.0366 \pm 0.001) \frac{g}{cm^3}$$
+Gereinigt:
+$$\rho_{2.1}:   (1.0366 \pm 0.001) \frac{g}{cm^3}$$
+$$\rho_{2.2}:   (1.0364 \pm 0.001) \frac{g}{cm^3}$$
+\subsection{Diskussion}
 
 
 
-\section{Aufbau und Methoden}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gleichmäßig beschleunigte Bewegung, eindimensional}
 
-\section{Resultate}
+\subsection{Theorie}
+
+g \ldots Gravitationsbeschleunigung Erde\\
+m \ldots kleine Masse am Faden\\
+M \ldots große Masse am Tisch\\
+$\mu$ \ldots Reibungskoeffizient von M\\
+a \ldots Beschleunigung beider Massen\\
+
+$$F_g = m * g = [N]$$
+$$F_{Reibung} = M*g*\mu$$
+$$F_{mM} = (m+M)*a$$
+$$F_{g} = F_{mM} + F_{Reibung}$$
+$$m * g = M*g*\mu + (m+M)*a$$
+
+\subsection{Aufbau und Methoden}
+
+\subsection{Resultate}
+Polynomieller Fit x-ter Ordnung mit der Formel:
+$$x(t) = A_0 + B_1*t^1 + B_2 * t^2$$
+$$v(t) = B_1 + B_2 * 2 * t$$
+$$a(t) = B_2 * 2 = const$$
+\end{multicols}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{./figure/x_t_diagram.png}
+	\caption{x(t)-Diagram}
+	\label{fig:lin_bewegung}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{./figure/v_a_t_diagram.png}
+	\caption{v(t)-Diagram und a(t)-Diagram}
+	\label{fig:lin_bewegung_v_a}
+\end{figure}
+\begin{multicols}{2}
+
+\subsection{Diskussion}
+
+\end{multicols}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25, angle=-90]{./figure/bewegungen.jpg}
+	\caption{Eindimensionale Beschleunigung und kräftefreie Bewegung}
+	\label{fig:bewegungen}
+\end{figure}
+
+\begin{multicols}{2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kräftefreie Bewegung}
+
+\subsection{Theorie}
+
+\subsection{Aufbau und Methoden}
+
+\subsection{Resultate}
+
+\subsection{Diskussion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Elastischer Stoß}
+
+\subsection{Theorie}
+
+\subsection{Aufbau und Methoden}
+
+\subsection{Resultate}
+
+\subsection{Diskussion}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Inelastischer Stoß}
 
-\section{Diskussion}
+\subsection{Theorie}
+
+\subsection{Aufbau und Methoden}
+
+\subsection{Resultate}
+
+\subsection{Diskussion}
+
 
 \section{Quellen}
 $[1]$ Anleitung, \url{http://www.univie.ac.at/anfpra/neu1/pw/pw2/PW2.pdf}\\

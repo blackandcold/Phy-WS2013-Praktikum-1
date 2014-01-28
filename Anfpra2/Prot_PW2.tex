@@ -286,7 +286,11 @@ Alle 3 sollen gezeigt und überprüft werden, indem gleichzeitig aufgezeichnete 
 Durch die Geschwindigkeitsvektoren vor und nach dem Stoß (eine bestimmte Länge zu einer definierten Zeit), lässt sich die Impulserhaltung grafisch, also auch numerisch überprüfen. Dazu werden die Vektoren (skaliert um die Masse) vor dem Stoß, sowie diejenigen nach dem Stoß addiert (entweder in Zahlen, oder durch hintereinander-zeichnen).\\
 Treffen sich die Spitzen der Impulsvektorsummen, wäre also die Erhaltung gezeigt.\\
 \\
-Zuletzt soll noch ein \textbf{inelastischer Stoß} untersucht werden.
+Zuletzt soll noch ein \textbf{inelastischer Stoß} untersucht werden.\\
+Dazu werden die Gleiter, statt mit Federringen, nun mit Ringen aus Klettverschluss ausgerüstet, um nach dem Stoß aneinander zu haften und eine gemeinsame Bahn zu beschreiben.\\
+In diesem Versuch wird nur der schwerere Gleiter $M_1$ in Bewegung versetzt, der leichtere $M_2$ befindet sich zunächst in Ruhe und wird vom schwereren angestoßen.\\
+Da nun ein Teil der Energie der beiden Gleiter beim Stoß in Verformung und Wärme umgewandelt wird, ergibt sich diese innere Energie $U$ durch die Differenz der kinetischen Energien vor und nach dem Stoß:
+$$U=\frac{M_1 \vec v_1^2}{2}-\frac{(M_1+M_2) \vec v'^2}{2}$$
 
 
 
@@ -302,33 +306,15 @@ Zuletzt soll noch ein \textbf{inelastischer Stoß} untersucht werden.
 %$$F_{g} = F_{mM} + F_{Reibung}$$
 %$$m * g = M*g*\mu + (m+M)*a$$
 
-
+\end{multicols}
 
 \subsection{Resultate}
-Polynomieller Fit x-ter Ordnung mit der Formel:
-$$x(t) = A_0 + B_1*t^1 + B_2 * t^2$$
-$$v(t) = B_1 + B_2 * 2 * t$$
-$$a(t) = B_2 * 2 = const$$
-\end{multicols}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.55]{./figure/x_t_diagram.png}
-	\caption{x(t)-Diagram}
-	\label{fig:lin_bewegung}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.29]{./figure/v_a_t_diagram.png}
-	\caption{v(t)-Diagram und a(t)-Diagram}
-	\label{fig:lin_bewegung_v_a}
-\end{figure}
-\begin{multicols}{2}
 
 
 
-%%%% Kraeftefreie Bewegung
-\pagebreak
-\end{multicols}
+%%%% Beschleunigte und Kraeftefreie Bewegung
+%\pagebreak
+%\end{multicols}
 
 \begin{figure}[H]
 	\centering
@@ -337,50 +323,140 @@ $$a(t) = B_2 * 2 = const$$
 	\label{fig:bewegungen}
 \end{figure}
 
+%\begin{multicols}{2}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.53]{./figure/x_t_diagram.png}
+	\caption{x(t)-Diagramm der gleichmäßig beschleunigten Bewegung}
+	\label{fig:lin_bewegung}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.27]{./figure/v_a_t_diagram.png}
+	\caption{v(t)- und a(t)-Diagramm der gleichmäßig beschleunigten Bewegung}
+	\label{fig:lin_bewegung_v_a}
+\end{figure}
+
+
+
 \begin{multicols}{2}
 
+\noindent \textbf{Gleichmäßig beschleunigte Bewegung:}\\
+
+In Abb. \ref{fig:lin_bewegung} ist die Ortsentwicklung des Gleiters nach der Zeit zu sehen.
+Der Polynomiale Fit (2. Ordnung) ergibt als Bewegungsgleichung:
+$$x(t)=x_0 + v_0 \cdot t + a \cdot \frac{t^2}{2}$$
+
+$$x_0=(0.000 \pm 0.024)cm$$
+$$v_0=(9.010 \pm 0.068)cm/s \cdot $$
+$$a=( 8.585 \pm 0.037) cm/s^2 $$
+
+Die Kraft, die auf das System wirkt, falls M reibungsfrei gleitet, ist:
+$$F= (0.08727 \pm 0.00038) N$$
+
+Der Gleitreibungskoeffizient $\mu_g$ ist:
+$$\mu_g = (0.010736 \pm 0.00092)$$
+(es wird $g=9.81m/s^2$ angenommen)\\
+\\
+\\
+
+
+\noindent \textbf{Kräftefreie Bewegung:}\\
+
+%%%% Grafik x(t),v(t),a(t) der kräftefreien bewegung
+
+%%%% Grafik $\phi (t)
+
+
+\noindent \textbf{Elastischer Stoß:}\\
+
+\noindent Geschwindigkeiten:\\
+vor dem Stoß:\\
+$\vec v_1 =\binom{9.2}{9.5} cm/s$\\
+
+$\vec v_2 =\binom{-14.3}{12.3} cm/s$\\
+\\
+nach dem Stoß:\\
+$\vec v_1' =\binom{-8.7}{9.8} cm/s$\\
+$\vec v_2 '=\binom{12.3}{11.3} cm/s$\\
+\\
+\\
+Impulse:\\
+vor dem Stoß:\\
+$\vec p_1 =\binom{13.7}{14.3} kg\cdot cm/s$\\
+$\vec p_2 =\binom{-14.3}{12.3} kg\cdot cm/s$\\
+\\
+nach dem Stoß:\\
+$\vec p_1' =\binom{-14.3}{12.3} kg\cdot cm/s$\\
+$\vec p_2 '=\binom{12.3}{11.3} kg\cdot cm/s$\\
+\\
+\\
+Impulserhaltung:\\
+$\vec p_1 + \vec p_2 = \binom{-0.6}{26.6} kg\cdot cm/s$\\
+$\vec p_1' + \vec p_2' = \binom{-0.7}{26.0} kg\cdot cm/s$\\
+$\Delta \vec p =  \binom{0.1}{0.6} kg\cdot cm/s$\\
+\\
+\\
+kinetische Energie:\\
+vor dem Stoß:\\
+$T = (0.030 \pm 0.003) J$\\
+nach dem Stoß:\\
+$T'=(0.027 \pm 0.003) J$\\
+\\
+\\
+Der Schwerpunkt beschreibt in guter Näherung eine Gerade.\\
+\\
+\textbf{Inelastischer Stoß:}\\
+\\
+\noindent Geschwindigkeiten:\\
+vor dem Stoß:\\
+$\vec v_1 =\binom{21.0}{5.0} cm/s$\\
+
+$\vec v_2 =\binom{0}{0} cm/s$\\
+\\
+nach dem Stoß:\\
+$\vec v_1' =\binom{11.0}{2.0} cm/s$\\
+$\vec v_2 '=\binom{11.0}{3.8} cm/s$\\
+\\
+\\
+Impulse:\\
+vor dem Stoß:\\
+$\vec p_1 =\binom{12.3}{3.2} kg\cdot cm/s$\\
+$\vec p_2 =\binom{0}{0} kg\cdot cm/s$\\
+\\
+nach dem Stoß:\\
+$\vec p_1' =\binom{7.4}{1.3} kg\cdot cm/s$\\
+$\vec p_2 '=\binom{4.4}{1.5} kg\cdot cm/s$\\
+\\
+\\
+Impulserhaltung:\\
+$\vec p_1 + \vec p_2 = \binom{12.3}{3.2} kg\cdot cm/s$\\
+$\vec p_1' + \vec p_2' = \binom{11.8}{2.8} kg\cdot cm/s$\\
+$\Delta \vec p =  \binom{0.5}{0.4} kg\cdot cm/s$\\
+\\
+\\
+\\
+\\
+kinetische Energie:\\
+vor dem Stoß:\\
+$T = (0.035 \pm 0.003) J$\\
+nach dem Stoß:\\
+$T'=(0.027 \pm 0.003) J$\\
+\\
+$\Delta T= (0.008 \pm 0.004) J$
+\\
+\\
+
 
 \subsection{Diskussion}
+
+
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Kräftefreie Bewegung}
-
-\subsection{Theorie}
-
-\subsection{Aufbau und Methoden}
-
-\subsection{Resultate}
-
-
-
-\subsection{Diskussion}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Elastischer Stoß}
-
-\subsection{Theorie}
-
-\subsection{Aufbau und Methoden}
-
-\subsection{Resultate}
-
-\subsection{Diskussion}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Inelastischer Stoß}
-
-\subsection{Theorie}
-
-\subsection{Aufbau und Methoden}
-
-\subsection{Resultate}
-
-\subsection{Diskussion}
 
 
 \section{Quellen}
